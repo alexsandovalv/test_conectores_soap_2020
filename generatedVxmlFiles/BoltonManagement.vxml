@@ -3,10 +3,10 @@
     <var expr="" name="result"/>
     <form id="SetVariable_3">
         <block>
-            <assign expr="&apos;1169557096&apos;" name="msisdn"/>
-            <log label="Log"><value expr="&apos;Boltons_RequestQueryBoltons [currencyCode: ARS, numRegs 50, SubscriberIdType: &apos;+msisdn+&apos;boltonStatusType: Y]&apos;"/></log>
-            <data fetchtimeout="23456ms" name="qBoltons222" srcexpr="queryBoltons_BoltonManagement('ARS',null,50,null,null,null,null,'&lt;e164Number&gt;' + msisdn + '&lt;/e164Number&gt;',null,null,null,null,null,'y',null,null,null,guid(),false)"/>
-            <assign expr="qBoltons222" name="result"/>
+            <assign expr="&apos;1169557211&apos;" name="msisdn"/>
+            <log label="Log">TEST V2 : <value expr="&apos;Boltons_RequestQueryBoltons [currencyCode: ARS, numRegs 50, SubscriberIdType: &apos;+msisdn+&apos;boltonStatusType: Y]&apos;"/></log>
+            <data name="Script_1" srcexpr="queryBoltons_BoltonManagement('ARS',null,50,null,null,null,null,'&lt;e164Number&gt;' + msisdn + '&lt;/e164Number&gt;',null,null,null,null,null,'Y',null,null,null,guid(),false)"/>
+            <assign expr="Script_1" name="result"/>
             <log>Boltons_ReponseQueryBoltons :<value expr=" print_r(result)"/></log>
             <prompt>
                 <audio src="../promptFiles/audio/respuesta_ok_ws.wav"/>

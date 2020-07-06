@@ -1,11 +1,8 @@
 eclipse.preferences.version=1
-encoding//diagrams/AccountManagement.mmdiag=UTF-8
-encoding//diagrams/BalanceCobroManagementService.mmdiag=UTF-8
 encoding//diagrams/BalanceManagement.mmdiag=UTF-8
 encoding//diagrams/BoltonManagement.mmdiag=UTF-8
 encoding//diagrams/PromotionService.mmdiag=UTF-8
 encoding//diagrams/SvaService.mmdiag=UTF-8
-encoding//diagrams/VoucherManagement.mmdiag=UTF-8
 encoding//diagrams/globalContext.mmdiag=UTF-8
 encoding//diagrams/sendSMSService.mmdiag=UTF-8
 encoding//diagrams/start.mmdiag=UTF-8

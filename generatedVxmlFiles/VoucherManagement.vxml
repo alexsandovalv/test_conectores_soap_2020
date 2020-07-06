@@ -5,7 +5,7 @@
         <block>
             <assign expr="&apos;1169557096&apos;" name="msisdn"/>
             <log label="Log"><value expr="&apos;VoucherManagement-RequestVoucherCardAccount [appId: P10,reference: testing, userCode: IVR, SubscriberIdType: &apos;+msisdn+&apos;, toUpkey: 1234567812345678, HEADERS: &apos;+generarHeader()+&apos;]&apos;"/></log>
-            <data fetchtimeout="20s" name="Script_3" srcexpr="voucherCardAccount_VoucherManagement('P10','testing',null,null,'IVR',null,null,null,'&lt;e164Number&gt;' + msisdn + '&lt;/e164Number&gt;','1234567812345678',null,null,null,generarHeader(),false)"/>
+            <data fetchtimeout="20s" name="Script_3" srcexpr="voucherCardAccount_VoucherManagement('P10','testing',null,null,'IVR',null,null,null,null,null,'&lt;e164Number&gt;' + msisdn + '&lt;/e164Number&gt;','1234567812345678',null,null,null,guid(),false)"/>
             <assign expr="Script_3" name="result"/>
             <log>VoucherManagement-ResponseVoucherCardAccount :<value expr=" print_r(result)"/></log>
             <goto next="#MenuPrincipal8"/>

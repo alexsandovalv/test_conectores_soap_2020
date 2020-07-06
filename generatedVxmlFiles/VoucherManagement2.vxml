@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<vxml xmlns="http://www.w3.org/2001/vxml" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.w3.org/2001/vxml http://www.w3.org/TR/2007/REC-voicexml21-20070619/vxml.xsd" application="globalContext.vxml" version="2.1">
+    <var expr="" name="result"/>
+    <form id="SetVariable_3">
+        <block>
+            <assign expr="&apos;1169557096&apos;" name="msisdn"/>
+            <log label="Log"><value expr="&apos;VoucherManagement-RequestVoucherCardAccount [appId: P10,reference: testing, userCode: IVR, SubscriberIdType: &apos;+msisdn+&apos;, toUpkey: 1234567812345678, HEADERS: &apos;+generarHeader()+&apos;]&apos;"/></log>
+            <data fetchtimeout="20s" name="Script_3" srcexpr="voucherCardAccount_VoucherManagement('P10','testing',null,null,'IVR',null,null,null,null,null,'&lt;e164Number&gt;' + msisdn + '&lt;/e164Number&gt;','1234567812345678',null,null,null,generarHeader(),null)"/>
+            <assign expr="Script_3" name="result"/>
+            <log>VoucherManagement-ResponseVoucherCardAccount :<value expr=" print_r(result)"/></log>
+            <goto next="#MenuPrincipal8"/>
+        </block>
+    </form>
+    <catch count="1" event="error.semantic error.badfetch">
+        <prompt>
+            <audio src="../promptFiles/audio/error_ws.wav"/>
+        </prompt>
+        <goto next="#MenuPrincipal8"/>
+    </catch>
+    <form id="MenuPrincipal8">
+        <block>
+            <goto next="start.vxml"/>
+        </block>
+    </form>
+</vxml>

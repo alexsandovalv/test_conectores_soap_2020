@@ -27,5 +27,6 @@
         <choice dtmf="6" next="sendSMSService.vxml"/>
         <choice dtmf="7" next="SvaService.vxml"/>
         <choice dtmf="8" next="VoucherManagement.vxml"/>
+        <choice dtmf="9" next="CyclicActionsManagement.vxml"/>
     </menu>
 </vxml>

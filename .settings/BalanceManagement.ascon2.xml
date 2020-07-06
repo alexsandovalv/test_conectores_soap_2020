@@ -1,0 +1,656 @@
+<?xml version="1.0" encoding="US-ASCII"?>
+<ascon version="1.2">
+<connector id="BalanceManagement" label="BalanceManagement" icon="BalanceManagement.gif" version="1.0">
+<!--
+			Textual description of the connector
+		-->
+<description>
+			Connector to the charging database for IVR Prepaid
+		</description>
+<include copy="true" file="BalanceManagement.es"/>
+<properties name="BalanceManagement">
+<property name="AS_URL" value="/SOAPConnector/SOAPConnector/"/>
+<property name="application" value="IVR444"/>
+<property name="service" value="BalanceManagement"/>
+</properties>
+</connector>
+<requests>
+<request id="balanceTransfer" label="balanceTransfer" function="balanceTransfer_BalanceManagement" type="JSON">
+<parameters>
+<param label="balanceTransfer.actionCommonInfo.appInfo.appId" name="balanceTransfer.actionCommonInfo.appInfo.appId" default="" target="function" required="true">
+<description>appId is of string type.</description>
+</param>
+<param label="balanceTransfer.actionCommonInfo.appInfo.reference" name="balanceTransfer.actionCommonInfo.appInfo.reference" default="" target="function" required="true">
+<description>reference is of string type.</description>
+</param>
+<param label="balanceTransfer.actionCommonInfo.appInfo.extension.@anyAttributeParam" name="balanceTransfer.actionCommonInfo.appInfo.extension.@anyAttributeParam" default="" target="function" required="false">
+<description>Additional attributes for element extension</description>
+</param>
+<param label="balanceTransfer.actionCommonInfo.appInfo.extension.any" name="balanceTransfer.actionCommonInfo.appInfo.extension.any" default="" target="function" required="false">
+<description>You may enter ANY elements at this point</description>
+</param>
+<param label="balanceTransfer.actionCommonInfo.userCode" name="balanceTransfer.actionCommonInfo.userCode" default="" target="function" required="false">
+<description>userCode is of string type.</description>
+</param>
+<param label="balanceTransfer.actionCommonInfo.opCost" name="balanceTransfer.actionCommonInfo.opCost" default="" target="function" required="false">
+<description>opCost is of long type.</description>
+</param>
+<param label="balanceTransfer.actionCommonInfo.opCost.@exponent" name="balanceTransfer.actionCommonInfo.opCost.@exponent" default="" target="function" required="false">
+<description>exponent is of int type.</description>
+</param>
+<param label="balanceTransfer.actionCommonInfo.currencyCode" name="balanceTransfer.actionCommonInfo.currencyCode" default="" target="function" required="false">
+<description>CurrencyCodeType</description>
+</param>
+<param label="balanceTransfer.actionCommonInfo.extension.@anyAttributeParam" name="balanceTransfer.actionCommonInfo.extension.@anyAttributeParam" default="" target="function" required="false">
+<description>Additional attributes for element extension</description>
+</param>
+<param label="balanceTransfer.actionCommonInfo.extension.any" name="balanceTransfer.actionCommonInfo.extension.any" default="" target="function" required="false">
+<description>You may enter ANY elements at this point</description>
+</param>
+<param label="balanceTransfer.donorSubscriberId.choice" name="balanceTransfer.donorSubscriberId.choice" default="" target="function" required="true">
+<description>SubscriberIdType</description>
+</param>
+<param label="balanceTransfer.receiverSubscriberId.choice" name="balanceTransfer.receiverSubscriberId.choice" default="" target="function" required="true">
+<description>SubscriberIdType</description>
+</param>
+<param label="balanceTransfer.payer" name="balanceTransfer.payer" default="" target="function" required="true">
+<description>payer is of string type.</description>
+</param>
+<param label="balanceTransfer.balanceTransferInfo.transferAmount" name="balanceTransfer.balanceTransferInfo.transferAmount" default="" target="function" required="true">
+<description>transferAmount is of long type.</description>
+</param>
+<param label="balanceTransfer.balanceTransferInfo.transferAmount.@exponent" name="balanceTransfer.balanceTransferInfo.transferAmount.@exponent" default="" target="function" required="false">
+<description>exponent is of int type.</description>
+</param>
+<param label="balanceTransfer.balanceTransferInfo.transferCost" name="balanceTransfer.balanceTransferInfo.transferCost" default="" target="function" required="false">
+<description>transferCost is of long type.</description>
+</param>
+<param label="balanceTransfer.balanceTransferInfo.transferCost.@exponent" name="balanceTransfer.balanceTransferInfo.transferCost.@exponent" default="" target="function" required="false">
+<description>exponent is of int type.</description>
+</param>
+<param label="balanceTransfer.balanceTransferInfo.transferWalletId" name="balanceTransfer.balanceTransferInfo.transferWalletId" default="" target="function" required="false">
+<description>transferWalletId is of string type.</description>
+</param>
+<param label="balanceTransfer.balanceTransferInfo.extension.@anyAttributeParam" name="balanceTransfer.balanceTransferInfo.extension.@anyAttributeParam" default="" target="function" required="false">
+<description>Additional attributes for element extension</description>
+</param>
+<param label="balanceTransfer.balanceTransferInfo.extension.any" name="balanceTransfer.balanceTransferInfo.extension.any" default="" target="function" required="false">
+<description>You may enter ANY elements at this point</description>
+</param>
+<param label="balanceTransfer.extension.@anyAttributeParam" name="balanceTransfer.extension.@anyAttributeParam" default="" target="function" required="false">
+<description>Additional attributes for element extension</description>
+</param>
+<param label="balanceTransfer.extension.any" name="balanceTransfer.extension.any" default="" target="function" required="false">
+<description>You may enter ANY elements at this point</description>
+</param>
+<param name="http.authorization" label="http.authorization" required="false" default="" target="function">
+<description/>
+</param>
+<param name="headers" label="headers" required="false" default="" target="function">
+<description/>
+</param>
+<param name="privateRequest" default="false" label="private" target="function">
+<description/>
+</param>
+</parameters>
+</request>
+<request id="decrementBalance" label="decrementBalance" function="decrementBalance_BalanceManagement" type="JSON">
+<parameters>
+<param label="decrementBalance.actionCommonInfo.appInfo.appId" name="decrementBalance.actionCommonInfo.appInfo.appId" default="" target="function" required="true">
+<description>appId is of string type.</description>
+</param>
+<param label="decrementBalance.actionCommonInfo.appInfo.reference" name="decrementBalance.actionCommonInfo.appInfo.reference" default="" target="function" required="true">
+<description>reference is of string type.</description>
+</param>
+<param label="decrementBalance.actionCommonInfo.appInfo.extension.@anyAttributeParam" name="decrementBalance.actionCommonInfo.appInfo.extension.@anyAttributeParam" default="" target="function" required="false">
+<description>Additional attributes for element extension</description>
+</param>
+<param label="decrementBalance.actionCommonInfo.appInfo.extension.any" name="decrementBalance.actionCommonInfo.appInfo.extension.any" default="" target="function" required="false">
+<description>You may enter ANY elements at this point</description>
+</param>
+<param label="decrementBalance.actionCommonInfo.userCode" name="decrementBalance.actionCommonInfo.userCode" default="" target="function" required="false">
+<description>userCode is of string type.</description>
+</param>
+<param label="decrementBalance.actionCommonInfo.opCost" name="decrementBalance.actionCommonInfo.opCost" default="" target="function" required="false">
+<description>opCost is of long type.</description>
+</param>
+<param label="decrementBalance.actionCommonInfo.opCost.@exponent" name="decrementBalance.actionCommonInfo.opCost.@exponent" default="" target="function" required="false">
+<description>exponent is of int type.</description>
+</param>
+<param label="decrementBalance.actionCommonInfo.currencyCode" name="decrementBalance.actionCommonInfo.currencyCode" default="" target="function" required="false">
+<description>CurrencyCodeType</description>
+</param>
+<param label="decrementBalance.actionCommonInfo.extension.@anyAttributeParam" name="decrementBalance.actionCommonInfo.extension.@anyAttributeParam" default="" target="function" required="false">
+<description>Additional attributes for element extension</description>
+</param>
+<param label="decrementBalance.actionCommonInfo.extension.any" name="decrementBalance.actionCommonInfo.extension.any" default="" target="function" required="false">
+<description>You may enter ANY elements at this point</description>
+</param>
+<param label="decrementBalance.subscriberId.choice" name="decrementBalance.subscriberId.choice" default="" target="function" required="true">
+<description>SubscriberIdType</description>
+</param>
+<param label="decrementBalance.adjustmentAmount" name="decrementBalance.adjustmentAmount" default="" target="function" required="false">
+<description>adjustmentAmount is of long type.</description>
+</param>
+<param label="decrementBalance.adjustmentAmount.@exponent" name="decrementBalance.adjustmentAmount.@exponent" default="" target="function" required="false">
+<description>exponent is of int type.</description>
+</param>
+<param label="decrementBalance.walletId" name="decrementBalance.walletId" default="" target="function" required="false">
+<description>walletId is of string type.</description>
+</param>
+<param label="decrementBalance.totalFlag" name="decrementBalance.totalFlag" default="" target="function" required="true">
+<description>FlagType</description>
+</param>
+<param label="decrementBalance.negativeBalanceUsageFlag" name="decrementBalance.negativeBalanceUsageFlag" default="" target="function" required="true">
+<description>FlagType</description>
+</param>
+<param label="decrementBalance.actionCauseCode" name="decrementBalance.actionCauseCode" default="" target="function" required="false">
+<description>actionCauseCode is of string type.</description>
+</param>
+<param label="decrementBalance.extension.@anyAttributeParam" name="decrementBalance.extension.@anyAttributeParam" default="" target="function" required="false">
+<description>Additional attributes for element extension</description>
+</param>
+<param label="decrementBalance.extension.any" name="decrementBalance.extension.any" default="" target="function" required="false">
+<description>You may enter ANY elements at this point</description>
+</param>
+<param name="http.authorization" label="http.authorization" required="false" default="" target="function">
+<description/>
+</param>
+<param name="headers" label="headers" required="false" default="" target="function">
+<description/>
+</param>
+<param name="privateRequest" default="false" label="private" target="function">
+<description/>
+</param>
+</parameters>
+</request>
+<request id="incrementBalance" label="incrementBalance" function="incrementBalance_BalanceManagement" type="JSON">
+<parameters>
+<param label="incrementBalance.actionCommonInfo.appInfo.appId" name="incrementBalance.actionCommonInfo.appInfo.appId" default="" target="function" required="true">
+<description>appId is of string type.</description>
+</param>
+<param label="incrementBalance.actionCommonInfo.appInfo.reference" name="incrementBalance.actionCommonInfo.appInfo.reference" default="" target="function" required="true">
+<description>reference is of string type.</description>
+</param>
+<param label="incrementBalance.actionCommonInfo.appInfo.extension.@anyAttributeParam" name="incrementBalance.actionCommonInfo.appInfo.extension.@anyAttributeParam" default="" target="function" required="false">
+<description>Additional attributes for element extension</description>
+</param>
+<param label="incrementBalance.actionCommonInfo.appInfo.extension.any" name="incrementBalance.actionCommonInfo.appInfo.extension.any" default="" target="function" required="false">
+<description>You may enter ANY elements at this point</description>
+</param>
+<param label="incrementBalance.actionCommonInfo.userCode" name="incrementBalance.actionCommonInfo.userCode" default="" target="function" required="false">
+<description>userCode is of string type.</description>
+</param>
+<param label="incrementBalance.actionCommonInfo.opCost" name="incrementBalance.actionCommonInfo.opCost" default="" target="function" required="false">
+<description>opCost is of long type.</description>
+</param>
+<param label="incrementBalance.actionCommonInfo.opCost.@exponent" name="incrementBalance.actionCommonInfo.opCost.@exponent" default="" target="function" required="false">
+<description>exponent is of int type.</description>
+</param>
+<param label="incrementBalance.actionCommonInfo.currencyCode" name="incrementBalance.actionCommonInfo.currencyCode" default="" target="function" required="false">
+<description>CurrencyCodeType</description>
+</param>
+<param label="incrementBalance.actionCommonInfo.extension.@anyAttributeParam" name="incrementBalance.actionCommonInfo.extension.@anyAttributeParam" default="" target="function" required="false">
+<description>Additional attributes for element extension</description>
+</param>
+<param label="incrementBalance.actionCommonInfo.extension.any" name="incrementBalance.actionCommonInfo.extension.any" default="" target="function" required="false">
+<description>You may enter ANY elements at this point</description>
+</param>
+<param label="incrementBalance.subscriberId.choice" name="incrementBalance.subscriberId.choice" default="" target="function" required="true">
+<description>SubscriberIdType</description>
+</param>
+<param label="incrementBalance.adjustmentAmount" name="incrementBalance.adjustmentAmount" default="" target="function" required="false">
+<description>adjustmentAmount is of long type.</description>
+</param>
+<param label="incrementBalance.adjustmentAmount.@exponent" name="incrementBalance.adjustmentAmount.@exponent" default="" target="function" required="false">
+<description>exponent is of int type.</description>
+</param>
+<param label="incrementBalance.walletId" name="incrementBalance.walletId" default="" target="function" required="false">
+<description>walletId is of string type.</description>
+</param>
+<param label="incrementBalance.extension.@anyAttributeParam" name="incrementBalance.extension.@anyAttributeParam" default="" target="function" required="false">
+<description>Additional attributes for element extension</description>
+</param>
+<param label="incrementBalance.extension.any" name="incrementBalance.extension.any" default="" target="function" required="false">
+<description>You may enter ANY elements at this point</description>
+</param>
+<param name="http.authorization" label="http.authorization" required="false" default="" target="function">
+<description/>
+</param>
+<param name="headers" label="headers" required="false" default="" target="function">
+<description/>
+</param>
+<param name="privateRequest" default="false" label="private" target="function">
+<description/>
+</param>
+</parameters>
+</request>
+<request id="queryBalanceAdjustment" label="queryBalanceAdjustment" function="queryBalanceAdjustment_BalanceManagement" type="JSON">
+<parameters>
+<param label="queryBalanceAdjustment.queryCommonInfo.currencyCode" name="queryBalanceAdjustment.queryCommonInfo.currencyCode" default="" target="function" required="false">
+<description>CurrencyCodeType</description>
+</param>
+<param label="queryBalanceAdjustment.queryCommonInfo.pagingInfo.token" name="queryBalanceAdjustment.queryCommonInfo.pagingInfo.token" default="" target="function" required="false">
+<description>token is of string type.</description>
+</param>
+<param label="queryBalanceAdjustment.queryCommonInfo.pagingInfo.numRegs" name="queryBalanceAdjustment.queryCommonInfo.pagingInfo.numRegs" default="" target="function" required="false">
+<description>numRegs is of int type.</description>
+</param>
+<param label="queryBalanceAdjustment.queryCommonInfo.pagingInfo.extension.@anyAttributeParam" name="queryBalanceAdjustment.queryCommonInfo.pagingInfo.extension.@anyAttributeParam" default="" target="function" required="false">
+<description>Additional attributes for element extension</description>
+</param>
+<param label="queryBalanceAdjustment.queryCommonInfo.pagingInfo.extension.any" name="queryBalanceAdjustment.queryCommonInfo.pagingInfo.extension.any" default="" target="function" required="false">
+<description>You may enter ANY elements at this point</description>
+</param>
+<param label="queryBalanceAdjustment.queryCommonInfo.extension.@anyAttributeParam" name="queryBalanceAdjustment.queryCommonInfo.extension.@anyAttributeParam" default="" target="function" required="false">
+<description>Additional attributes for element extension</description>
+</param>
+<param label="queryBalanceAdjustment.queryCommonInfo.extension.any" name="queryBalanceAdjustment.queryCommonInfo.extension.any" default="" target="function" required="false">
+<description>You may enter ANY elements at this point</description>
+</param>
+<param label="queryBalanceAdjustment.subscriberId.choice" name="queryBalanceAdjustment.subscriberId.choice" default="" target="function" required="true">
+<description>SubscriberIdType</description>
+</param>
+<param label="queryBalanceAdjustment.opReference.opId" name="queryBalanceAdjustment.opReference.opId" default="" target="function" required="false">
+<description>opId is of string type.</description>
+</param>
+<param label="queryBalanceAdjustment.opReference.opSubIdList.opId" name="queryBalanceAdjustment.opReference.opSubIdList.opId" default="" target="function" required="false">
+<description>opId is of string type.</description>
+</param>
+<param label="queryBalanceAdjustment.opReference.opSubIdList.extension.@anyAttributeParam" name="queryBalanceAdjustment.opReference.opSubIdList.extension.@anyAttributeParam" default="" target="function" required="false">
+<description>Additional attributes for element extension</description>
+</param>
+<param label="queryBalanceAdjustment.opReference.opSubIdList.extension.any" name="queryBalanceAdjustment.opReference.opSubIdList.extension.any" default="" target="function" required="false">
+<description>You may enter ANY elements at this point</description>
+</param>
+<param label="queryBalanceAdjustment.opReference.extension.@anyAttributeParam" name="queryBalanceAdjustment.opReference.extension.@anyAttributeParam" default="" target="function" required="false">
+<description>Additional attributes for element extension</description>
+</param>
+<param label="queryBalanceAdjustment.opReference.extension.any" name="queryBalanceAdjustment.opReference.extension.any" default="" target="function" required="false">
+<description>You may enter ANY elements at this point</description>
+</param>
+<param label="queryBalanceAdjustment.fixingReferenceCode" name="queryBalanceAdjustment.fixingReferenceCode" default="" target="function" required="false">
+<description>fixingReferenceCode is of string type.</description>
+</param>
+<param label="queryBalanceAdjustment.timeInterval.startTime.choice" name="queryBalanceAdjustment.timeInterval.startTime.choice" default="" target="function" required="false">
+<description>TimeType</description>
+</param>
+<param label="queryBalanceAdjustment.timeInterval.endTime.choice" name="queryBalanceAdjustment.timeInterval.endTime.choice" default="" target="function" required="false">
+<description>TimeType</description>
+</param>
+<param label="queryBalanceAdjustment.timeInterval.extension.@anyAttributeParam" name="queryBalanceAdjustment.timeInterval.extension.@anyAttributeParam" default="" target="function" required="false">
+<description>Additional attributes for element extension</description>
+</param>
+<param label="queryBalanceAdjustment.timeInterval.extension.any" name="queryBalanceAdjustment.timeInterval.extension.any" default="" target="function" required="false">
+<description>You may enter ANY elements at this point</description>
+</param>
+<param label="queryBalanceAdjustment.extension.@anyAttributeParam" name="queryBalanceAdjustment.extension.@anyAttributeParam" default="" target="function" required="false">
+<description>Additional attributes for element extension</description>
+</param>
+<param label="queryBalanceAdjustment.extension.any" name="queryBalanceAdjustment.extension.any" default="" target="function" required="false">
+<description>You may enter ANY elements at this point</description>
+</param>
+<param name="http.authorization" label="http.authorization" required="false" default="" target="function">
+<description/>
+</param>
+<param name="headers" label="headers" required="false" default="" target="function">
+<description/>
+</param>
+<param name="privateRequest" default="false" label="private" target="function">
+<description/>
+</param>
+</parameters>
+</request>
+<request id="queryBalances" label="queryBalances" function="queryBalances_BalanceManagement" type="JSON">
+<parameters>
+<param label="queryBalances.queryCommonInfo.currencyCode" name="queryBalances.queryCommonInfo.currencyCode" default="" target="function" required="false">
+<description>CurrencyCodeType</description>
+</param>
+<param label="queryBalances.queryCommonInfo.pagingInfo.token" name="queryBalances.queryCommonInfo.pagingInfo.token" default="" target="function" required="false">
+<description>token is of string type.</description>
+</param>
+<param label="queryBalances.queryCommonInfo.pagingInfo.numRegs" name="queryBalances.queryCommonInfo.pagingInfo.numRegs" default="" target="function" required="false">
+<description>numRegs is of int type.</description>
+</param>
+<param label="queryBalances.queryCommonInfo.pagingInfo.extension.@anyAttributeParam" name="queryBalances.queryCommonInfo.pagingInfo.extension.@anyAttributeParam" default="" target="function" required="false">
+<description>Additional attributes for element extension</description>
+</param>
+<param label="queryBalances.queryCommonInfo.pagingInfo.extension.any" name="queryBalances.queryCommonInfo.pagingInfo.extension.any" default="" target="function" required="false">
+<description>You may enter ANY elements at this point</description>
+</param>
+<param label="queryBalances.queryCommonInfo.extension.@anyAttributeParam" name="queryBalances.queryCommonInfo.extension.@anyAttributeParam" default="" target="function" required="false">
+<description>Additional attributes for element extension</description>
+</param>
+<param label="queryBalances.queryCommonInfo.extension.any" name="queryBalances.queryCommonInfo.extension.any" default="" target="function" required="false">
+<description>You may enter ANY elements at this point</description>
+</param>
+<param label="queryBalances.subscriberId.choice" name="queryBalances.subscriberId.choice" default="" target="function" required="true">
+<description>SubscriberIdType</description>
+</param>
+<param label="queryBalances.extension.@anyAttributeParam" name="queryBalances.extension.@anyAttributeParam" default="" target="function" required="false">
+<description>Additional attributes for element extension</description>
+</param>
+<param label="queryBalances.extension.any" name="queryBalances.extension.any" default="" target="function" required="false">
+<description>You may enter ANY elements at this point</description>
+</param>
+<param name="http.authorization" label="http.authorization" required="false" default="" target="function">
+<description/>
+</param>
+<param name="headers" label="headers" required="false" default="" target="function">
+<description/>
+</param>
+<param name="privateRequest" default="false" label="private" target="function">
+<description/>
+</param>
+</parameters>
+</request>
+<request id="queryBalanceTransferBasics" label="queryBalanceTransferBasics" function="queryBalanceTransferBasics_BalanceManagement" type="JSON">
+<parameters>
+<param label="queryBalanceTransferBasics.queryCommonInfo.currencyCode" name="queryBalanceTransferBasics.queryCommonInfo.currencyCode" default="" target="function" required="false">
+<description>CurrencyCodeType</description>
+</param>
+<param label="queryBalanceTransferBasics.queryCommonInfo.pagingInfo.token" name="queryBalanceTransferBasics.queryCommonInfo.pagingInfo.token" default="" target="function" required="false">
+<description>token is of string type.</description>
+</param>
+<param label="queryBalanceTransferBasics.queryCommonInfo.pagingInfo.numRegs" name="queryBalanceTransferBasics.queryCommonInfo.pagingInfo.numRegs" default="" target="function" required="false">
+<description>numRegs is of int type.</description>
+</param>
+<param label="queryBalanceTransferBasics.queryCommonInfo.pagingInfo.extension.@anyAttributeParam" name="queryBalanceTransferBasics.queryCommonInfo.pagingInfo.extension.@anyAttributeParam" default="" target="function" required="false">
+<description>Additional attributes for element extension</description>
+</param>
+<param label="queryBalanceTransferBasics.queryCommonInfo.pagingInfo.extension.any" name="queryBalanceTransferBasics.queryCommonInfo.pagingInfo.extension.any" default="" target="function" required="false">
+<description>You may enter ANY elements at this point</description>
+</param>
+<param label="queryBalanceTransferBasics.queryCommonInfo.extension.@anyAttributeParam" name="queryBalanceTransferBasics.queryCommonInfo.extension.@anyAttributeParam" default="" target="function" required="false">
+<description>Additional attributes for element extension</description>
+</param>
+<param label="queryBalanceTransferBasics.queryCommonInfo.extension.any" name="queryBalanceTransferBasics.queryCommonInfo.extension.any" default="" target="function" required="false">
+<description>You may enter ANY elements at this point</description>
+</param>
+<param label="queryBalanceTransferBasics.opReference.opId" name="queryBalanceTransferBasics.opReference.opId" default="" target="function" required="false">
+<description>opId is of string type.</description>
+</param>
+<param label="queryBalanceTransferBasics.opReference.opSubIdList.opId" name="queryBalanceTransferBasics.opReference.opSubIdList.opId" default="" target="function" required="false">
+<description>opId is of string type.</description>
+</param>
+<param label="queryBalanceTransferBasics.opReference.opSubIdList.extension.@anyAttributeParam" name="queryBalanceTransferBasics.opReference.opSubIdList.extension.@anyAttributeParam" default="" target="function" required="false">
+<description>Additional attributes for element extension</description>
+</param>
+<param label="queryBalanceTransferBasics.opReference.opSubIdList.extension.any" name="queryBalanceTransferBasics.opReference.opSubIdList.extension.any" default="" target="function" required="false">
+<description>You may enter ANY elements at this point</description>
+</param>
+<param label="queryBalanceTransferBasics.opReference.extension.@anyAttributeParam" name="queryBalanceTransferBasics.opReference.extension.@anyAttributeParam" default="" target="function" required="false">
+<description>Additional attributes for element extension</description>
+</param>
+<param label="queryBalanceTransferBasics.opReference.extension.any" name="queryBalanceTransferBasics.opReference.extension.any" default="" target="function" required="false">
+<description>You may enter ANY elements at this point</description>
+</param>
+<param label="queryBalanceTransferBasics.extension.@anyAttributeParam" name="queryBalanceTransferBasics.extension.@anyAttributeParam" default="" target="function" required="false">
+<description>Additional attributes for element extension</description>
+</param>
+<param label="queryBalanceTransferBasics.extension.any" name="queryBalanceTransferBasics.extension.any" default="" target="function" required="false">
+<description>You may enter ANY elements at this point</description>
+</param>
+<param name="http.authorization" label="http.authorization" required="false" default="" target="function">
+<description/>
+</param>
+<param name="headers" label="headers" required="false" default="" target="function">
+<description/>
+</param>
+<param name="privateRequest" default="false" label="private" target="function">
+<description/>
+</param>
+</parameters>
+</request>
+<request id="queryTopUpsDetails" label="queryTopUpsDetails" function="queryTopUpsDetails_BalanceManagement" type="JSON">
+<parameters>
+<param label="queryTopUpsDetails.queryCommonInfo.currencyCode" name="queryTopUpsDetails.queryCommonInfo.currencyCode" default="" target="function" required="false">
+<description>CurrencyCodeType</description>
+</param>
+<param label="queryTopUpsDetails.queryCommonInfo.pagingInfo.token" name="queryTopUpsDetails.queryCommonInfo.pagingInfo.token" default="" target="function" required="false">
+<description>token is of string type.</description>
+</param>
+<param label="queryTopUpsDetails.queryCommonInfo.pagingInfo.numRegs" name="queryTopUpsDetails.queryCommonInfo.pagingInfo.numRegs" default="" target="function" required="false">
+<description>numRegs is of int type.</description>
+</param>
+<param label="queryTopUpsDetails.queryCommonInfo.pagingInfo.extension.@anyAttributeParam" name="queryTopUpsDetails.queryCommonInfo.pagingInfo.extension.@anyAttributeParam" default="" target="function" required="false">
+<description>Additional attributes for element extension</description>
+</param>
+<param label="queryTopUpsDetails.queryCommonInfo.pagingInfo.extension.any" name="queryTopUpsDetails.queryCommonInfo.pagingInfo.extension.any" default="" target="function" required="false">
+<description>You may enter ANY elements at this point</description>
+</param>
+<param label="queryTopUpsDetails.queryCommonInfo.extension.@anyAttributeParam" name="queryTopUpsDetails.queryCommonInfo.extension.@anyAttributeParam" default="" target="function" required="false">
+<description>Additional attributes for element extension</description>
+</param>
+<param label="queryTopUpsDetails.queryCommonInfo.extension.any" name="queryTopUpsDetails.queryCommonInfo.extension.any" default="" target="function" required="false">
+<description>You may enter ANY elements at this point</description>
+</param>
+<param label="queryTopUpsDetails.subscriberId.choice" name="queryTopUpsDetails.subscriberId.choice" default="" target="function" required="true">
+<description>SubscriberIdType</description>
+</param>
+<param label="queryTopUpsDetails.timeInterval.startTime.choice" name="queryTopUpsDetails.timeInterval.startTime.choice" default="" target="function" required="false">
+<description>TimeType</description>
+</param>
+<param label="queryTopUpsDetails.timeInterval.endTime.choice" name="queryTopUpsDetails.timeInterval.endTime.choice" default="" target="function" required="false">
+<description>TimeType</description>
+</param>
+<param label="queryTopUpsDetails.timeInterval.extension.@anyAttributeParam" name="queryTopUpsDetails.timeInterval.extension.@anyAttributeParam" default="" target="function" required="false">
+<description>Additional attributes for element extension</description>
+</param>
+<param label="queryTopUpsDetails.timeInterval.extension.any" name="queryTopUpsDetails.timeInterval.extension.any" default="" target="function" required="false">
+<description>You may enter ANY elements at this point</description>
+</param>
+<param label="queryTopUpsDetails.topUpReferenceCode" name="queryTopUpsDetails.topUpReferenceCode" default="" target="function" required="false">
+<description>topUpReferenceCode is of string type.</description>
+</param>
+<param label="queryTopUpsDetails.opStatus" name="queryTopUpsDetails.opStatus" default="" target="function" required="false">
+<description>opStatus is of string type.</description>
+</param>
+<param label="queryTopUpsDetails.topUpOrigin" name="queryTopUpsDetails.topUpOrigin" default="" target="function" required="false">
+<description>topUpOrigin is of string type.</description>
+</param>
+<param label="queryTopUpsDetails.extension.@anyAttributeParam" name="queryTopUpsDetails.extension.@anyAttributeParam" default="" target="function" required="false">
+<description>Additional attributes for element extension</description>
+</param>
+<param label="queryTopUpsDetails.extension.any" name="queryTopUpsDetails.extension.any" default="" target="function" required="false">
+<description>You may enter ANY elements at this point</description>
+</param>
+<param name="http.authorization" label="http.authorization" required="false" default="" target="function">
+<description/>
+</param>
+<param name="headers" label="headers" required="false" default="" target="function">
+<description/>
+</param>
+<param name="privateRequest" default="false" label="private" target="function">
+<description/>
+</param>
+</parameters>
+</request>
+<request id="queryTotalBalance" label="queryTotalBalance" function="queryTotalBalance_BalanceManagement" type="JSON">
+<parameters>
+<param label="queryTotalBalance.queryCommonInfo.currencyCode" name="queryTotalBalance.queryCommonInfo.currencyCode" default="" target="function" required="false">
+<description>CurrencyCodeType</description>
+</param>
+<param label="queryTotalBalance.queryCommonInfo.pagingInfo.token" name="queryTotalBalance.queryCommonInfo.pagingInfo.token" default="" target="function" required="false">
+<description>token is of string type.</description>
+</param>
+<param label="queryTotalBalance.queryCommonInfo.pagingInfo.numRegs" name="queryTotalBalance.queryCommonInfo.pagingInfo.numRegs" default="" target="function" required="false">
+<description>numRegs is of int type.</description>
+</param>
+<param label="queryTotalBalance.queryCommonInfo.pagingInfo.extension.@anyAttributeParam" name="queryTotalBalance.queryCommonInfo.pagingInfo.extension.@anyAttributeParam" default="" target="function" required="false">
+<description>Additional attributes for element extension</description>
+</param>
+<param label="queryTotalBalance.queryCommonInfo.pagingInfo.extension.any" name="queryTotalBalance.queryCommonInfo.pagingInfo.extension.any" default="" target="function" required="false">
+<description>You may enter ANY elements at this point</description>
+</param>
+<param label="queryTotalBalance.queryCommonInfo.extension.@anyAttributeParam" name="queryTotalBalance.queryCommonInfo.extension.@anyAttributeParam" default="" target="function" required="false">
+<description>Additional attributes for element extension</description>
+</param>
+<param label="queryTotalBalance.queryCommonInfo.extension.any" name="queryTotalBalance.queryCommonInfo.extension.any" default="" target="function" required="false">
+<description>You may enter ANY elements at this point</description>
+</param>
+<param label="queryTotalBalance.subscriberId.choice" name="queryTotalBalance.subscriberId.choice" default="" target="function" required="true">
+<description>SubscriberIdType</description>
+</param>
+<param label="queryTotalBalance.extension.@anyAttributeParam" name="queryTotalBalance.extension.@anyAttributeParam" default="" target="function" required="false">
+<description>Additional attributes for element extension</description>
+</param>
+<param label="queryTotalBalance.extension.any" name="queryTotalBalance.extension.any" default="" target="function" required="false">
+<description>You may enter ANY elements at this point</description>
+</param>
+<param name="http.authorization" label="http.authorization" required="false" default="" target="function">
+<description/>
+</param>
+<param name="headers" label="headers" required="false" default="" target="function">
+<description/>
+</param>
+<param name="privateRequest" default="false" label="private" target="function">
+<description/>
+</param>
+</parameters>
+</request>
+<request id="topUpAccount" label="topUpAccount" function="topUpAccount_BalanceManagement" type="JSON">
+<parameters>
+<param label="topUpAccount.actionCommonInfo.appInfo.appId" name="topUpAccount.actionCommonInfo.appInfo.appId" default="" target="function" required="true">
+<description>appId is of string type.</description>
+</param>
+<param label="topUpAccount.actionCommonInfo.appInfo.reference" name="topUpAccount.actionCommonInfo.appInfo.reference" default="" target="function" required="true">
+<description>reference is of string type.</description>
+</param>
+<param label="topUpAccount.actionCommonInfo.appInfo.extension.@anyAttributeParam" name="topUpAccount.actionCommonInfo.appInfo.extension.@anyAttributeParam" default="" target="function" required="false">
+<description>Additional attributes for element extension</description>
+</param>
+<param label="topUpAccount.actionCommonInfo.appInfo.extension.any" name="topUpAccount.actionCommonInfo.appInfo.extension.any" default="" target="function" required="false">
+<description>You may enter ANY elements at this point</description>
+</param>
+<param label="topUpAccount.actionCommonInfo.userCode" name="topUpAccount.actionCommonInfo.userCode" default="" target="function" required="false">
+<description>userCode is of string type.</description>
+</param>
+<param label="topUpAccount.actionCommonInfo.opCost" name="topUpAccount.actionCommonInfo.opCost" default="" target="function" required="false">
+<description>opCost is of long type.</description>
+</param>
+<param label="topUpAccount.actionCommonInfo.opCost.@exponent" name="topUpAccount.actionCommonInfo.opCost.@exponent" default="" target="function" required="false">
+<description>exponent is of int type.</description>
+</param>
+<param label="topUpAccount.actionCommonInfo.currencyCode" name="topUpAccount.actionCommonInfo.currencyCode" default="" target="function" required="false">
+<description>CurrencyCodeType</description>
+</param>
+<param label="topUpAccount.actionCommonInfo.extension.@anyAttributeParam" name="topUpAccount.actionCommonInfo.extension.@anyAttributeParam" default="" target="function" required="false">
+<description>Additional attributes for element extension</description>
+</param>
+<param label="topUpAccount.actionCommonInfo.extension.any" name="topUpAccount.actionCommonInfo.extension.any" default="" target="function" required="false">
+<description>You may enter ANY elements at this point</description>
+</param>
+<param label="topUpAccount.subscriberId.choice" name="topUpAccount.subscriberId.choice" default="" target="function" required="true">
+<description>SubscriberIdType</description>
+</param>
+<param label="topUpAccount.topUpAmount" name="topUpAccount.topUpAmount" default="" target="function" required="false">
+<description>topUpAmount is of long type.</description>
+</param>
+<param label="topUpAccount.topUpAmount.@exponent" name="topUpAccount.topUpAmount.@exponent" default="" target="function" required="false">
+<description>exponent is of int type.</description>
+</param>
+<param label="topUpAccount.topUpOrigin" name="topUpAccount.topUpOrigin" default="" target="function" required="false">
+<description>topUpOrigin is of string type.</description>
+</param>
+<param label="topUpAccount.validityPeriod" name="topUpAccount.validityPeriod" default="" target="function" required="false">
+<description>validityPeriod is of duration type.</description>
+</param>
+<param label="topUpAccount.SOSTopUpInfo.noPenaltyPeriod" name="topUpAccount.SOSTopUpInfo.noPenaltyPeriod" default="" target="function" required="false">
+<description>noPenaltyPeriod is of duration type.</description>
+</param>
+<param label="topUpAccount.SOSTopUpInfo.balancePenaltyAmount" name="topUpAccount.SOSTopUpInfo.balancePenaltyAmount" default="" target="function" required="false">
+<description>balancePenaltyAmount is of long type.</description>
+</param>
+<param label="topUpAccount.SOSTopUpInfo.balancePenaltyAmount.@exponent" name="topUpAccount.SOSTopUpInfo.balancePenaltyAmount.@exponent" default="" target="function" required="false">
+<description>exponent is of int type.</description>
+</param>
+<param label="topUpAccount.SOSTopUpInfo.extension.@anyAttributeParam" name="topUpAccount.SOSTopUpInfo.extension.@anyAttributeParam" default="" target="function" required="false">
+<description>Additional attributes for element extension</description>
+</param>
+<param label="topUpAccount.SOSTopUpInfo.extension.any" name="topUpAccount.SOSTopUpInfo.extension.any" default="" target="function" required="false">
+<description>You may enter ANY elements at this point</description>
+</param>
+<param label="topUpAccount.completeTransact" name="topUpAccount.completeTransact" default="" target="function" required="true">
+<description>completeTransact is of string type.</description>
+</param>
+<param label="topUpAccount.extension.@anyAttributeParam" name="topUpAccount.extension.@anyAttributeParam" default="" target="function" required="false">
+<description>Additional attributes for element extension</description>
+</param>
+<param label="topUpAccount.extension.any" name="topUpAccount.extension.any" default="" target="function" required="false">
+<description>You may enter ANY elements at this point</description>
+</param>
+<param name="http.authorization" label="http.authorization" required="false" default="" target="function">
+<description/>
+</param>
+<param name="headers" label="headers" required="false" default="" target="function">
+<description/>
+</param>
+<param name="privateRequest" default="false" label="private" target="function">
+<description/>
+</param>
+</parameters>
+</request>
+<request id="chargeAccount" label="chargeAccount" function="chargeAccount_BalanceManagement" type="JSON">
+<parameters>
+<param label="chargeAccount.actionCommonInfo.appInfo.appId" name="chargeAccount.actionCommonInfo.appInfo.appId" default="" target="function" required="true">
+<description>appId is of string type.</description>
+</param>
+<param label="chargeAccount.actionCommonInfo.appInfo.reference" name="chargeAccount.actionCommonInfo.appInfo.reference" default="" target="function" required="true">
+<description>reference is of string type.</description>
+</param>
+<param label="chargeAccount.actionCommonInfo.appInfo.extension.@anyAttributeParam" name="chargeAccount.actionCommonInfo.appInfo.extension.@anyAttributeParam" default="" target="function" required="false">
+<description>Additional attributes for element extension</description>
+</param>
+<param label="chargeAccount.actionCommonInfo.appInfo.extension.any" name="chargeAccount.actionCommonInfo.appInfo.extension.any" default="" target="function" required="false">
+<description>You may enter ANY elements at this point</description>
+</param>
+<param label="chargeAccount.actionCommonInfo.userCode" name="chargeAccount.actionCommonInfo.userCode" default="" target="function" required="false">
+<description>userCode is of string type.</description>
+</param>
+<param label="chargeAccount.actionCommonInfo.opCost" name="chargeAccount.actionCommonInfo.opCost" default="" target="function" required="false">
+<description>opCost is of long type.</description>
+</param>
+<param label="chargeAccount.actionCommonInfo.opCost.@exponent" name="chargeAccount.actionCommonInfo.opCost.@exponent" default="" target="function" required="false">
+<description>exponent is of int type.</description>
+</param>
+<param label="chargeAccount.actionCommonInfo.currencyCode" name="chargeAccount.actionCommonInfo.currencyCode" default="" target="function" required="false">
+<description>CurrencyCodeType</description>
+</param>
+<param label="chargeAccount.actionCommonInfo.extension.@anyAttributeParam" name="chargeAccount.actionCommonInfo.extension.@anyAttributeParam" default="" target="function" required="false">
+<description>Additional attributes for element extension</description>
+</param>
+<param label="chargeAccount.actionCommonInfo.extension.any" name="chargeAccount.actionCommonInfo.extension.any" default="" target="function" required="false">
+<description>You may enter ANY elements at this point</description>
+</param>
+<param label="chargeAccount.subscriberId.choice" name="chargeAccount.subscriberId.choice" default="" target="function" required="true">
+<description>SubscriberIdType</description>
+</param>
+<param label="chargeAccount.totalFlag" name="chargeAccount.totalFlag" default="" target="function" required="true">
+<description>FlagType</description>
+</param>
+<param label="chargeAccount.chargingModality" name="chargeAccount.chargingModality" default="" target="function" required="false">
+<description>chargingModality is of long type.</description>
+</param>
+<param label="chargeAccount.actionCauseCode" name="chargeAccount.actionCauseCode" default="" target="function" required="false">
+<description>actionCauseCode is of string type.</description>
+</param>
+<param label="chargeAccount.extension.@anyAttributeParam" name="chargeAccount.extension.@anyAttributeParam" default="" target="function" required="false">
+<description>Additional attributes for element extension</description>
+</param>
+<param label="chargeAccount.extension.any" name="chargeAccount.extension.any" default="" target="function" required="false">
+<description>You may enter ANY elements at this point</description>
+</param>
+<param name="http.authorization" label="http.authorization" required="false" default="" target="function">
+<description/>
+</param>
+<param name="headers" label="headers" required="false" default="" target="function">
+<description/>
+</param>
+<param name="privateRequest" default="false" label="private" target="function">
+<description/>
+</param>
+</parameters>
+</request>
+</requests>
+</ascon>

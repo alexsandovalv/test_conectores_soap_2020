@@ -17,38 +17,38 @@
       <stdTransitionPlayGotoTarget xmi:type="gmap:StandardTransitionPlayGotoTargetType" xmi:id="_rM0AMG9ZEeqWQbNrfNviJw" source="_j_gsC29ZEeqWQbNrfNviJw" targetElement="_j_gsBm9ZEeqWQbNrfNviJw"/>
     </play>
     <setVariable xmi:type="gmap:SetType" xmi:id="_FMNW4G9ZEeqWQbNrfNviJw" id="SetVariable_3" label="Set Variable">
-      <var xmi:type="gmap:VarType" xmi:id="_f546cG9ZEeqWQbNrfNviJw" name="msisdn" value="'1169557096'"/>
+      <var xmi:type="gmap:VarType" xmi:id="_-uxs0LJpEeqhto0xOzZWNw" name="msisdn" value="'1169557211'"/>
       <stdTransitionSetVariableLog xmi:type="gmap:StandardTransitionSetVariableLogType" xmi:id="_ieqkUG9ZEeqWQbNrfNviJw" source="_FMNW4G9ZEeqWQbNrfNviJw" targetElement="_FMMIwm9ZEeqWQbNrfNviJw"/>
     </setVariable>
     <gotoTarget xmi:type="gmap:GotoTargetType" xmi:id="_j_gsBm9ZEeqWQbNrfNviJw" enabled="Yes" id="MenuPrincipal8999" label="MenuPrincipal8999" target="start.vxml"/>
-    <log xmi:type="gmap:LogType" xmi:id="_FMMIwm9ZEeqWQbNrfNviJw" desc="Log" id="Log_3" label="Log" logtext="" sourceExpr="'Boltons_RequestQueryBoltons [currencyCode: ARS, numRegs 50, SubscriberIdType: '+msisdn+'boltonStatusType: Y]'">
-      <stdTransitionLogScript xmi:type="gmap:StandardTransitionLogScriptType" xmi:id="_i4sN4G9ZEeqWQbNrfNviJw" source="_FMMIwm9ZEeqWQbNrfNviJw" targetElement="_tQ3YEm9YEeqWQbNrfNviJw"/>
+    <log xmi:type="gmap:LogType" xmi:id="_FMMIwm9ZEeqWQbNrfNviJw" desc="Log" id="Log_3" label="Log" logtext="TEST V2 : " sourceExpr="'Boltons_RequestQueryBoltons [currencyCode: ARS, numRegs 50, SubscriberIdType: '+msisdn+'boltonStatusType: Y]'">
+      <stdTransitionLogScript xmi:type="gmap:StandardTransitionLogScriptType" xmi:id="_zQl5cLJBEequysycqUlAaQ" source="_FMMIwm9ZEeqWQbNrfNviJw" targetElement="_XSt5ULJBEequysycqUlAaQ"/>
     </log>
     <log xmi:type="gmap:LogType" xmi:id="_j_gsCW9ZEeqWQbNrfNviJw" desc="Log" id="Log_800054" label="" logtext="Boltons_ReponseQueryBoltons :" sourceExpr=" print_r(result)">
       <stdTransitionLogPlay xmi:type="gmap:StandardTransitionLogPlayType" xmi:id="_qQ2uQG9ZEeqWQbNrfNviJw" source="_j_gsCW9ZEeqWQbNrfNviJw" targetElement="_j_gsC29ZEeqWQbNrfNviJw"/>
     </log>
-    <script xmi:type="gmap:ScriptType" xmi:id="_tQ3YEm9YEeqWQbNrfNviJw" connetorRequest="queryBoltons" connetorType="BoltonManagement" fetchtimeout="23456ms" id="qBoltons222" isData="false" label="qBoltons" sensitivityLocal="false">
-      <var xmi:type="gmap:VarType" xmi:id="_tQ3YE29YEeqWQbNrfNviJw" name="result"/>
-      <connetorParameter xmi:type="gmap:ConnetorParameterType" xmi:id="_jqjp4H5mEeqxFsnp-Q8kRw" name="queryBoltons.queryCommonInfo.currencyCode" value="'ARS'"/>
-      <connetorParameter xmi:type="gmap:ConnetorParameterType" xmi:id="_jqjp4X5mEeqxFsnp-Q8kRw" name="queryBoltons.queryCommonInfo.pagingInfo.token" value=""/>
-      <connetorParameter xmi:type="gmap:ConnetorParameterType" xmi:id="_jqjp4n5mEeqxFsnp-Q8kRw" name="queryBoltons.queryCommonInfo.pagingInfo.numRegs" value="50"/>
-      <connetorParameter xmi:type="gmap:ConnetorParameterType" xmi:id="_jqjp435mEeqxFsnp-Q8kRw" name="queryBoltons.queryCommonInfo.pagingInfo.extension.@anyAttributeParam" value=""/>
-      <connetorParameter xmi:type="gmap:ConnetorParameterType" xmi:id="_jqjp5H5mEeqxFsnp-Q8kRw" name="queryBoltons.queryCommonInfo.pagingInfo.extension.any" value=""/>
-      <connetorParameter xmi:type="gmap:ConnetorParameterType" xmi:id="_jqjp5X5mEeqxFsnp-Q8kRw" name="queryBoltons.queryCommonInfo.extension.@anyAttributeParam" value=""/>
-      <connetorParameter xmi:type="gmap:ConnetorParameterType" xmi:id="_jqjp5n5mEeqxFsnp-Q8kRw" name="queryBoltons.queryCommonInfo.extension.any" value=""/>
-      <connetorParameter xmi:type="gmap:ConnetorParameterType" xmi:id="_jqjp535mEeqxFsnp-Q8kRw" name="queryBoltons.subscriberId.choice" value="'&amp;lt;e164Number&amp;gt;' + msisdn + '&amp;lt;/e164Number&amp;gt;'"/>
-      <connetorParameter xmi:type="gmap:ConnetorParameterType" xmi:id="_jqjp6H5mEeqxFsnp-Q8kRw" name="queryBoltons.boltonIdentifierFilter.boltonCode" value=""/>
-      <connetorParameter xmi:type="gmap:ConnetorParameterType" xmi:id="_jqjp6X5mEeqxFsnp-Q8kRw" name="queryBoltons.boltonIdentifierFilter.boltonTypeCode" value=""/>
-      <connetorParameter xmi:type="gmap:ConnetorParameterType" xmi:id="_jqjp6n5mEeqxFsnp-Q8kRw" name="queryBoltons.boltonIdentifierFilter.boltonInstance" value=""/>
-      <connetorParameter xmi:type="gmap:ConnetorParameterType" xmi:id="_jqjp635mEeqxFsnp-Q8kRw" name="queryBoltons.boltonIdentifierFilter.extension.@anyAttributeParam" value=""/>
-      <connetorParameter xmi:type="gmap:ConnetorParameterType" xmi:id="_jqjp7H5mEeqxFsnp-Q8kRw" name="queryBoltons.boltonIdentifierFilter.extension.any" value=""/>
-      <connetorParameter xmi:type="gmap:ConnetorParameterType" xmi:id="_jqjp7X5mEeqxFsnp-Q8kRw" name="queryBoltons.boltonStatusFilter" value="'y'"/>
-      <connetorParameter xmi:type="gmap:ConnetorParameterType" xmi:id="_jqjp7n5mEeqxFsnp-Q8kRw" name="queryBoltons.extension.@anyAttributeParam" value=""/>
-      <connetorParameter xmi:type="gmap:ConnetorParameterType" xmi:id="_jqjp735mEeqxFsnp-Q8kRw" name="queryBoltons.extension.any" value=""/>
-      <connetorParameter xmi:type="gmap:ConnetorParameterType" xmi:id="_jqjp8H5mEeqxFsnp-Q8kRw" name="http.authorization" value=""/>
-      <connetorParameter xmi:type="gmap:ConnetorParameterType" xmi:id="_jqjp8X5mEeqxFsnp-Q8kRw" name="headers" value="guid()"/>
-      <connetorParameter xmi:type="gmap:ConnetorParameterType" xmi:id="_jqjp8n5mEeqxFsnp-Q8kRw" name="private" value="false"/>
-      <stdTransitionScriptLog xmi:type="gmap:StandardTransitionScriptLogType" xmi:id="_pyQtwG9ZEeqWQbNrfNviJw" source="_tQ3YEm9YEeqWQbNrfNviJw" targetElement="_j_gsCW9ZEeqWQbNrfNviJw"/>
+    <script xmi:type="gmap:ScriptType" xmi:id="_XSt5ULJBEequysycqUlAaQ" connetorRequest="queryBoltons" connetorType="BoltonManagement" id="Script_1" isData="false" label="Script" sensitivityLocal="false">
+      <var xmi:type="gmap:VarType" xmi:id="_hUoqMLJBEequysycqUlAaQ" name="result"/>
+      <connetorParameter xmi:type="gmap:ConnetorParameterType" xmi:id="_gztXgLJ6Eeqhto0xOzZWNw" name="queryBoltons.queryCommonInfo.currencyCode" value="'ARS'"/>
+      <connetorParameter xmi:type="gmap:ConnetorParameterType" xmi:id="_gztXgbJ6Eeqhto0xOzZWNw" name="queryBoltons.queryCommonInfo.pagingInfo.token" value=""/>
+      <connetorParameter xmi:type="gmap:ConnetorParameterType" xmi:id="_gztXgrJ6Eeqhto0xOzZWNw" name="queryBoltons.queryCommonInfo.pagingInfo.numRegs" value="50"/>
+      <connetorParameter xmi:type="gmap:ConnetorParameterType" xmi:id="_gztXg7J6Eeqhto0xOzZWNw" name="queryBoltons.queryCommonInfo.pagingInfo.extension.any" value=""/>
+      <connetorParameter xmi:type="gmap:ConnetorParameterType" xmi:id="_gztXhLJ6Eeqhto0xOzZWNw" name="queryBoltons.queryCommonInfo.pagingInfo.extension.@anyAttributeParam" value=""/>
+      <connetorParameter xmi:type="gmap:ConnetorParameterType" xmi:id="_gztXhbJ6Eeqhto0xOzZWNw" name="queryBoltons.queryCommonInfo.extension.any" value=""/>
+      <connetorParameter xmi:type="gmap:ConnetorParameterType" xmi:id="_gztXhrJ6Eeqhto0xOzZWNw" name="queryBoltons.queryCommonInfo.extension.@anyAttributeParam" value=""/>
+      <connetorParameter xmi:type="gmap:ConnetorParameterType" xmi:id="_gztXh7J6Eeqhto0xOzZWNw" name="queryBoltons.subscriberId.choice" value="'&amp;lt;e164Number&amp;gt;' + msisdn + '&amp;lt;/e164Number&amp;gt;'"/>
+      <connetorParameter xmi:type="gmap:ConnetorParameterType" xmi:id="_gzt-kLJ6Eeqhto0xOzZWNw" name="queryBoltons.boltonIdentifierFilter.boltonCode" value=""/>
+      <connetorParameter xmi:type="gmap:ConnetorParameterType" xmi:id="_gzt-kbJ6Eeqhto0xOzZWNw" name="queryBoltons.boltonIdentifierFilter.boltonTypeCode" value=""/>
+      <connetorParameter xmi:type="gmap:ConnetorParameterType" xmi:id="_gzt-krJ6Eeqhto0xOzZWNw" name="queryBoltons.boltonIdentifierFilter.boltonInstance" value=""/>
+      <connetorParameter xmi:type="gmap:ConnetorParameterType" xmi:id="_gzt-k7J6Eeqhto0xOzZWNw" name="queryBoltons.boltonIdentifierFilter.extension.any" value=""/>
+      <connetorParameter xmi:type="gmap:ConnetorParameterType" xmi:id="_gzt-lLJ6Eeqhto0xOzZWNw" name="queryBoltons.boltonIdentifierFilter.extension.@anyAttributeParam" value=""/>
+      <connetorParameter xmi:type="gmap:ConnetorParameterType" xmi:id="_gzt-lbJ6Eeqhto0xOzZWNw" name="queryBoltons.boltonStatusFilter" value="'Y'"/>
+      <connetorParameter xmi:type="gmap:ConnetorParameterType" xmi:id="_gzt-lrJ6Eeqhto0xOzZWNw" name="queryBoltons.extension.any" value=""/>
+      <connetorParameter xmi:type="gmap:ConnetorParameterType" xmi:id="_gzt-l7J6Eeqhto0xOzZWNw" name="queryBoltons.extension.@anyAttributeParam" value=""/>
+      <connetorParameter xmi:type="gmap:ConnetorParameterType" xmi:id="_gzt-mLJ6Eeqhto0xOzZWNw" name="http.authorization" value=""/>
+      <connetorParameter xmi:type="gmap:ConnetorParameterType" xmi:id="_gzt-mbJ6Eeqhto0xOzZWNw" name="headers" value="guid()"/>
+      <connetorParameter xmi:type="gmap:ConnetorParameterType" xmi:id="_gzt-mrJ6Eeqhto0xOzZWNw" name="privateRequest" value="false"/>
+      <stdTransitionScriptLog xmi:type="gmap:StandardTransitionScriptLogType" xmi:id="_zuy4YLJBEequysycqUlAaQ" source="_XSt5ULJBEequysycqUlAaQ" targetElement="_j_gsCW9ZEeqWQbNrfNviJw"/>
     </script>
   </gmap:VxmlType>
   <notation:Diagram xmi:id="_Z4xkpG7tEeqWQbNrfNviJw" type="Gmap" element="_Z4xkoG7tEeqWQbNrfNviJw" name="BoltonManagement.mmdiag" measurementUnit="Pixel">
@@ -60,9 +60,6 @@
     </children>
     <children xmi:type="notation:Shape" xmi:id="_Z4xkqW7tEeqWQbNrfNviJw" type="1001" element="_Z4xko27tEeqWQbNrfNviJw" fontName="Segoe UI">
       <layoutConstraint xmi:type="notation:Bounds" xmi:id="_Z4xkqm7tEeqWQbNrfNviJw"/>
-    </children>
-    <children xmi:type="notation:Shape" xmi:id="_tQ3YEG9YEeqWQbNrfNviJw" type="1010" element="_tQ3YEm9YEeqWQbNrfNviJw" fontName="Segoe UI">
-      <layoutConstraint xmi:type="notation:Bounds" xmi:id="_tQ3YEW9YEeqWQbNrfNviJw" x="270" y="225"/>
     </children>
     <children xmi:type="notation:Shape" xmi:id="_FMLhsW9ZEeqWQbNrfNviJw" type="1017" element="_FMMIwm9ZEeqWQbNrfNviJw" fontName="Segoe UI">
       <layoutConstraint xmi:type="notation:Bounds" xmi:id="_FMLhsm9ZEeqWQbNrfNviJw" x="270" y="150"/>
@@ -82,6 +79,9 @@
     <children xmi:type="notation:Shape" xmi:id="_j_gsBG9ZEeqWQbNrfNviJw" type="1004" element="_j_gsC29ZEeqWQbNrfNviJw" fontName="Segoe UI">
       <layoutConstraint xmi:type="notation:Bounds" xmi:id="_j_gsBW9ZEeqWQbNrfNviJw" x="555" y="315"/>
     </children>
+    <children xmi:type="notation:Shape" xmi:id="_XS1OELJBEequysycqUlAaQ" type="1010" element="_XSt5ULJBEequysycqUlAaQ" fontName="Segoe UI">
+      <layoutConstraint xmi:type="notation:Bounds" xmi:id="_XS11ILJBEequysycqUlAaQ" x="271" y="237"/>
+    </children>
     <styles xmi:type="notation:DiagramStyle" xmi:id="_Z4xkq27tEeqWQbNrfNviJw"/>
     <edges xmi:type="notation:Connector" xmi:id="_iGCB4G9ZEeqWQbNrfNviJw" type="3263" element="_iGBa0G9ZEeqWQbNrfNviJw" source="_Z4xkpW7tEeqWQbNrfNviJw" target="_FMMIwG9ZEeqWQbNrfNviJw">
       <styles xmi:type="notation:FontStyle" xmi:id="_iGCB4W9ZEeqWQbNrfNviJw" fontName="Segoe UI"/>
@@ -90,15 +90,6 @@
     <edges xmi:type="notation:Connector" xmi:id="_ierycG9ZEeqWQbNrfNviJw" type="3273" element="_ieqkUG9ZEeqWQbNrfNviJw" source="_FMMIwG9ZEeqWQbNrfNviJw" target="_FMLhsW9ZEeqWQbNrfNviJw">
       <styles xmi:type="notation:FontStyle" xmi:id="_ierycW9ZEeqWQbNrfNviJw" fontName="Segoe UI"/>
       <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_ierycm9ZEeqWQbNrfNviJw" points="[-3, 20, -3, -40]$[-3, 40, -3, -20]"/>
-    </edges>
-    <edges xmi:type="notation:Connector" xmi:id="_i4s08G9ZEeqWQbNrfNviJw" type="3399" element="_i4sN4G9ZEeqWQbNrfNviJw" source="_FMLhsW9ZEeqWQbNrfNviJw" target="_tQ3YEG9YEeqWQbNrfNviJw">
-      <styles xmi:type="notation:FontStyle" xmi:id="_i4s08W9ZEeqWQbNrfNviJw" fontName="Segoe UI"/>
-      <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_i4s08m9ZEeqWQbNrfNviJw" points="[-3, 8, -4, -55]$[-3, 43, -4, -20]"/>
-      <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_i463YG9ZEeqWQbNrfNviJw" id="(0.4881889763779528,0.8)"/>
-    </edges>
-    <edges xmi:type="notation:Connector" xmi:id="_pyhMcG9ZEeqWQbNrfNviJw" type="3042" element="_pyQtwG9ZEeqWQbNrfNviJw" source="_tQ3YEG9YEeqWQbNrfNviJw" target="_j_gsAm9ZEeqWQbNrfNviJw">
-      <styles xmi:type="notation:FontStyle" xmi:id="_pyhMcW9ZEeqWQbNrfNviJw" fontName="Segoe UI"/>
-      <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_pyhMcm9ZEeqWQbNrfNviJw" points="[-3, 20, -3, -70]$[-3, 70, -3, -20]"/>
     </edges>
     <edges xmi:type="notation:Connector" xmi:id="_qQ3VUG9ZEeqWQbNrfNviJw" type="3329" element="_qQ2uQG9ZEeqWQbNrfNviJw" source="_j_gsAm9ZEeqWQbNrfNviJw" target="_j_gsBG9ZEeqWQbNrfNviJw">
       <styles xmi:type="notation:FontStyle" xmi:id="_qQ3VUW9ZEeqWQbNrfNviJw" fontName="Segoe UI"/>
@@ -121,6 +112,15 @@
       </children>
       <styles xmi:type="notation:FontStyle" xmi:id="_veLHsm9ZEeqWQbNrfNviJw" fontName="Segoe UI"/>
       <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_veLHs29ZEeqWQbNrfNviJw" points="[-5, 20, -5, -85]$[-5, 85, -5, -20]"/>
+    </edges>
+    <edges xmi:type="notation:Connector" xmi:id="_zQrZALJBEequysycqUlAaQ" type="3399" element="_zQl5cLJBEequysycqUlAaQ" source="_FMLhsW9ZEeqWQbNrfNviJw" target="_XS1OELJBEequysycqUlAaQ">
+      <styles xmi:type="notation:FontStyle" xmi:id="_zQsAELJBEequysycqUlAaQ" fontName="Segoe UI"/>
+      <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_zQsAEbJBEequysycqUlAaQ" points="[-2, 20, -3, -67]$[-2, 67, -3, -20]"/>
+    </edges>
+    <edges xmi:type="notation:Connector" xmi:id="_zvNIELJBEequysycqUlAaQ" type="3042" element="_zuy4YLJBEequysycqUlAaQ" source="_XS1OELJBEequysycqUlAaQ" target="_j_gsAm9ZEeqWQbNrfNviJw">
+      <styles xmi:type="notation:FontStyle" xmi:id="_zvNIEbJBEequysycqUlAaQ" fontName="Segoe UI"/>
+      <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_zvNIErJBEequysycqUlAaQ" points="[-5, 20, 0, -46]$[-8, 58, -3, -8]"/>
+      <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_zvmJoLJBEequysycqUlAaQ" id="(0.4645669291338583,0.2)"/>
     </edges>
   </notation:Diagram>
 </xmi:XMI>

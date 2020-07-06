@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="US-ASCII"?>
+<ascon version="1.2">
+<connector icon="queryBalance.gif" id="queryBalance" label="queryBalance" version="1.0">
+<!--Textual description of the connector-->
+<description>Connector to the charging database for IVR Prepaid</description>
+<include copy="true" file="queryBalance.es"/>
+<properties name="queryBalance">
+<property name="AS_URL" value="/SOAPConnector/SOAPConnector/"/>
+<property name="application" value="queryBalance"/>
+<property name="service" value="queryBalance"/>
+</properties>
+</connector>
+<requests>
+<request function="queryBalance_queryBalance" id="queryBalance" label="queryBalance" type="JSON">
+<parameters>
+<param default="" label="queryBalance.channel" name="queryBalance.channel" required="true" target="URL">
+<description>channel is of string type</description>
+</param>
+<param default="" label="queryBalance.msisdn" name="queryBalance.msisdn" required="true" target="URL">
+<description>msisdn is of string type</description>
+</param>
+<param default="" label="http.authorization" name="http.authorization" required="false" target="URL">
+<description/>
+</param>
+<param default="" label="headers" name="headers" required="false" target="URL">
+<description/>
+</param>
+<param default="" label="privateRequest" name="privateRequest" required="false" target="URL">
+<description/>
+</param>
+</parameters>
+</request>
+<request function="getBalanceManagementByMsisdn_queryBalance" id="getBalanceManagementByMsisdn" label="getBalanceManagementByMsisdn" type="JSON">
+<parameters>
+<param default="" label="getBalanceManagementByMsisdn.channel" name="getBalanceManagementByMsisdn.channel" required="true" target="URL">
+<description>channel is of string type</description>
+</param>
+<param default="" label="getBalanceManagementByMsisdn.msisdn" name="getBalanceManagementByMsisdn.msisdn" required="true" target="URL">
+<description>msisdn is of string type</description>
+</param>
+<param default="" label="http.authorization" name="http.authorization" required="false" target="URL">
+<description/>
+</param>
+<param default="" label="headers" name="headers" required="false" target="URL">
+<description/>
+</param>
+<param default="" label="privateRequest" name="privateRequest" required="false" target="URL">
+<description/>
+</param>
+</parameters>
+</request>
+</requests>
+</ascon>

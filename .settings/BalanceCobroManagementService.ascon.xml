@@ -1,54 +1,50 @@
 <?xml version="1.0" encoding="US-ASCII"?>
 <ascon version="1.2">
-<connector id="BalanceCobroManagementService" label="BalanceCobroManagementService" icon="BalanceCobroManagementService.gif" version="1.0">
-<!--
-			Textual description of the connector
-		-->
-<description>
-			Connector to the charging database for IVR Prepaid
-		</description>
+<connector icon="BalanceCobroManagementService.gif" id="BalanceCobroManagementService" label="BalanceCobroManagementService" version="1.0">
+<!--Textual description of the connector-->
+<description>Connector to the charging database for IVR Prepaid</description>
 <include copy="true" file="BalanceCobroManagementService.es"/>
 <properties name="BalanceCobroManagementService">
 <property name="AS_URL" value="/SOAPConnector/SOAPConnector/"/>
 <property name="application" value="BalanceCobroManagementService"/>
-<property name="service" value="queryBalance"/>
+<property name="service" value="BalanceCobroManagementService"/>
 </properties>
 </connector>
 <requests>
-<request id="queryBalance" label="queryBalance" function="queryBalance_BalanceCobroManagementService" type="JSON">
+<request function="queryBalance_BalanceCobroManagementService" id="queryBalance" label="queryBalance" type="JSON">
 <parameters>
-<param label="queryBalance.channel" name="queryBalance.channel" default="" target="function" required="true">
-<description>channel is of string type.</description>
+<param default="" label="queryBalance.channel" name="queryBalance.channel" required="true" target="URL">
+<description>channel is of string type</description>
 </param>
-<param label="queryBalance.msisdn" name="queryBalance.msisdn" default="" target="function" required="true">
-<description>msisdn is of string type.</description>
+<param default="" label="queryBalance.msisdn" name="queryBalance.msisdn" required="true" target="URL">
+<description>msisdn is of string type</description>
 </param>
-<param name="http.authorization" label="http.authorization" required="false" default="" target="function">
+<param default="" label="http.authorization" name="http.authorization" required="false" target="URL">
 <description/>
 </param>
-<param name="headers" label="headers" required="false" default="" target="function">
+<param default="" label="headers" name="headers" required="false" target="URL">
 <description/>
 </param>
-<param name="privateRequest" default="false" label="private" target="function">
+<param default="" label="privateRequest" name="privateRequest" required="false" target="URL">
 <description/>
 </param>
 </parameters>
 </request>
-<request id="getBalanceManagementByMsisdn" label="getBalanceManagementByMsisdn" function="getBalanceManagementByMsisdn_BalanceCobroManagementService" type="JSON">
+<request function="getBalanceManagementByMsisdn_BalanceCobroManagementService" id="getBalanceManagementByMsisdn" label="getBalanceManagementByMsisdn" type="JSON">
 <parameters>
-<param label="getBalanceManagementByMsisdn.channel" name="getBalanceManagementByMsisdn.channel" default="" target="function" required="true">
-<description>channel is of string type.</description>
+<param default="" label="getBalanceManagementByMsisdn.channel" name="getBalanceManagementByMsisdn.channel" required="true" target="URL">
+<description>channel is of string type</description>
 </param>
-<param label="getBalanceManagementByMsisdn.msisdn" name="getBalanceManagementByMsisdn.msisdn" default="" target="function" required="true">
-<description>msisdn is of string type.</description>
+<param default="" label="getBalanceManagementByMsisdn.msisdn" name="getBalanceManagementByMsisdn.msisdn" required="true" target="URL">
+<description>msisdn is of string type</description>
 </param>
-<param name="http.authorization" label="http.authorization" required="false" default="" target="function">
+<param default="" label="http.authorization" name="http.authorization" required="false" target="URL">
 <description/>
 </param>
-<param name="headers" label="headers" required="false" default="" target="function">
+<param default="" label="headers" name="headers" required="false" target="URL">
 <description/>
 </param>
-<param name="privateRequest" default="false" label="private" target="function">
+<param default="" label="privateRequest" name="privateRequest" required="false" target="URL">
 <description/>
 </param>
 </parameters>

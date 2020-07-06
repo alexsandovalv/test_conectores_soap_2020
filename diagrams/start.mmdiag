@@ -6,7 +6,7 @@
     </start>
     <globalEventHandler xmi:type="gmap:GlobalEventHandlerType" xmi:id="_L3NBwm61EeqWQbNrfNviJw"/>
     <variable xmi:type="gmap:VariableType" xmi:id="_L3NBw261EeqWQbNrfNviJw"/>
-    <menu xmi:type="gmap:MenuType" xmi:id="_CG98UG7tEeqWQbNrfNviJw" accept="exact" choiceList="Choice_1,Choice_2,Choice_3,Choice_4,Choice_5,Choice_6,Choice_7,Choice_8" customXML="" choicePosition="AN,AN,AN,AN,AN,AN,AN,AN" dtmfNumbering="startat1" dtmfSelection="true" id="Menu_test" label="Menu_test" menuCategory="staticMenu" noInputPromptCount="1" noMatchPromptCount="1" promptFile="../promptFiles/audio/menu_test_ws.wav" repromptNI="false" repromptNM="false">
+    <menu xmi:type="gmap:MenuType" xmi:id="_CG98UG7tEeqWQbNrfNviJw" accept="exact" choiceList="Choice_1,Choice_2,Choice_3,Choice_4,Choice_5,Choice_6,Choice_7,Choice_8,Choice_9" customXML="" choicePosition="AN,AN,AN,AN,AN,AN,AN,AN,AN" dtmfNumbering="startat1" dtmfSelection="true" id="Menu_test" label="Menu_test" menuCategory="staticMenu" noInputPromptCount="1" noMatchPromptCount="1" promptFile="../promptFiles/audio/menu_test_ws.wav" repromptNI="false" repromptNM="false">
       <play xmi:type="gmap:PromptType" xmi:id="_G2XqsG7tEeqWQbNrfNviJw" promptFile="../promptFiles/audio/menu_test_ws.wav" type="audio"/>
       <stdTransitionMenuChoice xmi:type="gmap:StandardTransitionMenuChoiceType" xmi:id="_G82GIG7tEeqWQbNrfNviJw" source="_CG98UG7tEeqWQbNrfNviJw" targetElement="_GzqU8G7tEeqWQbNrfNviJw"/>
       <stdTransitionMenuChoice xmi:type="gmap:StandardTransitionMenuChoiceType" xmi:id="_G-rSIG7tEeqWQbNrfNviJw" source="_CG98UG7tEeqWQbNrfNviJw" targetElement="_G9V1YG7tEeqWQbNrfNviJw"/>
@@ -16,6 +16,7 @@
       <stdTransitionMenuChoice xmi:type="gmap:StandardTransitionMenuChoiceType" xmi:id="_HFqD4G7tEeqWQbNrfNviJw" source="_CG98UG7tEeqWQbNrfNviJw" targetElement="_HE09cG7tEeqWQbNrfNviJw"/>
       <stdTransitionMenuChoice xmi:type="gmap:StandardTransitionMenuChoiceType" xmi:id="_HHG1YG7tEeqWQbNrfNviJw" source="_CG98UG7tEeqWQbNrfNviJw" targetElement="_HGVZUG7tEeqWQbNrfNviJw"/>
       <stdTransitionMenuChoice xmi:type="gmap:StandardTransitionMenuChoiceType" xmi:id="_HIumAG7tEeqWQbNrfNviJw" source="_CG98UG7tEeqWQbNrfNviJw" targetElement="_HH6GoG7tEeqWQbNrfNviJw"/>
+      <stdTransitionMenuChoice xmi:type="gmap:StandardTransitionMenuChoiceType" xmi:id="_hVNx4JusEeqo57bimSOoLA" source="_CG98UG7tEeqWQbNrfNviJw" targetElement="_QpDFoJujEeqo57bimSOoLA"/>
     </menu>
     <choice xmi:type="gmap:ChoiceType" xmi:id="_GzqU8G7tEeqWQbNrfNviJw" dtmf="auto numbered" id="Choice_1">
       <stdTransitionChoiceGotoTarget xmi:type="gmap:StandardTransitionChoiceGotoTargetType" xmi:id="_spX84G7tEeqWQbNrfNviJw" source="_GzqU8G7tEeqWQbNrfNviJw" targetElement="_pgYLoG7tEeqWQbNrfNviJw"/>
@@ -41,6 +42,9 @@
     <choice xmi:type="gmap:ChoiceType" xmi:id="_HH6GoG7tEeqWQbNrfNviJw" dtmf="auto numbered" id="Choice_8">
       <stdTransitionChoiceGotoTarget xmi:type="gmap:StandardTransitionChoiceGotoTargetType" xmi:id="_Xs5tgG7uEeqWQbNrfNviJw" source="_HH6GoG7tEeqWQbNrfNviJw" targetElement="_V8W88G7uEeqWQbNrfNviJw"/>
     </choice>
+    <choice xmi:type="gmap:ChoiceType" xmi:id="_QpDFoJujEeqo57bimSOoLA" accept="" dtmf="auto numbered" enabledIf="" id="Choice_9" label="Choice">
+      <stdTransitionChoiceGotoTarget xmi:type="gmap:StandardTransitionChoiceGotoTargetType" xmi:id="_QpDFoZujEeqo57bimSOoLA" source="_QpDFoJujEeqo57bimSOoLA" targetElement="_QpDssJujEeqo57bimSOoLA"/>
+    </choice>
     <setVariable xmi:type="gmap:SetType" xmi:id="_CPi-om7vEeqWQbNrfNviJw" id="calling_number" label="calling_number">
       <var xmi:type="gmap:VarType" xmi:id="_EkOXAG7vEeqWQbNrfNviJw" name="newNumero" value="connection.ccxml.values.passertedid"/>
       <var xmi:type="gmap:VarType" xmi:id="_EkOXAW7vEeqWQbNrfNviJw" name="calling_number" value="getMsisdn(anonimo,calling_number)"/>
@@ -61,6 +65,7 @@
     <gotoTarget xmi:type="gmap:GotoTargetType" xmi:id="_KTNIgG7uEeqWQbNrfNviJw" id="GotoTarget_6" label="GotoTarget" target="sendSMSService.vxml"/>
     <gotoTarget xmi:type="gmap:GotoTargetType" xmi:id="_PdZVcG7uEeqWQbNrfNviJw" id="GotoTarget_7" label="GotoTarget" target="SvaService.vxml"/>
     <gotoTarget xmi:type="gmap:GotoTargetType" xmi:id="_V8W88G7uEeqWQbNrfNviJw" id="GotoTarget_8" label="GotoTarget" target="VoucherManagement.vxml"/>
+    <gotoTarget xmi:type="gmap:GotoTargetType" xmi:id="_QpDssJujEeqo57bimSOoLA" id="GotoTarget_9" label="GotoTarget" target="CyclicActionsManagement.vxml"/>
     <log xmi:type="gmap:LogType" xmi:id="_L60KEm7vEeqWQbNrfNviJw" desc="calling_number" id="Log_1" label="Application.Info" logtext="numero de llamada: " sourceExpr="calling_number+ ', numero corto: '+called_number+', ivr_session_id: '+ivr_session_id+', ip aplicacion: '+ivr_session_ip+', passertedid: '+connection.ccxml.values.passertedid">
       <stdTransitionLogMenu xmi:type="gmap:StandardTransitionLogMenuType" xmi:id="_ZSNpAG7vEeqWQbNrfNviJw" source="_L60KEm7vEeqWQbNrfNviJw" targetElement="_CG98UG7tEeqWQbNrfNviJw"/>
     </log>
@@ -131,6 +136,12 @@
     </children>
     <children xmi:type="notation:Shape" xmi:id="_L60KEG7vEeqWQbNrfNviJw" type="1017" element="_L60KEm7vEeqWQbNrfNviJw" fontName="Segoe UI">
       <layoutConstraint xmi:type="notation:Bounds" xmi:id="_L60KEW7vEeqWQbNrfNviJw" x="420" y="60"/>
+    </children>
+    <children xmi:type="notation:Shape" xmi:id="_Qo-NIJujEeqo57bimSOoLA" type="1022" element="_QpDFoJujEeqo57bimSOoLA" fontName="Segoe UI">
+      <layoutConstraint xmi:type="notation:Bounds" xmi:id="_Qo-NIZujEeqo57bimSOoLA" x="846" y="324"/>
+    </children>
+    <children xmi:type="notation:Shape" xmi:id="_QpCekJujEeqo57bimSOoLA" type="1020" element="_QpDssJujEeqo57bimSOoLA" fontName="Segoe UI">
+      <layoutConstraint xmi:type="notation:Bounds" xmi:id="_QpCekZujEeqo57bimSOoLA" x="801" y="384"/>
     </children>
     <styles xmi:type="notation:DiagramStyle" xmi:id="_L3NBy261EeqWQbNrfNviJw"/>
     <edges xmi:type="notation:Connector" xmi:id="_G837UG7tEeqWQbNrfNviJw" type="3354" element="_G82GIG7tEeqWQbNrfNviJw" source="_CG-jYG7tEeqWQbNrfNviJw" target="_G2jQ4G7tEeqWQbNrfNviJw">
@@ -214,6 +225,16 @@
     <edges xmi:type="notation:Connector" xmi:id="_ZSOQEG7vEeqWQbNrfNviJw" type="3134" element="_ZSNpAG7vEeqWQbNrfNviJw" source="_L60KEG7vEeqWQbNrfNviJw" target="_CG-jYG7tEeqWQbNrfNviJw">
       <styles xmi:type="notation:FontStyle" xmi:id="_ZSOQEW7vEeqWQbNrfNviJw" fontName="Segoe UI"/>
       <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_ZSOQEm7vEeqWQbNrfNviJw" points="[-8, 20, -8, -40]$[-8, 40, -8, -20]"/>
+    </edges>
+    <edges xmi:type="notation:Connector" xmi:id="_QpETwJujEeqo57bimSOoLA" type="3293" element="_QpDFoZujEeqo57bimSOoLA" source="_Qo-NIJujEeqo57bimSOoLA" target="_QpCekJujEeqo57bimSOoLA">
+      <styles xmi:type="notation:FontStyle" xmi:id="_QpETwZujEeqo57bimSOoLA" fontName="Segoe UI"/>
+      <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_QpETwpujEeqo57bimSOoLA" points="[-3, 20, -1, -40]$[-3, 40, -1, -20]"/>
+    </edges>
+    <edges xmi:type="notation:Connector" xmi:id="_hVTRcJusEeqo57bimSOoLA" type="3354" element="_hVNx4JusEeqo57bimSOoLA" source="_CG-jYG7tEeqWQbNrfNviJw" target="_Qo-NIJujEeqo57bimSOoLA">
+      <styles xmi:type="notation:FontStyle" xmi:id="_hVTRcZusEeqo57bimSOoLA" fontName="Segoe UI"/>
+      <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_hVTRcpusEeqo57bimSOoLA" points="[13, 0, -320, -184]$[312, 0, -21, -184]$[333, 0, 0, -184]$[333, 178, 0, -6]"/>
+      <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_hVW70JusEeqo57bimSOoLA" id="(0.8976377952755905,0.65)"/>
+      <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_hVW70ZusEeqo57bimSOoLA" id="(0.525,0.15)"/>
     </edges>
   </notation:Diagram>
 </xmi:XMI>

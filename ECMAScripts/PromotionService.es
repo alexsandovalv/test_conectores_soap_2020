@@ -56,48 +56,35 @@
     }
     return out;
 	}	
-	function doPromotion_PromotionService(doPromotion_channel,doPromotion_msisdn,doPromotion_promotionId,http_authorization,headers,privateRequest){
-	    	var lRequest = "";
+function doPromotion_PromotionService(doPromotion_channel,doPromotion_msisdn,doPromotion_promotionId,doPromotionByShortCodeAndKeyword_channel,doPromotionByShortCodeAndKeyword_msisdn,doPromotionByShortCodeAndKeyword_shortCode,doPromotionByShortCodeAndKeyword_keyword,http_authorization,headers,privateRequest){
+			var lRequest = "";
 			lRequest = PromotionService.AS_URL + '?' + "_service=" + PromotionService.service + Ptf_DIM + "_application=" + PromotionService.application + Ptf_DIM + "_operation=" + "doPromotion"
 						 + Ptf_DIM + "_mode=" + "JSON"
-						 + Ptf_DIM + "request=" +  request + Ptf_DIM + "doPromotion.channel=" + encodeURIComponent(doPromotion_channel) + Ptf_DIM + "doPromotion.msisdn=" + encodeURIComponent(doPromotion_msisdn) + Ptf_DIM + "doPromotion.promotionId=" + encodeURIComponent(doPromotion_promotionId) + buildHeaders_PromotionService(headers) + Ptf_DIM + "private=" + encodeURIComponent(privateRequest);
+						 + Ptf_DIM + "request=" + request + Ptf_DIM + "doPromotion.channel=" + encodeURIComponent(doPromotion_channel) + Ptf_DIM + "doPromotion.msisdn=" + encodeURIComponent(doPromotion_msisdn) + Ptf_DIM + "doPromotion.promotionId=" + encodeURIComponent(doPromotion_promotionId) + Ptf_DIM + "doPromotionByShortCodeAndKeyword.channel=" + encodeURIComponent(doPromotionByShortCodeAndKeyword_channel) + Ptf_DIM + "doPromotionByShortCodeAndKeyword.msisdn=" + encodeURIComponent(doPromotionByShortCodeAndKeyword_msisdn) + Ptf_DIM + "doPromotionByShortCodeAndKeyword.shortCode=" + encodeURIComponent(doPromotionByShortCodeAndKeyword_shortCode) + Ptf_DIM + "doPromotionByShortCodeAndKeyword.keyword=" + encodeURIComponent(doPromotionByShortCodeAndKeyword_keyword) + buildHeaders_PromotionService(headers);
 if(http_authorization != null){
 lRequest = lRequest + Ptf_DIM + "http.authorization="+encodeURIComponent(base64Encode(http_authorization));
 }
-			return lRequest;
-			}
-		function doPromotionByShortCodeAndKeyword_PromotionService(doPromotionByShortCodeAndKeyword_channel,doPromotionByShortCodeAndKeyword_msisdn,doPromotionByShortCodeAndKeyword_shortCode,doPromotionByShortCodeAndKeyword_keyword,http_authorization,headers,privateRequest){
-	    	var lRequest = "";
+if(privateRequest != null){
+lRequest = lRequest + Ptf_DIM + "private="+encodeURIComponent(base64Encode(privateRequest));
+}else{
+lRequest = lRequest + Ptf_DIM + "private="+encodeURIComponent(base64Encode("false"));
+}
+									return lRequest;
+}
+
+function doPromotionByShortCodeAndKeyword_PromotionService(doPromotionByShortCodeAndKeyword_channel,doPromotionByShortCodeAndKeyword_msisdn,doPromotionByShortCodeAndKeyword_shortCode,doPromotionByShortCodeAndKeyword_keyword,http_authorization,headers,privateRequest){
+			var lRequest = "";
 			lRequest = PromotionService.AS_URL + '?' + "_service=" + PromotionService.service + Ptf_DIM + "_application=" + PromotionService.application + Ptf_DIM + "_operation=" + "doPromotionByShortCodeAndKeyword"
 						 + Ptf_DIM + "_mode=" + "JSON"
-						 + Ptf_DIM + "request=" +  request + Ptf_DIM + "doPromotionByShortCodeAndKeyword.channel=" + encodeURIComponent(doPromotionByShortCodeAndKeyword_channel) + Ptf_DIM + "doPromotionByShortCodeAndKeyword.msisdn=" + encodeURIComponent(doPromotionByShortCodeAndKeyword_msisdn) + Ptf_DIM + "doPromotionByShortCodeAndKeyword.shortCode=" + encodeURIComponent(doPromotionByShortCodeAndKeyword_shortCode) + Ptf_DIM + "doPromotionByShortCodeAndKeyword.keyword=" + encodeURIComponent(doPromotionByShortCodeAndKeyword_keyword) + buildHeaders_PromotionService(headers) + Ptf_DIM + "private=" + encodeURIComponent(privateRequest);
-			
-			
-			if(http_authorization != null){
+						 + Ptf_DIM + "request=" + request + Ptf_DIM + "doPromotionByShortCodeAndKeyword.channel=" + encodeURIComponent(doPromotionByShortCodeAndKeyword_channel) + Ptf_DIM + "doPromotionByShortCodeAndKeyword.msisdn=" + encodeURIComponent(doPromotionByShortCodeAndKeyword_msisdn) + Ptf_DIM + "doPromotionByShortCodeAndKeyword.shortCode=" + encodeURIComponent(doPromotionByShortCodeAndKeyword_shortCode) + Ptf_DIM + "doPromotionByShortCodeAndKeyword.keyword=" + encodeURIComponent(doPromotionByShortCodeAndKeyword_keyword) + buildHeaders_PromotionService(headers);
+if(http_authorization != null){
 lRequest = lRequest + Ptf_DIM + "http.authorization="+encodeURIComponent(base64Encode(http_authorization));
 }
-			
-			return lRequest;
-			}
-		
-		function print_r(printthis, returnoutput) {
-		    var output = '';
+if(privateRequest != null){
+lRequest = lRequest + Ptf_DIM + "private="+encodeURIComponent(base64Encode(privateRequest));
+}else{
+lRequest = lRequest + Ptf_DIM + "private="+encodeURIComponent(base64Encode("false"));
+}
+									return lRequest;
+}
 
-		    if(printthis.Class=='Array' || typeof(printthis) == 'object') {
-		    	output += ' { ';
-		    	var coma = '';
-		        for(var i in printthis) {
-		        	output += coma;
-		            output += '\"' +  i + ' \" : ' + print_r(printthis[i], true);
-		            coma=', ';
-		        }
-		        output += '}'
-		    }else {
-		        output += '\"' + printthis + '\"';
-		    }
-
-		    return output;
-
-		} 
-
-		

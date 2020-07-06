@@ -18,9 +18,11 @@ function guid() {
 
 
 function print_r(printthis, returnoutput) {
-    var output = '';
+    ivr_log_ws="Imprimiendo log";
+	var output = '';
 
     if(printthis.Class=='Array' || typeof(printthis) == 'object') {
+    	ivr_log_ws+="Paso 1";
     	output += ' { ';
     	var coma = '';
         for(var i in printthis) {
@@ -30,9 +32,10 @@ function print_r(printthis, returnoutput) {
         }
         output += '}'
     }else {
+    	ivr_log_ws+="Paso else";
         output += '\"' + printthis + '\"';
     }
-
+    ivr_log_ws+="Fin metodo "+output;
     return output;
 
 }

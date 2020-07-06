@@ -56,44 +56,51 @@
     }
     return out;
 	}	
-	function addService_SvaService(addService_channel,addService_msisdn,addService_destination,addService_message,http_authorization,headers,privateRequest){
-	    	var lRequest = "";
+function addService_SvaService(addService_channel,addService_msisdn,addService_destination,addService_message,http_authorization,headers,privateRequest){
+			var lRequest = "";
 			lRequest = SvaService.AS_URL + '?' + "_service=" + SvaService.service + Ptf_DIM + "_application=" + SvaService.application + Ptf_DIM + "_operation=" + "addService"
 						 + Ptf_DIM + "_mode=" + "JSON"
-						 + Ptf_DIM + "request=" +  request + Ptf_DIM + "addService.channel=" + encodeURIComponent(addService_channel) + Ptf_DIM + "addService.msisdn=" + encodeURIComponent(addService_msisdn) + Ptf_DIM + "addService.destination=" + encodeURIComponent(addService_destination) + buildHeaders_SvaService(headers) + Ptf_DIM + "private=" + encodeURIComponent(privateRequest);
-if(addService_message != null){
-lRequest = lRequest + Ptf_DIM + "addService.message="+encodeURIComponent(addService_message);
-}
+						 + Ptf_DIM + "request=" + request + Ptf_DIM + "addService.channel=" + encodeURIComponent(addService_channel) + Ptf_DIM + "addService.msisdn=" + encodeURIComponent(addService_msisdn) + Ptf_DIM + "addService.destination=" + encodeURIComponent(addService_destination) + Ptf_DIM + "addService.message=" + encodeURIComponent(addService_message) + buildHeaders_SvaService(headers);
 if(http_authorization != null){
 lRequest = lRequest + Ptf_DIM + "http.authorization="+encodeURIComponent(base64Encode(http_authorization));
 }
+if(privateRequest != null){
+lRequest = lRequest + Ptf_DIM + "private="+encodeURIComponent(base64Encode(privateRequest));
+}else{
+lRequest = lRequest + Ptf_DIM + "private="+encodeURIComponent(base64Encode("false"));
+}
+									return lRequest;
+}
 
-			return lRequest;
-			}
-	
-	
-		function findAllServiceGrouped_SvaService(findAllServiceGrouped_channel,findAllServiceGrouped_msisdn,http_authorization,headers,privateRequest){
-	    	var lRequest = "";
+function findAllServiceGrouped_SvaService(findAllServiceGrouped_channel,findAllServiceGrouped_msisdn,http_authorization,headers,privateRequest){
+			var lRequest = "";
 			lRequest = SvaService.AS_URL + '?' + "_service=" + SvaService.service + Ptf_DIM + "_application=" + SvaService.application + Ptf_DIM + "_operation=" + "findAllServiceGrouped"
 						 + Ptf_DIM + "_mode=" + "JSON"
-						 + Ptf_DIM + "request=" +  request + Ptf_DIM + "findAllServiceGrouped.channel=" + encodeURIComponent(findAllServiceGrouped_channel) + Ptf_DIM + "findAllServiceGrouped.msisdn=" + encodeURIComponent(findAllServiceGrouped_msisdn) + buildHeaders_SvaService(headers) + Ptf_DIM + "private=" + encodeURIComponent(privateRequest);
-
-			
-			if(http_authorization != null){
-lRequest = lRequest + Ptf_DIM + "http.authorization="+encodeURIComponent(base64Encode(http_authorization));
-}
-			
-			return lRequest;
-			}
-		function findAllService_SvaService(findAllService_channel,findAllService_msisdn,http_authorization,headers,privateRequest){
-	    	var lRequest = "";
-			lRequest = SvaService.AS_URL + '?' + "_service=" + SvaService.service + Ptf_DIM + "_application=" + SvaService.application + Ptf_DIM + "_operation=" + "findAllService"
-						 + Ptf_DIM + "_mode=" + "JSON"
-						 + Ptf_DIM + "request=" +  request + Ptf_DIM + "findAllService.channel=" + encodeURIComponent(findAllService_channel) + Ptf_DIM + "findAllService.msisdn=" + encodeURIComponent(findAllService_msisdn) + buildHeaders_SvaService(headers) + Ptf_DIM + "private=" + encodeURIComponent(privateRequest);
+						 + Ptf_DIM + "request=" + request + Ptf_DIM + "findAllServiceGrouped.channel=" + encodeURIComponent(findAllServiceGrouped_channel) + Ptf_DIM + "findAllServiceGrouped.msisdn=" + encodeURIComponent(findAllServiceGrouped_msisdn) + buildHeaders_SvaService(headers);
 if(http_authorization != null){
 lRequest = lRequest + Ptf_DIM + "http.authorization="+encodeURIComponent(base64Encode(http_authorization));
 }
+if(privateRequest != null){
+lRequest = lRequest + Ptf_DIM + "private="+encodeURIComponent(base64Encode(privateRequest));
+}else{
+lRequest = lRequest + Ptf_DIM + "private="+encodeURIComponent(base64Encode("false"));
+}
+									return lRequest;
+}
 
-			return lRequest;
-			}
-		
+function findAllService_SvaService(findAllServiceGrouped_channel,findAllServiceGrouped_msisdn,findAllService_channel,findAllService_msisdn,http_authorization,headers,privateRequest){
+			var lRequest = "";
+			lRequest = SvaService.AS_URL + '?' + "_service=" + SvaService.service + Ptf_DIM + "_application=" + SvaService.application + Ptf_DIM + "_operation=" + "findAllService"
+						 + Ptf_DIM + "_mode=" + "JSON"
+						 + Ptf_DIM + "request=" + request + Ptf_DIM + "findAllServiceGrouped.channel=" + encodeURIComponent(findAllServiceGrouped_channel) + Ptf_DIM + "findAllServiceGrouped.msisdn=" + encodeURIComponent(findAllServiceGrouped_msisdn) + Ptf_DIM + "findAllService.channel=" + encodeURIComponent(findAllService_channel) + Ptf_DIM + "findAllService.msisdn=" + encodeURIComponent(findAllService_msisdn) + buildHeaders_SvaService(headers);
+if(http_authorization != null){
+lRequest = lRequest + Ptf_DIM + "http.authorization="+encodeURIComponent(base64Encode(http_authorization));
+}
+if(privateRequest != null){
+lRequest = lRequest + Ptf_DIM + "private="+encodeURIComponent(base64Encode(privateRequest));
+}else{
+lRequest = lRequest + Ptf_DIM + "private="+encodeURIComponent(base64Encode("false"));
+}
+									return lRequest;
+}
+

@@ -1,0 +1,804 @@
+<?xml version="1.0" encoding="US-ASCII"?>
+<ascon version="1.2">
+<connector icon="CyclicActionsManagement.gif" id="CyclicActionsManagement" label="CyclicActionsManagement" version="1.0">
+<!--Textual description of the connector-->
+<description>Connector to the charging database for IVR Prepaid</description>
+<include copy="true" file="CyclicActionsManagement.es"/>
+<properties name="CyclicActionsManagement">
+<property name="AS_URL" value="/SOAPConnector/SOAPConnector/"/>
+<property name="application" value="CyclicActionsManagement"/>
+<property name="service" value="CyclicActionsManagement"/>
+</properties>
+</connector>
+<requests>
+<request function="queryCyclicTopUpsDetails_CyclicActionsManagement" id="queryCyclicTopUpsDetails" label="queryCyclicTopUpsDetails" type="JSON">
+<parameters>
+<param default="" label="queryCyclicTopUpsDetails.queryCommonInfo.currencyCode" name="queryCyclicTopUpsDetails.queryCommonInfo.currencyCode" required="false" target="URL">
+<description>currencyCode is of string type</description>
+</param>
+<param default="" label="queryCyclicTopUpsDetails.queryCommonInfo.pagingInfo.token" name="queryCyclicTopUpsDetails.queryCommonInfo.pagingInfo.token" required="false" target="URL">
+<description>token is of string type</description>
+</param>
+<param default="" label="queryCyclicTopUpsDetails.queryCommonInfo.pagingInfo.numRegs" name="queryCyclicTopUpsDetails.queryCommonInfo.pagingInfo.numRegs" required="false" target="URL">
+<description>numRegs is of int type</description>
+</param>
+<param default="" label="queryCyclicTopUpsDetails.queryCommonInfo.pagingInfo.extension.any" name="queryCyclicTopUpsDetails.queryCommonInfo.pagingInfo.extension.any" required="false" target="URL">
+<description>You may enter ANY elements at this point</description>
+</param>
+<param default="" label="queryCyclicTopUpsDetails.queryCommonInfo.pagingInfo.extension.@anyAttributeParam" name="queryCyclicTopUpsDetails.queryCommonInfo.pagingInfo.extension.@anyAttributeParam" required="false" target="URL">
+<description>Additional attributes for element extension</description>
+</param>
+<param default="" label="queryCyclicTopUpsDetails.queryCommonInfo.extension.any" name="queryCyclicTopUpsDetails.queryCommonInfo.extension.any" required="false" target="URL">
+<description>You may enter ANY elements at this point</description>
+</param>
+<param default="" label="queryCyclicTopUpsDetails.queryCommonInfo.extension.@anyAttributeParam" name="queryCyclicTopUpsDetails.queryCommonInfo.extension.@anyAttributeParam" required="false" target="URL">
+<description>Additional attributes for element extension</description>
+</param>
+<param default="" label="queryCyclicTopUpsDetails.subscriberId.choice" name="queryCyclicTopUpsDetails.subscriberId.choice" required="true" target="URL">
+<description>SubscriberIdType</description>
+</param>
+<param default="" label="queryCyclicTopUpsDetails.statusCyclicFilter" name="queryCyclicTopUpsDetails.statusCyclicFilter" required="false" target="URL">
+<description>statusCyclicFilter is of string type</description>
+</param>
+<param default="" label="queryCyclicTopUpsDetails.billingCycleFlagFilter" name="queryCyclicTopUpsDetails.billingCycleFlagFilter" required="false" target="URL">
+<description>FlagType</description>
+</param>
+<param default="" label="queryCyclicTopUpsDetails.extension.any" name="queryCyclicTopUpsDetails.extension.any" required="false" target="URL">
+<description>You may enter ANY elements at this point</description>
+</param>
+<param default="" label="queryCyclicTopUpsDetails.extension.@anyAttributeParam" name="queryCyclicTopUpsDetails.extension.@anyAttributeParam" required="false" target="URL">
+<description>Additional attributes for element extension</description>
+</param>
+<param default="" label="http.authorization" name="http.authorization" required="false" target="URL">
+<description/>
+</param>
+<param default="" label="headers" name="headers" required="false" target="URL">
+<description/>
+</param>
+<param default="" label="privateRequest" name="privateRequest" required="false" target="URL">
+<description/>
+</param>
+</parameters>
+</request>
+<request function="queryCyclicBalanceTransfersDetails_CyclicActionsManagement" id="queryCyclicBalanceTransfersDetails" label="queryCyclicBalanceTransfersDetails" type="JSON">
+<parameters>
+<param default="" label="queryCyclicBalanceTransfersDetails.queryCommonInfo.currencyCode" name="queryCyclicBalanceTransfersDetails.queryCommonInfo.currencyCode" required="false" target="URL">
+<description>currencyCode is of string type</description>
+</param>
+<param default="" label="queryCyclicBalanceTransfersDetails.queryCommonInfo.pagingInfo.token" name="queryCyclicBalanceTransfersDetails.queryCommonInfo.pagingInfo.token" required="false" target="URL">
+<description>token is of string type</description>
+</param>
+<param default="" label="queryCyclicBalanceTransfersDetails.queryCommonInfo.pagingInfo.numRegs" name="queryCyclicBalanceTransfersDetails.queryCommonInfo.pagingInfo.numRegs" required="false" target="URL">
+<description>numRegs is of int type</description>
+</param>
+<param default="" label="queryCyclicBalanceTransfersDetails.queryCommonInfo.pagingInfo.extension.any" name="queryCyclicBalanceTransfersDetails.queryCommonInfo.pagingInfo.extension.any" required="false" target="URL">
+<description>You may enter ANY elements at this point</description>
+</param>
+<param default="" label="queryCyclicBalanceTransfersDetails.queryCommonInfo.pagingInfo.extension.@anyAttributeParam" name="queryCyclicBalanceTransfersDetails.queryCommonInfo.pagingInfo.extension.@anyAttributeParam" required="false" target="URL">
+<description>Additional attributes for element extension</description>
+</param>
+<param default="" label="queryCyclicBalanceTransfersDetails.queryCommonInfo.extension.any" name="queryCyclicBalanceTransfersDetails.queryCommonInfo.extension.any" required="false" target="URL">
+<description>You may enter ANY elements at this point</description>
+</param>
+<param default="" label="queryCyclicBalanceTransfersDetails.queryCommonInfo.extension.@anyAttributeParam" name="queryCyclicBalanceTransfersDetails.queryCommonInfo.extension.@anyAttributeParam" required="false" target="URL">
+<description>Additional attributes for element extension</description>
+</param>
+<param default="" label="queryCyclicBalanceTransfersDetails.donorSubscriberId.choice" name="queryCyclicBalanceTransfersDetails.donorSubscriberId.choice" required="true" target="URL">
+<description>SubscriberIdType</description>
+</param>
+<param default="" label="queryCyclicBalanceTransfersDetails.statusCyclicFilter" name="queryCyclicBalanceTransfersDetails.statusCyclicFilter" required="false" target="URL">
+<description>statusCyclicFilter is of string type</description>
+</param>
+<param default="" label="queryCyclicBalanceTransfersDetails.billingCycleFlagFilter" name="queryCyclicBalanceTransfersDetails.billingCycleFlagFilter" required="false" target="URL">
+<description>FlagType</description>
+</param>
+<param default="" label="queryCyclicBalanceTransfersDetails.extension.any" name="queryCyclicBalanceTransfersDetails.extension.any" required="false" target="URL">
+<description>You may enter ANY elements at this point</description>
+</param>
+<param default="" label="queryCyclicBalanceTransfersDetails.extension.@anyAttributeParam" name="queryCyclicBalanceTransfersDetails.extension.@anyAttributeParam" required="false" target="URL">
+<description>Additional attributes for element extension</description>
+</param>
+<param default="" label="http.authorization" name="http.authorization" required="false" target="URL">
+<description/>
+</param>
+<param default="" label="headers" name="headers" required="false" target="URL">
+<description/>
+</param>
+<param default="" label="privateRequest" name="privateRequest" required="false" target="URL">
+<description/>
+</param>
+</parameters>
+</request>
+<request function="subscribeCyclicChargingServices_CyclicActionsManagement" id="subscribeCyclicChargingServices" label="subscribeCyclicChargingServices" type="JSON">
+<parameters>
+<param default="" label="subscribeCyclicChargingServices.actionCommonInfo.appInfo.appId" name="subscribeCyclicChargingServices.actionCommonInfo.appInfo.appId" required="true" target="URL">
+<description>appId is of string type</description>
+</param>
+<param default="" label="subscribeCyclicChargingServices.actionCommonInfo.appInfo.reference" name="subscribeCyclicChargingServices.actionCommonInfo.appInfo.reference" required="true" target="URL">
+<description>reference is of string type</description>
+</param>
+<param default="" label="subscribeCyclicChargingServices.actionCommonInfo.appInfo.extension.any" name="subscribeCyclicChargingServices.actionCommonInfo.appInfo.extension.any" required="false" target="URL">
+<description>You may enter ANY elements at this point</description>
+</param>
+<param default="" label="subscribeCyclicChargingServices.actionCommonInfo.appInfo.extension.@anyAttributeParam" name="subscribeCyclicChargingServices.actionCommonInfo.appInfo.extension.@anyAttributeParam" required="false" target="URL">
+<description>Additional attributes for element extension</description>
+</param>
+<param default="" label="subscribeCyclicChargingServices.actionCommonInfo.userCode" name="subscribeCyclicChargingServices.actionCommonInfo.userCode" required="true" target="URL">
+<description>userCode is of string type</description>
+</param>
+<param default="" label="subscribeCyclicChargingServices.actionCommonInfo.opCost" name="subscribeCyclicChargingServices.actionCommonInfo.opCost" required="false" target="URL">
+<description>opCost is of long type</description>
+</param>
+<param default="" label="subscribeCyclicChargingServices.actionCommonInfo.opCost.@exponent" name="subscribeCyclicChargingServices.actionCommonInfo.opCost.@exponent" required="false" target="URL">
+<description>exponent is of exponent type</description>
+</param>
+<param default="" label="subscribeCyclicChargingServices.actionCommonInfo.currencyCode" name="subscribeCyclicChargingServices.actionCommonInfo.currencyCode" required="false" target="URL">
+<description>currencyCode is of string type</description>
+</param>
+<param default="" label="subscribeCyclicChargingServices.actionCommonInfo.extension.any" name="subscribeCyclicChargingServices.actionCommonInfo.extension.any" required="false" target="URL">
+<description>You may enter ANY elements at this point</description>
+</param>
+<param default="" label="subscribeCyclicChargingServices.actionCommonInfo.extension.@anyAttributeParam" name="subscribeCyclicChargingServices.actionCommonInfo.extension.@anyAttributeParam" required="false" target="URL">
+<description>Additional attributes for element extension</description>
+</param>
+<param default="" label="subscribeCyclicChargingServices.subscriberId.choice" name="subscribeCyclicChargingServices.subscriberId.choice" required="true" target="URL">
+<description>SubscriberIdType</description>
+</param>
+<param default="" label="subscribeCyclicChargingServices.cyclicCode" name="subscribeCyclicChargingServices.cyclicCode" required="true" target="URL">
+<description>cyclicCode is of string type</description>
+</param>
+<param default="" label="subscribeCyclicChargingServices.cyclicInfo.choice" name="subscribeCyclicChargingServices.cyclicInfo.choice" required="true" target="URL">
+<description>CyclicInfoType</description>
+</param>
+<param default="" label="subscribeCyclicChargingServices.chargingInfoList.chargingInfo.chargingAmount" name="subscribeCyclicChargingServices.chargingInfoList.chargingInfo.chargingAmount" required="false" target="URL">
+<description>chargingAmount is of long type</description>
+</param>
+<param default="" label="subscribeCyclicChargingServices.chargingInfoList.chargingInfo.chargingAmount.@exponent" name="subscribeCyclicChargingServices.chargingInfoList.chargingInfo.chargingAmount.@exponent" required="false" target="URL">
+<description>exponent is of exponent type</description>
+</param>
+<param default="" label="subscribeCyclicChargingServices.chargingInfoList.chargingInfo.chargingModality" name="subscribeCyclicChargingServices.chargingInfoList.chargingInfo.chargingModality" required="false" target="URL">
+<description>chargingModality is of integer type</description>
+</param>
+<param default="" label="subscribeCyclicChargingServices.chargingInfoList.chargingInfo.totalFlag" name="subscribeCyclicChargingServices.chargingInfoList.chargingInfo.totalFlag" required="true" target="URL">
+<description>string</description>
+</param>
+<param default="" label="subscribeCyclicChargingServices.chargingInfoList.chargingInfo.extension.any" name="subscribeCyclicChargingServices.chargingInfoList.chargingInfo.extension.any" required="false" target="URL">
+<description>You may enter ANY elements at this point</description>
+</param>
+<param default="" label="subscribeCyclicChargingServices.chargingInfoList.chargingInfo.extension.@anyAttributeParam" name="subscribeCyclicChargingServices.chargingInfoList.chargingInfo.extension.@anyAttributeParam" required="false" target="URL">
+<description>Additional attributes for element extension</description>
+</param>
+<param default="" label="subscribeCyclicChargingServices.chargingInfoList.extension.any" name="subscribeCyclicChargingServices.chargingInfoList.extension.any" required="false" target="URL">
+<description>You may enter ANY elements at this point</description>
+</param>
+<param default="" label="subscribeCyclicChargingServices.chargingInfoList.extension.@anyAttributeParam" name="subscribeCyclicChargingServices.chargingInfoList.extension.@anyAttributeParam" required="false" target="URL">
+<description>Additional attributes for element extension</description>
+</param>
+<param default="" label="subscribeCyclicChargingServices.calcChargingAmountCode" name="subscribeCyclicChargingServices.calcChargingAmountCode" required="false" target="URL">
+<description>calcChargingAmountCode is of integer type</description>
+</param>
+<param default="" label="subscribeCyclicChargingServices.chargingCycleChange.chargingAmount" name="subscribeCyclicChargingServices.chargingCycleChange.chargingAmount" required="false" target="URL">
+<description>chargingAmount is of long type</description>
+</param>
+<param default="" label="subscribeCyclicChargingServices.chargingCycleChange.chargingAmount.@exponent" name="subscribeCyclicChargingServices.chargingCycleChange.chargingAmount.@exponent" required="false" target="URL">
+<description>exponent is of exponent type</description>
+</param>
+<param default="" label="subscribeCyclicChargingServices.chargingCycleChange.calcChargingAmountCode" name="subscribeCyclicChargingServices.chargingCycleChange.calcChargingAmountCode" required="false" target="URL">
+<description>calcChargingAmountCode is of integer type</description>
+</param>
+<param default="" label="subscribeCyclicChargingServices.chargingCycleChange.prorateFlag" name="subscribeCyclicChargingServices.chargingCycleChange.prorateFlag" required="true" target="URL">
+<description>string</description>
+</param>
+<param default="" label="subscribeCyclicChargingServices.chargingCycleChange.totalFlag" name="subscribeCyclicChargingServices.chargingCycleChange.totalFlag" required="true" target="URL">
+<description>string</description>
+</param>
+<param default="" label="subscribeCyclicChargingServices.chargingCycleChange.chargingModality" name="subscribeCyclicChargingServices.chargingCycleChange.chargingModality" required="false" target="URL">
+<description>chargingModality is of integer type</description>
+</param>
+<param default="" label="subscribeCyclicChargingServices.chargingCycleChange.extension.any" name="subscribeCyclicChargingServices.chargingCycleChange.extension.any" required="false" target="URL">
+<description>You may enter ANY elements at this point</description>
+</param>
+<param default="" label="subscribeCyclicChargingServices.chargingCycleChange.extension.@anyAttributeParam" name="subscribeCyclicChargingServices.chargingCycleChange.extension.@anyAttributeParam" required="false" target="URL">
+<description>Additional attributes for element extension</description>
+</param>
+<param default="" label="subscribeCyclicChargingServices.extension.any" name="subscribeCyclicChargingServices.extension.any" required="false" target="URL">
+<description>You may enter ANY elements at this point</description>
+</param>
+<param default="" label="subscribeCyclicChargingServices.extension.@anyAttributeParam" name="subscribeCyclicChargingServices.extension.@anyAttributeParam" required="false" target="URL">
+<description>Additional attributes for element extension</description>
+</param>
+<param default="" label="http.authorization" name="http.authorization" required="false" target="URL">
+<description/>
+</param>
+<param default="" label="headers" name="headers" required="false" target="URL">
+<description/>
+</param>
+<param default="" label="privateRequest" name="privateRequest" required="false" target="URL">
+<description/>
+</param>
+</parameters>
+</request>
+<request function="subscribeCyclicBalanceTransfers_CyclicActionsManagement" id="subscribeCyclicBalanceTransfers" label="subscribeCyclicBalanceTransfers" type="JSON">
+<parameters>
+<param default="" label="subscribeCyclicBalanceTransfers.actionCommonInfo.appInfo.appId" name="subscribeCyclicBalanceTransfers.actionCommonInfo.appInfo.appId" required="true" target="URL">
+<description>appId is of string type</description>
+</param>
+<param default="" label="subscribeCyclicBalanceTransfers.actionCommonInfo.appInfo.reference" name="subscribeCyclicBalanceTransfers.actionCommonInfo.appInfo.reference" required="true" target="URL">
+<description>reference is of string type</description>
+</param>
+<param default="" label="subscribeCyclicBalanceTransfers.actionCommonInfo.appInfo.extension.any" name="subscribeCyclicBalanceTransfers.actionCommonInfo.appInfo.extension.any" required="false" target="URL">
+<description>You may enter ANY elements at this point</description>
+</param>
+<param default="" label="subscribeCyclicBalanceTransfers.actionCommonInfo.appInfo.extension.@anyAttributeParam" name="subscribeCyclicBalanceTransfers.actionCommonInfo.appInfo.extension.@anyAttributeParam" required="false" target="URL">
+<description>Additional attributes for element extension</description>
+</param>
+<param default="" label="subscribeCyclicBalanceTransfers.actionCommonInfo.userCode" name="subscribeCyclicBalanceTransfers.actionCommonInfo.userCode" required="true" target="URL">
+<description>userCode is of string type</description>
+</param>
+<param default="" label="subscribeCyclicBalanceTransfers.actionCommonInfo.opCost" name="subscribeCyclicBalanceTransfers.actionCommonInfo.opCost" required="false" target="URL">
+<description>opCost is of long type</description>
+</param>
+<param default="" label="subscribeCyclicBalanceTransfers.actionCommonInfo.opCost.@exponent" name="subscribeCyclicBalanceTransfers.actionCommonInfo.opCost.@exponent" required="false" target="URL">
+<description>exponent is of exponent type</description>
+</param>
+<param default="" label="subscribeCyclicBalanceTransfers.actionCommonInfo.currencyCode" name="subscribeCyclicBalanceTransfers.actionCommonInfo.currencyCode" required="false" target="URL">
+<description>currencyCode is of string type</description>
+</param>
+<param default="" label="subscribeCyclicBalanceTransfers.actionCommonInfo.extension.any" name="subscribeCyclicBalanceTransfers.actionCommonInfo.extension.any" required="false" target="URL">
+<description>You may enter ANY elements at this point</description>
+</param>
+<param default="" label="subscribeCyclicBalanceTransfers.actionCommonInfo.extension.@anyAttributeParam" name="subscribeCyclicBalanceTransfers.actionCommonInfo.extension.@anyAttributeParam" required="false" target="URL">
+<description>Additional attributes for element extension</description>
+</param>
+<param default="" label="subscribeCyclicBalanceTransfers.donorSubscriberId.choice" name="subscribeCyclicBalanceTransfers.donorSubscriberId.choice" required="true" target="URL">
+<description>SubscriberIdType</description>
+</param>
+<param default="" label="subscribeCyclicBalanceTransfers.receiverSubscriberId.choice" name="subscribeCyclicBalanceTransfers.receiverSubscriberId.choice" required="true" target="URL">
+<description>SubscriberIdType</description>
+</param>
+<param default="" label="subscribeCyclicBalanceTransfers.payer" name="subscribeCyclicBalanceTransfers.payer" required="true" target="URL">
+<description>payer is of string type</description>
+</param>
+<param default="" label="subscribeCyclicBalanceTransfers.cyclicCode" name="subscribeCyclicBalanceTransfers.cyclicCode" required="true" target="URL">
+<description>cyclicCode is of string type</description>
+</param>
+<param default="" label="subscribeCyclicBalanceTransfers.cyclicInfo.choice" name="subscribeCyclicBalanceTransfers.cyclicInfo.choice" required="true" target="URL">
+<description>CyclicInfoType</description>
+</param>
+<param default="" label="subscribeCyclicBalanceTransfers.balanceTransferInfoList.balanceTransferInfo.transferAmount" name="subscribeCyclicBalanceTransfers.balanceTransferInfoList.balanceTransferInfo.transferAmount" required="false" target="URL">
+<description>transferAmount is of long type</description>
+</param>
+<param default="" label="subscribeCyclicBalanceTransfers.balanceTransferInfoList.balanceTransferInfo.transferAmount.@exponent" name="subscribeCyclicBalanceTransfers.balanceTransferInfoList.balanceTransferInfo.transferAmount.@exponent" required="false" target="URL">
+<description>exponent is of exponent type</description>
+</param>
+<param default="" label="subscribeCyclicBalanceTransfers.balanceTransferInfoList.balanceTransferInfo.transferCost" name="subscribeCyclicBalanceTransfers.balanceTransferInfoList.balanceTransferInfo.transferCost" required="false" target="URL">
+<description>transferCost is of long type</description>
+</param>
+<param default="" label="subscribeCyclicBalanceTransfers.balanceTransferInfoList.balanceTransferInfo.transferCost.@exponent" name="subscribeCyclicBalanceTransfers.balanceTransferInfoList.balanceTransferInfo.transferCost.@exponent" required="false" target="URL">
+<description>exponent is of exponent type</description>
+</param>
+<param default="" label="subscribeCyclicBalanceTransfers.balanceTransferInfoList.balanceTransferInfo.transferWalletId" name="subscribeCyclicBalanceTransfers.balanceTransferInfoList.balanceTransferInfo.transferWalletId" required="false" target="URL">
+<description>transferWalletId is of string type</description>
+</param>
+<param default="" label="subscribeCyclicBalanceTransfers.balanceTransferInfoList.balanceTransferInfo.topUpOriginOrBoltonIdentifier" name="subscribeCyclicBalanceTransfers.balanceTransferInfoList.balanceTransferInfo.topUpOriginOrBoltonIdentifier" required="false" target="URL">
+<description>topUpOriginOrBoltonIdentifier is of object type</description>
+</param>
+<param default="" label="subscribeCyclicBalanceTransfers.balanceTransferInfoList.balanceTransferInfo.extension.any" name="subscribeCyclicBalanceTransfers.balanceTransferInfoList.balanceTransferInfo.extension.any" required="false" target="URL">
+<description>You may enter ANY elements at this point</description>
+</param>
+<param default="" label="subscribeCyclicBalanceTransfers.balanceTransferInfoList.balanceTransferInfo.extension.@anyAttributeParam" name="subscribeCyclicBalanceTransfers.balanceTransferInfoList.balanceTransferInfo.extension.@anyAttributeParam" required="false" target="URL">
+<description>Additional attributes for element extension</description>
+</param>
+<param default="" label="subscribeCyclicBalanceTransfers.balanceTransferInfoList.extension.any" name="subscribeCyclicBalanceTransfers.balanceTransferInfoList.extension.any" required="false" target="URL">
+<description>You may enter ANY elements at this point</description>
+</param>
+<param default="" label="subscribeCyclicBalanceTransfers.balanceTransferInfoList.extension.@anyAttributeParam" name="subscribeCyclicBalanceTransfers.balanceTransferInfoList.extension.@anyAttributeParam" required="false" target="URL">
+<description>Additional attributes for element extension</description>
+</param>
+<param default="" label="subscribeCyclicBalanceTransfers.balanceTransferInfoCalculation.calcBalanceTransferAmountCode" name="subscribeCyclicBalanceTransfers.balanceTransferInfoCalculation.calcBalanceTransferAmountCode" required="false" target="URL">
+<description>calcBalanceTransferAmountCode is of integer type</description>
+</param>
+<param default="" label="subscribeCyclicBalanceTransfers.balanceTransferInfoCalculation.calcBalanceTransferCostCode" name="subscribeCyclicBalanceTransfers.balanceTransferInfoCalculation.calcBalanceTransferCostCode" required="false" target="URL">
+<description>calcBalanceTransferCostCode is of integer type</description>
+</param>
+<param default="" label="subscribeCyclicBalanceTransfers.balanceTransferInfoCalculation.extension.any" name="subscribeCyclicBalanceTransfers.balanceTransferInfoCalculation.extension.any" required="false" target="URL">
+<description>You may enter ANY elements at this point</description>
+</param>
+<param default="" label="subscribeCyclicBalanceTransfers.balanceTransferInfoCalculation.extension.@anyAttributeParam" name="subscribeCyclicBalanceTransfers.balanceTransferInfoCalculation.extension.@anyAttributeParam" required="false" target="URL">
+<description>Additional attributes for element extension</description>
+</param>
+<param default="" label="subscribeCyclicBalanceTransfers.balanceTransferCycleChange.balanceTransferCost" name="subscribeCyclicBalanceTransfers.balanceTransferCycleChange.balanceTransferCost" required="false" target="URL">
+<description>balanceTransferCost is of long type</description>
+</param>
+<param default="" label="subscribeCyclicBalanceTransfers.balanceTransferCycleChange.balanceTransferCost.@exponent" name="subscribeCyclicBalanceTransfers.balanceTransferCycleChange.balanceTransferCost.@exponent" required="false" target="URL">
+<description>exponent is of exponent type</description>
+</param>
+<param default="" label="subscribeCyclicBalanceTransfers.balanceTransferCycleChange.calcBalanceTransferCostCode" name="subscribeCyclicBalanceTransfers.balanceTransferCycleChange.calcBalanceTransferCostCode" required="false" target="URL">
+<description>calcBalanceTransferCostCode is of integer type</description>
+</param>
+<param default="" label="subscribeCyclicBalanceTransfers.balanceTransferCycleChange.balanceTransferAmount" name="subscribeCyclicBalanceTransfers.balanceTransferCycleChange.balanceTransferAmount" required="false" target="URL">
+<description>balanceTransferAmount is of long type</description>
+</param>
+<param default="" label="subscribeCyclicBalanceTransfers.balanceTransferCycleChange.balanceTransferAmount.@exponent" name="subscribeCyclicBalanceTransfers.balanceTransferCycleChange.balanceTransferAmount.@exponent" required="false" target="URL">
+<description>exponent is of exponent type</description>
+</param>
+<param default="" label="subscribeCyclicBalanceTransfers.balanceTransferCycleChange.calcBalanceTransferAmountCode" name="subscribeCyclicBalanceTransfers.balanceTransferCycleChange.calcBalanceTransferAmountCode" required="false" target="URL">
+<description>calcBalanceTransferAmountCode is of integer type</description>
+</param>
+<param default="" label="subscribeCyclicBalanceTransfers.balanceTransferCycleChange.prorateFlag" name="subscribeCyclicBalanceTransfers.balanceTransferCycleChange.prorateFlag" required="true" target="URL">
+<description>string</description>
+</param>
+<param default="" label="subscribeCyclicBalanceTransfers.balanceTransferCycleChange.extension.any" name="subscribeCyclicBalanceTransfers.balanceTransferCycleChange.extension.any" required="false" target="URL">
+<description>You may enter ANY elements at this point</description>
+</param>
+<param default="" label="subscribeCyclicBalanceTransfers.balanceTransferCycleChange.extension.@anyAttributeParam" name="subscribeCyclicBalanceTransfers.balanceTransferCycleChange.extension.@anyAttributeParam" required="false" target="URL">
+<description>Additional attributes for element extension</description>
+</param>
+<param default="" label="subscribeCyclicBalanceTransfers.extension.any" name="subscribeCyclicBalanceTransfers.extension.any" required="false" target="URL">
+<description>You may enter ANY elements at this point</description>
+</param>
+<param default="" label="subscribeCyclicBalanceTransfers.extension.@anyAttributeParam" name="subscribeCyclicBalanceTransfers.extension.@anyAttributeParam" required="false" target="URL">
+<description>Additional attributes for element extension</description>
+</param>
+<param default="" label="http.authorization" name="http.authorization" required="false" target="URL">
+<description/>
+</param>
+<param default="" label="headers" name="headers" required="false" target="URL">
+<description/>
+</param>
+<param default="" label="privateRequest" name="privateRequest" required="false" target="URL">
+<description/>
+</param>
+</parameters>
+</request>
+<request function="unsubscribeCyclicServices_CyclicActionsManagement" id="unsubscribeCyclicServices" label="unsubscribeCyclicServices" type="JSON">
+<parameters>
+<param default="" label="unsubscribeCyclicServices.actionCommonInfo.appInfo.appId" name="unsubscribeCyclicServices.actionCommonInfo.appInfo.appId" required="true" target="URL">
+<description>appId is of string type</description>
+</param>
+<param default="" label="unsubscribeCyclicServices.actionCommonInfo.appInfo.reference" name="unsubscribeCyclicServices.actionCommonInfo.appInfo.reference" required="true" target="URL">
+<description>reference is of string type</description>
+</param>
+<param default="" label="unsubscribeCyclicServices.actionCommonInfo.appInfo.extension.any" name="unsubscribeCyclicServices.actionCommonInfo.appInfo.extension.any" required="false" target="URL">
+<description>You may enter ANY elements at this point</description>
+</param>
+<param default="" label="unsubscribeCyclicServices.actionCommonInfo.appInfo.extension.@anyAttributeParam" name="unsubscribeCyclicServices.actionCommonInfo.appInfo.extension.@anyAttributeParam" required="false" target="URL">
+<description>Additional attributes for element extension</description>
+</param>
+<param default="" label="unsubscribeCyclicServices.actionCommonInfo.userCode" name="unsubscribeCyclicServices.actionCommonInfo.userCode" required="true" target="URL">
+<description>userCode is of string type</description>
+</param>
+<param default="" label="unsubscribeCyclicServices.actionCommonInfo.opCost" name="unsubscribeCyclicServices.actionCommonInfo.opCost" required="false" target="URL">
+<description>opCost is of long type</description>
+</param>
+<param default="" label="unsubscribeCyclicServices.actionCommonInfo.opCost.@exponent" name="unsubscribeCyclicServices.actionCommonInfo.opCost.@exponent" required="false" target="URL">
+<description>exponent is of exponent type</description>
+</param>
+<param default="" label="unsubscribeCyclicServices.actionCommonInfo.currencyCode" name="unsubscribeCyclicServices.actionCommonInfo.currencyCode" required="false" target="URL">
+<description>currencyCode is of string type</description>
+</param>
+<param default="" label="unsubscribeCyclicServices.actionCommonInfo.extension.any" name="unsubscribeCyclicServices.actionCommonInfo.extension.any" required="false" target="URL">
+<description>You may enter ANY elements at this point</description>
+</param>
+<param default="" label="unsubscribeCyclicServices.actionCommonInfo.extension.@anyAttributeParam" name="unsubscribeCyclicServices.actionCommonInfo.extension.@anyAttributeParam" required="false" target="URL">
+<description>Additional attributes for element extension</description>
+</param>
+<param default="" label="unsubscribeCyclicServices.subscriberId.choice" name="unsubscribeCyclicServices.subscriberId.choice" required="true" target="URL">
+<description>SubscriberIdType</description>
+</param>
+<param default="" label="unsubscribeCyclicServices.opReferenceOrBoltonIdentifier" name="unsubscribeCyclicServices.opReferenceOrBoltonIdentifier" required="false" target="URL">
+<description>opReferenceOrBoltonIdentifier is of object type</description>
+</param>
+<param default="" label="unsubscribeCyclicServices.cyclicServicesCascadeFlag" name="unsubscribeCyclicServices.cyclicServicesCascadeFlag" required="false" target="URL">
+<description>FlagType</description>
+</param>
+<param default="" label="unsubscribeCyclicServices.extension.any" name="unsubscribeCyclicServices.extension.any" required="false" target="URL">
+<description>You may enter ANY elements at this point</description>
+</param>
+<param default="" label="unsubscribeCyclicServices.extension.@anyAttributeParam" name="unsubscribeCyclicServices.extension.@anyAttributeParam" required="false" target="URL">
+<description>Additional attributes for element extension</description>
+</param>
+<param default="" label="http.authorization" name="http.authorization" required="false" target="URL">
+<description/>
+</param>
+<param default="" label="headers" name="headers" required="false" target="URL">
+<description/>
+</param>
+<param default="" label="privateRequest" name="privateRequest" required="false" target="URL">
+<description/>
+</param>
+</parameters>
+</request>
+<request function="queryCyclicBoltonsDetails_CyclicActionsManagement" id="queryCyclicBoltonsDetails" label="queryCyclicBoltonsDetails" type="JSON">
+<parameters>
+<param default="" label="queryCyclicBoltonsDetails.queryCommonInfo.currencyCode" name="queryCyclicBoltonsDetails.queryCommonInfo.currencyCode" required="false" target="URL">
+<description>currencyCode is of string type</description>
+</param>
+<param default="" label="queryCyclicBoltonsDetails.queryCommonInfo.pagingInfo.token" name="queryCyclicBoltonsDetails.queryCommonInfo.pagingInfo.token" required="false" target="URL">
+<description>token is of string type</description>
+</param>
+<param default="" label="queryCyclicBoltonsDetails.queryCommonInfo.pagingInfo.numRegs" name="queryCyclicBoltonsDetails.queryCommonInfo.pagingInfo.numRegs" required="false" target="URL">
+<description>numRegs is of int type</description>
+</param>
+<param default="" label="queryCyclicBoltonsDetails.queryCommonInfo.pagingInfo.extension.any" name="queryCyclicBoltonsDetails.queryCommonInfo.pagingInfo.extension.any" required="false" target="URL">
+<description>You may enter ANY elements at this point</description>
+</param>
+<param default="" label="queryCyclicBoltonsDetails.queryCommonInfo.pagingInfo.extension.@anyAttributeParam" name="queryCyclicBoltonsDetails.queryCommonInfo.pagingInfo.extension.@anyAttributeParam" required="false" target="URL">
+<description>Additional attributes for element extension</description>
+</param>
+<param default="" label="queryCyclicBoltonsDetails.queryCommonInfo.extension.any" name="queryCyclicBoltonsDetails.queryCommonInfo.extension.any" required="false" target="URL">
+<description>You may enter ANY elements at this point</description>
+</param>
+<param default="" label="queryCyclicBoltonsDetails.queryCommonInfo.extension.@anyAttributeParam" name="queryCyclicBoltonsDetails.queryCommonInfo.extension.@anyAttributeParam" required="false" target="URL">
+<description>Additional attributes for element extension</description>
+</param>
+<param default="" label="queryCyclicBoltonsDetails.subscriberId.choice" name="queryCyclicBoltonsDetails.subscriberId.choice" required="true" target="URL">
+<description>SubscriberIdType</description>
+</param>
+<param default="" label="queryCyclicBoltonsDetails.statusCyclicFilter" name="queryCyclicBoltonsDetails.statusCyclicFilter" required="false" target="URL">
+<description>statusCyclicFilter is of string type</description>
+</param>
+<param default="" label="queryCyclicBoltonsDetails.billingCycleFlagFilter" name="queryCyclicBoltonsDetails.billingCycleFlagFilter" required="false" target="URL">
+<description>FlagType</description>
+</param>
+<param default="" label="queryCyclicBoltonsDetails.extension.any" name="queryCyclicBoltonsDetails.extension.any" required="false" target="URL">
+<description>You may enter ANY elements at this point</description>
+</param>
+<param default="" label="queryCyclicBoltonsDetails.extension.@anyAttributeParam" name="queryCyclicBoltonsDetails.extension.@anyAttributeParam" required="false" target="URL">
+<description>Additional attributes for element extension</description>
+</param>
+<param default="" label="http.authorization" name="http.authorization" required="false" target="URL">
+<description/>
+</param>
+<param default="" label="headers" name="headers" required="false" target="URL">
+<description/>
+</param>
+<param default="" label="privateRequest" name="privateRequest" required="false" target="URL">
+<description/>
+</param>
+</parameters>
+</request>
+<request function="queryCyclicChargingServicesDetails_CyclicActionsManagement" id="queryCyclicChargingServicesDetails" label="queryCyclicChargingServicesDetails" type="JSON">
+<parameters>
+<param default="" label="queryCyclicChargingServicesDetails.queryCommonInfo.currencyCode" name="queryCyclicChargingServicesDetails.queryCommonInfo.currencyCode" required="false" target="URL">
+<description>currencyCode is of string type</description>
+</param>
+<param default="" label="queryCyclicChargingServicesDetails.queryCommonInfo.pagingInfo.token" name="queryCyclicChargingServicesDetails.queryCommonInfo.pagingInfo.token" required="false" target="URL">
+<description>token is of string type</description>
+</param>
+<param default="" label="queryCyclicChargingServicesDetails.queryCommonInfo.pagingInfo.numRegs" name="queryCyclicChargingServicesDetails.queryCommonInfo.pagingInfo.numRegs" required="false" target="URL">
+<description>numRegs is of int type</description>
+</param>
+<param default="" label="queryCyclicChargingServicesDetails.queryCommonInfo.pagingInfo.extension.any" name="queryCyclicChargingServicesDetails.queryCommonInfo.pagingInfo.extension.any" required="false" target="URL">
+<description>You may enter ANY elements at this point</description>
+</param>
+<param default="" label="queryCyclicChargingServicesDetails.queryCommonInfo.pagingInfo.extension.@anyAttributeParam" name="queryCyclicChargingServicesDetails.queryCommonInfo.pagingInfo.extension.@anyAttributeParam" required="false" target="URL">
+<description>Additional attributes for element extension</description>
+</param>
+<param default="" label="queryCyclicChargingServicesDetails.queryCommonInfo.extension.any" name="queryCyclicChargingServicesDetails.queryCommonInfo.extension.any" required="false" target="URL">
+<description>You may enter ANY elements at this point</description>
+</param>
+<param default="" label="queryCyclicChargingServicesDetails.queryCommonInfo.extension.@anyAttributeParam" name="queryCyclicChargingServicesDetails.queryCommonInfo.extension.@anyAttributeParam" required="false" target="URL">
+<description>Additional attributes for element extension</description>
+</param>
+<param default="" label="queryCyclicChargingServicesDetails.subscriberId.choice" name="queryCyclicChargingServicesDetails.subscriberId.choice" required="true" target="URL">
+<description>SubscriberIdType</description>
+</param>
+<param default="" label="queryCyclicChargingServicesDetails.statusCyclicFilter" name="queryCyclicChargingServicesDetails.statusCyclicFilter" required="false" target="URL">
+<description>statusCyclicFilter is of string type</description>
+</param>
+<param default="" label="queryCyclicChargingServicesDetails.billingCycleFlagFilter" name="queryCyclicChargingServicesDetails.billingCycleFlagFilter" required="false" target="URL">
+<description>FlagType</description>
+</param>
+<param default="" label="queryCyclicChargingServicesDetails.extension.any" name="queryCyclicChargingServicesDetails.extension.any" required="false" target="URL">
+<description>You may enter ANY elements at this point</description>
+</param>
+<param default="" label="queryCyclicChargingServicesDetails.extension.@anyAttributeParam" name="queryCyclicChargingServicesDetails.extension.@anyAttributeParam" required="false" target="URL">
+<description>Additional attributes for element extension</description>
+</param>
+<param default="" label="http.authorization" name="http.authorization" required="false" target="URL">
+<description/>
+</param>
+<param default="" label="headers" name="headers" required="false" target="URL">
+<description/>
+</param>
+<param default="" label="privateRequest" name="privateRequest" required="false" target="URL">
+<description/>
+</param>
+</parameters>
+</request>
+<request function="subscribeCyclicTopUps_CyclicActionsManagement" id="subscribeCyclicTopUps" label="subscribeCyclicTopUps" type="JSON">
+<parameters>
+<param default="" label="subscribeCyclicTopUps.actionCommonInfo.appInfo.appId" name="subscribeCyclicTopUps.actionCommonInfo.appInfo.appId" required="true" target="URL">
+<description>appId is of string type</description>
+</param>
+<param default="" label="subscribeCyclicTopUps.actionCommonInfo.appInfo.reference" name="subscribeCyclicTopUps.actionCommonInfo.appInfo.reference" required="true" target="URL">
+<description>reference is of string type</description>
+</param>
+<param default="" label="subscribeCyclicTopUps.actionCommonInfo.appInfo.extension.any" name="subscribeCyclicTopUps.actionCommonInfo.appInfo.extension.any" required="false" target="URL">
+<description>You may enter ANY elements at this point</description>
+</param>
+<param default="" label="subscribeCyclicTopUps.actionCommonInfo.appInfo.extension.@anyAttributeParam" name="subscribeCyclicTopUps.actionCommonInfo.appInfo.extension.@anyAttributeParam" required="false" target="URL">
+<description>Additional attributes for element extension</description>
+</param>
+<param default="" label="subscribeCyclicTopUps.actionCommonInfo.userCode" name="subscribeCyclicTopUps.actionCommonInfo.userCode" required="true" target="URL">
+<description>userCode is of string type</description>
+</param>
+<param default="" label="subscribeCyclicTopUps.actionCommonInfo.opCost" name="subscribeCyclicTopUps.actionCommonInfo.opCost" required="false" target="URL">
+<description>opCost is of long type</description>
+</param>
+<param default="" label="subscribeCyclicTopUps.actionCommonInfo.opCost.@exponent" name="subscribeCyclicTopUps.actionCommonInfo.opCost.@exponent" required="false" target="URL">
+<description>exponent is of exponent type</description>
+</param>
+<param default="" label="subscribeCyclicTopUps.actionCommonInfo.currencyCode" name="subscribeCyclicTopUps.actionCommonInfo.currencyCode" required="false" target="URL">
+<description>currencyCode is of string type</description>
+</param>
+<param default="" label="subscribeCyclicTopUps.actionCommonInfo.extension.any" name="subscribeCyclicTopUps.actionCommonInfo.extension.any" required="false" target="URL">
+<description>You may enter ANY elements at this point</description>
+</param>
+<param default="" label="subscribeCyclicTopUps.actionCommonInfo.extension.@anyAttributeParam" name="subscribeCyclicTopUps.actionCommonInfo.extension.@anyAttributeParam" required="false" target="URL">
+<description>Additional attributes for element extension</description>
+</param>
+<param default="" label="subscribeCyclicTopUps.subscriberId.choice" name="subscribeCyclicTopUps.subscriberId.choice" required="true" target="URL">
+<description>SubscriberIdType</description>
+</param>
+<param default="" label="subscribeCyclicTopUps.cyclicCode" name="subscribeCyclicTopUps.cyclicCode" required="true" target="URL">
+<description>cyclicCode is of string type</description>
+</param>
+<param default="" label="subscribeCyclicTopUps.cyclicInfo.choice" name="subscribeCyclicTopUps.cyclicInfo.choice" required="true" target="URL">
+<description>CyclicInfoType</description>
+</param>
+<param default="" label="subscribeCyclicTopUps.topUpInfoList.topUpInfo.topUpAmount" name="subscribeCyclicTopUps.topUpInfoList.topUpInfo.topUpAmount" required="false" target="URL">
+<description>topUpAmount is of long type</description>
+</param>
+<param default="" label="subscribeCyclicTopUps.topUpInfoList.topUpInfo.topUpAmount.@exponent" name="subscribeCyclicTopUps.topUpInfoList.topUpInfo.topUpAmount.@exponent" required="false" target="URL">
+<description>exponent is of exponent type</description>
+</param>
+<param default="" label="subscribeCyclicTopUps.topUpInfoList.topUpInfo.topUpOrigin" name="subscribeCyclicTopUps.topUpInfoList.topUpInfo.topUpOrigin" required="false" target="URL">
+<description>topUpOrigin is of string type</description>
+</param>
+<param default="" label="subscribeCyclicTopUps.topUpInfoList.topUpInfo.extension.any" name="subscribeCyclicTopUps.topUpInfoList.topUpInfo.extension.any" required="false" target="URL">
+<description>You may enter ANY elements at this point</description>
+</param>
+<param default="" label="subscribeCyclicTopUps.topUpInfoList.topUpInfo.extension.@anyAttributeParam" name="subscribeCyclicTopUps.topUpInfoList.topUpInfo.extension.@anyAttributeParam" required="false" target="URL">
+<description>Additional attributes for element extension</description>
+</param>
+<param default="" label="subscribeCyclicTopUps.topUpInfoList.extension.any" name="subscribeCyclicTopUps.topUpInfoList.extension.any" required="false" target="URL">
+<description>You may enter ANY elements at this point</description>
+</param>
+<param default="" label="subscribeCyclicTopUps.topUpInfoList.extension.@anyAttributeParam" name="subscribeCyclicTopUps.topUpInfoList.extension.@anyAttributeParam" required="false" target="URL">
+<description>Additional attributes for element extension</description>
+</param>
+<param default="" label="subscribeCyclicTopUps.calcTopUpAmountCode" name="subscribeCyclicTopUps.calcTopUpAmountCode" required="false" target="URL">
+<description>calcTopUpAmountCode is of integer type</description>
+</param>
+<param default="" label="subscribeCyclicTopUps.topUpInfoCycleChange.topUpOrigin" name="subscribeCyclicTopUps.topUpInfoCycleChange.topUpOrigin" required="false" target="URL">
+<description>topUpOrigin is of string type</description>
+</param>
+<param default="" label="subscribeCyclicTopUps.topUpInfoCycleChange.topUpAmount" name="subscribeCyclicTopUps.topUpInfoCycleChange.topUpAmount" required="false" target="URL">
+<description>topUpAmount is of long type</description>
+</param>
+<param default="" label="subscribeCyclicTopUps.topUpInfoCycleChange.topUpAmount.@exponent" name="subscribeCyclicTopUps.topUpInfoCycleChange.topUpAmount.@exponent" required="false" target="URL">
+<description>exponent is of exponent type</description>
+</param>
+<param default="" label="subscribeCyclicTopUps.topUpInfoCycleChange.calcTopUpAmountCode" name="subscribeCyclicTopUps.topUpInfoCycleChange.calcTopUpAmountCode" required="false" target="URL">
+<description>calcTopUpAmountCode is of integer type</description>
+</param>
+<param default="" label="subscribeCyclicTopUps.topUpInfoCycleChange.prorateFlag" name="subscribeCyclicTopUps.topUpInfoCycleChange.prorateFlag" required="true" target="URL">
+<description>string</description>
+</param>
+<param default="" label="subscribeCyclicTopUps.topUpInfoCycleChange.extension.any" name="subscribeCyclicTopUps.topUpInfoCycleChange.extension.any" required="false" target="URL">
+<description>You may enter ANY elements at this point</description>
+</param>
+<param default="" label="subscribeCyclicTopUps.topUpInfoCycleChange.extension.@anyAttributeParam" name="subscribeCyclicTopUps.topUpInfoCycleChange.extension.@anyAttributeParam" required="false" target="URL">
+<description>Additional attributes for element extension</description>
+</param>
+<param default="" label="subscribeCyclicTopUps.extension.any" name="subscribeCyclicTopUps.extension.any" required="false" target="URL">
+<description>You may enter ANY elements at this point</description>
+</param>
+<param default="" label="subscribeCyclicTopUps.extension.@anyAttributeParam" name="subscribeCyclicTopUps.extension.@anyAttributeParam" required="false" target="URL">
+<description>Additional attributes for element extension</description>
+</param>
+<param default="" label="http.authorization" name="http.authorization" required="false" target="URL">
+<description/>
+</param>
+<param default="" label="headers" name="headers" required="false" target="URL">
+<description/>
+</param>
+<param default="" label="privateRequest" name="privateRequest" required="false" target="URL">
+<description/>
+</param>
+</parameters>
+</request>
+<request function="subscribeCyclicBoltons_CyclicActionsManagement" id="subscribeCyclicBoltons" label="subscribeCyclicBoltons" type="JSON">
+<parameters>
+<param default="" label="subscribeCyclicBoltons.actionCommonInfo.appInfo.appId" name="subscribeCyclicBoltons.actionCommonInfo.appInfo.appId" required="true" target="URL">
+<description>appId is of string type</description>
+</param>
+<param default="" label="subscribeCyclicBoltons.actionCommonInfo.appInfo.reference" name="subscribeCyclicBoltons.actionCommonInfo.appInfo.reference" required="true" target="URL">
+<description>reference is of string type</description>
+</param>
+<param default="" label="subscribeCyclicBoltons.actionCommonInfo.appInfo.extension.any" name="subscribeCyclicBoltons.actionCommonInfo.appInfo.extension.any" required="false" target="URL">
+<description>You may enter ANY elements at this point</description>
+</param>
+<param default="" label="subscribeCyclicBoltons.actionCommonInfo.appInfo.extension.@anyAttributeParam" name="subscribeCyclicBoltons.actionCommonInfo.appInfo.extension.@anyAttributeParam" required="false" target="URL">
+<description>Additional attributes for element extension</description>
+</param>
+<param default="" label="subscribeCyclicBoltons.actionCommonInfo.userCode" name="subscribeCyclicBoltons.actionCommonInfo.userCode" required="true" target="URL">
+<description>userCode is of string type</description>
+</param>
+<param default="" label="subscribeCyclicBoltons.actionCommonInfo.opCost" name="subscribeCyclicBoltons.actionCommonInfo.opCost" required="false" target="URL">
+<description>opCost is of long type</description>
+</param>
+<param default="" label="subscribeCyclicBoltons.actionCommonInfo.opCost.@exponent" name="subscribeCyclicBoltons.actionCommonInfo.opCost.@exponent" required="false" target="URL">
+<description>exponent is of exponent type</description>
+</param>
+<param default="" label="subscribeCyclicBoltons.actionCommonInfo.currencyCode" name="subscribeCyclicBoltons.actionCommonInfo.currencyCode" required="false" target="URL">
+<description>currencyCode is of string type</description>
+</param>
+<param default="" label="subscribeCyclicBoltons.actionCommonInfo.extension.any" name="subscribeCyclicBoltons.actionCommonInfo.extension.any" required="false" target="URL">
+<description>You may enter ANY elements at this point</description>
+</param>
+<param default="" label="subscribeCyclicBoltons.actionCommonInfo.extension.@anyAttributeParam" name="subscribeCyclicBoltons.actionCommonInfo.extension.@anyAttributeParam" required="false" target="URL">
+<description>Additional attributes for element extension</description>
+</param>
+<param default="" label="subscribeCyclicBoltons.subscriberId.choice" name="subscribeCyclicBoltons.subscriberId.choice" required="true" target="URL">
+<description>SubscriberIdType</description>
+</param>
+<param default="" label="subscribeCyclicBoltons.cyclicCode" name="subscribeCyclicBoltons.cyclicCode" required="true" target="URL">
+<description>cyclicCode is of string type</description>
+</param>
+<param default="" label="subscribeCyclicBoltons.cyclicInfo.choice" name="subscribeCyclicBoltons.cyclicInfo.choice" required="true" target="URL">
+<description>CyclicInfoType</description>
+</param>
+<param default="" label="subscribeCyclicBoltons.boltonInfoList.boltonInfo.boltonIdentifier.boltonCode" name="subscribeCyclicBoltons.boltonInfoList.boltonInfo.boltonIdentifier.boltonCode" required="false" target="URL">
+<description>boltonCode is of string type</description>
+</param>
+<param default="" label="subscribeCyclicBoltons.boltonInfoList.boltonInfo.boltonIdentifier.boltonTypeCode" name="subscribeCyclicBoltons.boltonInfoList.boltonInfo.boltonIdentifier.boltonTypeCode" required="false" target="URL">
+<description>boltonTypeCode is of string type</description>
+</param>
+<param default="" label="subscribeCyclicBoltons.boltonInfoList.boltonInfo.boltonIdentifier.boltonInstance" name="subscribeCyclicBoltons.boltonInfoList.boltonInfo.boltonIdentifier.boltonInstance" required="false" target="URL">
+<description>boltonInstance is of string type</description>
+</param>
+<param default="" label="subscribeCyclicBoltons.boltonInfoList.boltonInfo.boltonIdentifier.extension.any" name="subscribeCyclicBoltons.boltonInfoList.boltonInfo.boltonIdentifier.extension.any" required="false" target="URL">
+<description>You may enter ANY elements at this point</description>
+</param>
+<param default="" label="subscribeCyclicBoltons.boltonInfoList.boltonInfo.boltonIdentifier.extension.@anyAttributeParam" name="subscribeCyclicBoltons.boltonInfoList.boltonInfo.boltonIdentifier.extension.@anyAttributeParam" required="false" target="URL">
+<description>Additional attributes for element extension</description>
+</param>
+<param default="" label="subscribeCyclicBoltons.boltonInfoList.boltonInfo.boltonAmount" name="subscribeCyclicBoltons.boltonInfoList.boltonInfo.boltonAmount" required="false" target="URL">
+<description>boltonAmount is of long type</description>
+</param>
+<param default="" label="subscribeCyclicBoltons.boltonInfoList.boltonInfo.boltonAmount.@exponent" name="subscribeCyclicBoltons.boltonInfoList.boltonInfo.boltonAmount.@exponent" required="false" target="URL">
+<description>exponent is of exponent type</description>
+</param>
+<param default="" label="subscribeCyclicBoltons.boltonInfoList.boltonInfo.boltonLD" name="subscribeCyclicBoltons.boltonInfoList.boltonInfo.boltonLD" required="false" target="URL">
+<description>boltonLD is of long type</description>
+</param>
+<param default="" label="subscribeCyclicBoltons.boltonInfoList.boltonInfo.boltonLD.@exponent" name="subscribeCyclicBoltons.boltonInfoList.boltonInfo.boltonLD.@exponent" required="false" target="URL">
+<description>exponent is of exponent type</description>
+</param>
+<param default="" label="subscribeCyclicBoltons.boltonInfoList.boltonInfo.boltonMaxNumberOfSessions" name="subscribeCyclicBoltons.boltonInfoList.boltonInfo.boltonMaxNumberOfSessions" required="false" target="URL">
+<description>boltonMaxNumberOfSessions is of integer type</description>
+</param>
+<param default="" label="subscribeCyclicBoltons.boltonInfoList.boltonInfo.boltonCost" name="subscribeCyclicBoltons.boltonInfoList.boltonInfo.boltonCost" required="false" target="URL">
+<description>boltonCost is of long type</description>
+</param>
+<param default="" label="subscribeCyclicBoltons.boltonInfoList.boltonInfo.boltonCost.@exponent" name="subscribeCyclicBoltons.boltonInfoList.boltonInfo.boltonCost.@exponent" required="false" target="URL">
+<description>exponent is of exponent type</description>
+</param>
+<param default="" label="subscribeCyclicBoltons.boltonInfoList.boltonInfo.chargingModality" name="subscribeCyclicBoltons.boltonInfoList.boltonInfo.chargingModality" required="false" target="URL">
+<description>chargingModality is of integer type</description>
+</param>
+<param default="" label="subscribeCyclicBoltons.boltonInfoList.boltonInfo.timeInterval.startTime.choice" name="subscribeCyclicBoltons.boltonInfoList.boltonInfo.timeInterval.startTime.choice" required="true" target="URL">
+<description>TimeType</description>
+</param>
+<param default="" label="subscribeCyclicBoltons.boltonInfoList.boltonInfo.timeInterval.endTime.choice" name="subscribeCyclicBoltons.boltonInfoList.boltonInfo.timeInterval.endTime.choice" required="true" target="URL">
+<description>TimeType</description>
+</param>
+<param default="" label="subscribeCyclicBoltons.boltonInfoList.boltonInfo.timeInterval.extension.any" name="subscribeCyclicBoltons.boltonInfoList.boltonInfo.timeInterval.extension.any" required="false" target="URL">
+<description>You may enter ANY elements at this point</description>
+</param>
+<param default="" label="subscribeCyclicBoltons.boltonInfoList.boltonInfo.timeInterval.extension.@anyAttributeParam" name="subscribeCyclicBoltons.boltonInfoList.boltonInfo.timeInterval.extension.@anyAttributeParam" required="false" target="URL">
+<description>Additional attributes for element extension</description>
+</param>
+<param default="" label="subscribeCyclicBoltons.boltonInfoList.boltonInfo.maxUnitsPerSession" name="subscribeCyclicBoltons.boltonInfoList.boltonInfo.maxUnitsPerSession" required="false" target="URL">
+<description>maxUnitsPerSession is of long type</description>
+</param>
+<param default="" label="subscribeCyclicBoltons.boltonInfoList.boltonInfo.maxUnitsPerSession.@exponent" name="subscribeCyclicBoltons.boltonInfoList.boltonInfo.maxUnitsPerSession.@exponent" required="false" target="URL">
+<description>exponent is of exponent type</description>
+</param>
+<param default="" label="subscribeCyclicBoltons.boltonInfoList.boltonInfo.extension.any" name="subscribeCyclicBoltons.boltonInfoList.boltonInfo.extension.any" required="false" target="URL">
+<description>You may enter ANY elements at this point</description>
+</param>
+<param default="" label="subscribeCyclicBoltons.boltonInfoList.boltonInfo.extension.@anyAttributeParam" name="subscribeCyclicBoltons.boltonInfoList.boltonInfo.extension.@anyAttributeParam" required="false" target="URL">
+<description>Additional attributes for element extension</description>
+</param>
+<param default="" label="subscribeCyclicBoltons.boltonInfoList.extension.any" name="subscribeCyclicBoltons.boltonInfoList.extension.any" required="false" target="URL">
+<description>You may enter ANY elements at this point</description>
+</param>
+<param default="" label="subscribeCyclicBoltons.boltonInfoList.extension.@anyAttributeParam" name="subscribeCyclicBoltons.boltonInfoList.extension.@anyAttributeParam" required="false" target="URL">
+<description>Additional attributes for element extension</description>
+</param>
+<param default="" label="subscribeCyclicBoltons.boltonInfoCalculation.calcBoltonAmountCode" name="subscribeCyclicBoltons.boltonInfoCalculation.calcBoltonAmountCode" required="false" target="URL">
+<description>calcBoltonAmountCode is of integer type</description>
+</param>
+<param default="" label="subscribeCyclicBoltons.boltonInfoCalculation.calcBoltonLDCode" name="subscribeCyclicBoltons.boltonInfoCalculation.calcBoltonLDCode" required="false" target="URL">
+<description>calcBoltonLDCode is of integer type</description>
+</param>
+<param default="" label="subscribeCyclicBoltons.boltonInfoCalculation.calcBoltonCostCode" name="subscribeCyclicBoltons.boltonInfoCalculation.calcBoltonCostCode" required="false" target="URL">
+<description>calcBoltonCostCode is of integer type</description>
+</param>
+<param default="" label="subscribeCyclicBoltons.boltonInfoCalculation.calcMaxNumberOfSessionsCode" name="subscribeCyclicBoltons.boltonInfoCalculation.calcMaxNumberOfSessionsCode" required="false" target="URL">
+<description>calcMaxNumberOfSessionsCode is of integer type</description>
+</param>
+<param default="" label="subscribeCyclicBoltons.boltonInfoCalculation.extension.any" name="subscribeCyclicBoltons.boltonInfoCalculation.extension.any" required="false" target="URL">
+<description>You may enter ANY elements at this point</description>
+</param>
+<param default="" label="subscribeCyclicBoltons.boltonInfoCalculation.extension.@anyAttributeParam" name="subscribeCyclicBoltons.boltonInfoCalculation.extension.@anyAttributeParam" required="false" target="URL">
+<description>Additional attributes for element extension</description>
+</param>
+<param default="" label="subscribeCyclicBoltons.boltonInfoCycleChange.boltonAmount" name="subscribeCyclicBoltons.boltonInfoCycleChange.boltonAmount" required="false" target="URL">
+<description>boltonAmount is of long type</description>
+</param>
+<param default="" label="subscribeCyclicBoltons.boltonInfoCycleChange.boltonAmount.@exponent" name="subscribeCyclicBoltons.boltonInfoCycleChange.boltonAmount.@exponent" required="false" target="URL">
+<description>exponent is of exponent type</description>
+</param>
+<param default="" label="subscribeCyclicBoltons.boltonInfoCycleChange.boltonLD" name="subscribeCyclicBoltons.boltonInfoCycleChange.boltonLD" required="false" target="URL">
+<description>boltonLD is of long type</description>
+</param>
+<param default="" label="subscribeCyclicBoltons.boltonInfoCycleChange.boltonLD.@exponent" name="subscribeCyclicBoltons.boltonInfoCycleChange.boltonLD.@exponent" required="false" target="URL">
+<description>exponent is of exponent type</description>
+</param>
+<param default="" label="subscribeCyclicBoltons.boltonInfoCycleChange.boltonCost" name="subscribeCyclicBoltons.boltonInfoCycleChange.boltonCost" required="false" target="URL">
+<description>boltonCost is of long type</description>
+</param>
+<param default="" label="subscribeCyclicBoltons.boltonInfoCycleChange.boltonCost.@exponent" name="subscribeCyclicBoltons.boltonInfoCycleChange.boltonCost.@exponent" required="false" target="URL">
+<description>exponent is of exponent type</description>
+</param>
+<param default="" label="subscribeCyclicBoltons.boltonInfoCycleChange.boltonMaxNumberOfSessions" name="subscribeCyclicBoltons.boltonInfoCycleChange.boltonMaxNumberOfSessions" required="false" target="URL">
+<description>boltonMaxNumberOfSessions is of integer type</description>
+</param>
+<param default="" label="subscribeCyclicBoltons.boltonInfoCycleChange.chargingModality" name="subscribeCyclicBoltons.boltonInfoCycleChange.chargingModality" required="false" target="URL">
+<description>chargingModality is of integer type</description>
+</param>
+<param default="" label="subscribeCyclicBoltons.boltonInfoCycleChange.calcBoltonAmountCode" name="subscribeCyclicBoltons.boltonInfoCycleChange.calcBoltonAmountCode" required="false" target="URL">
+<description>calcBoltonAmountCode is of integer type</description>
+</param>
+<param default="" label="subscribeCyclicBoltons.boltonInfoCycleChange.calcBoltonLDCode" name="subscribeCyclicBoltons.boltonInfoCycleChange.calcBoltonLDCode" required="false" target="URL">
+<description>calcBoltonLDCode is of integer type</description>
+</param>
+<param default="" label="subscribeCyclicBoltons.boltonInfoCycleChange.calcBoltonCostCode" name="subscribeCyclicBoltons.boltonInfoCycleChange.calcBoltonCostCode" required="false" target="URL">
+<description>calcBoltonCostCode is of integer type</description>
+</param>
+<param default="" label="subscribeCyclicBoltons.boltonInfoCycleChange.calcMaxNumberOfSessionsCode" name="subscribeCyclicBoltons.boltonInfoCycleChange.calcMaxNumberOfSessionsCode" required="false" target="URL">
+<description>calcMaxNumberOfSessionsCode is of integer type</description>
+</param>
+<param default="" label="subscribeCyclicBoltons.boltonInfoCycleChange.prorateFlag" name="subscribeCyclicBoltons.boltonInfoCycleChange.prorateFlag" required="true" target="URL">
+<description>string</description>
+</param>
+<param default="" label="subscribeCyclicBoltons.boltonInfoCycleChange.extension.any" name="subscribeCyclicBoltons.boltonInfoCycleChange.extension.any" required="false" target="URL">
+<description>You may enter ANY elements at this point</description>
+</param>
+<param default="" label="subscribeCyclicBoltons.boltonInfoCycleChange.extension.@anyAttributeParam" name="subscribeCyclicBoltons.boltonInfoCycleChange.extension.@anyAttributeParam" required="false" target="URL">
+<description>Additional attributes for element extension</description>
+</param>
+<param default="" label="subscribeCyclicBoltons.extension.any" name="subscribeCyclicBoltons.extension.any" required="false" target="URL">
+<description>You may enter ANY elements at this point</description>
+</param>
+<param default="" label="subscribeCyclicBoltons.extension.@anyAttributeParam" name="subscribeCyclicBoltons.extension.@anyAttributeParam" required="false" target="URL">
+<description>Additional attributes for element extension</description>
+</param>
+<param default="" label="http.authorization" name="http.authorization" required="false" target="URL">
+<description/>
+</param>
+<param default="" label="headers" name="headers" required="false" target="URL">
+<description/>
+</param>
+<param default="" label="privateRequest" name="privateRequest" required="false" target="URL">
+<description/>
+</param>
+</parameters>
+</request>
+</requests>
+</ascon>

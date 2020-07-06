@@ -18,11 +18,23 @@
         sendSMSService.application='sendSMSService';
         sendSMSService.AS_URL='/SOAPConnector/SOAPConnector/';
     </script>
+    <var expr="new Object()" name="queryBalance"/>
+    <script>
+        queryBalance.service='queryBalance';
+        queryBalance.application='queryBalance';
+        queryBalance.AS_URL='/SOAPConnector/SOAPConnector/';
+    </script>
     <var expr="new Object()" name="PromotionService"/>
     <script>
         PromotionService.service='PromotionService';
         PromotionService.application='PromotionService';
         PromotionService.AS_URL='/SOAPConnector/SOAPConnector/';
+    </script>
+    <var expr="new Object()" name="CyclicActionsManagement"/>
+    <script>
+        CyclicActionsManagement.service='CyclicActionsManagement';
+        CyclicActionsManagement.application='CyclicActionsManagement';
+        CyclicActionsManagement.AS_URL='/SOAPConnector/SOAPConnector/';
     </script>
     <var expr="new Object()" name="BoltonManagement"/>
     <script>
@@ -33,12 +45,12 @@
     <var expr="new Object()" name="BalanceManagement"/>
     <script>
         BalanceManagement.service='BalanceManagement';
-        BalanceManagement.application='IVR444';
+        BalanceManagement.application='BalanceManagement';
         BalanceManagement.AS_URL='/SOAPConnector/SOAPConnector/';
     </script>
     <var expr="new Object()" name="BalanceCobroManagementService"/>
     <script>
-        BalanceCobroManagementService.service='queryBalance';
+        BalanceCobroManagementService.service='BalanceCobroManagementService';
         BalanceCobroManagementService.application='BalanceCobroManagementService';
         BalanceCobroManagementService.AS_URL='/SOAPConnector/SOAPConnector/';
     </script>
@@ -51,7 +63,9 @@
     <script src="../ECMAScripts/VoucherManagement.es"/>
     <script src="../ECMAScripts/SvaService.es"/>
     <script src="../ECMAScripts/sendSMSService.es"/>
+    <script src="../ECMAScripts/queryBalance.es"/>
     <script src="../ECMAScripts/PromotionService.es"/>
+    <script src="../ECMAScripts/CyclicActionsManagement.es"/>
     <script src="../ECMAScripts/BoltonManagement.es"/>
     <script src="../ECMAScripts/BalanceManagement.es"/>
     <script src="../ECMAScripts/BalanceCobroManagementService.es"/>

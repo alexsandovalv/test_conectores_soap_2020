@@ -26,21 +26,23 @@
     </log>
     <script xmi:type="gmap:ScriptType" xmi:id="_bBogIm9bEeqWQbNrfNviJw" connetorRequest="voucherCardAccount" connetorType="VoucherManagement" enabled="Yes" fetchtimeout="20s" id="Script_3" isData="false" label="vCardAccount" sensitivityLocal="false">
       <var xmi:type="gmap:VarType" xmi:id="_bBogI29bEeqWQbNrfNviJw" name="result"/>
-      <connetorParameter xmi:type="gmap:ConnetorParameterType" xmi:id="_3UCPEG-5EeqUepDB--4z6w" name="voucherCardAccount.actionCommonInfo.appInfo.appId" value="'P10'"/>
-      <connetorParameter xmi:type="gmap:ConnetorParameterType" xmi:id="_3UCPEW-5EeqUepDB--4z6w" name="voucherCardAccount.actionCommonInfo.appInfo.reference" value="'testing'"/>
-      <connetorParameter xmi:type="gmap:ConnetorParameterType" xmi:id="_3UCPEm-5EeqUepDB--4z6w" name="voucherCardAccount.actionCommonInfo.appInfo.extension.@anyAttributeParam" value=""/>
-      <connetorParameter xmi:type="gmap:ConnetorParameterType" xmi:id="_3UCPE2-5EeqUepDB--4z6w" name="voucherCardAccount.actionCommonInfo.appInfo.extension.any" value=""/>
-      <connetorParameter xmi:type="gmap:ConnetorParameterType" xmi:id="_3UCPFG-5EeqUepDB--4z6w" name="voucherCardAccount.actionCommonInfo.userCode" value="'IVR'"/>
-      <connetorParameter xmi:type="gmap:ConnetorParameterType" xmi:id="_3UCPFW-5EeqUepDB--4z6w" name="voucherCardAccount.actionCommonInfo.opCost.@exponent" value=""/>
-      <connetorParameter xmi:type="gmap:ConnetorParameterType" xmi:id="_3UCPFm-5EeqUepDB--4z6w" name="voucherCardAccount.actionCommonInfo.extension.@anyAttributeParam" value=""/>
-      <connetorParameter xmi:type="gmap:ConnetorParameterType" xmi:id="_3UCPF2-5EeqUepDB--4z6w" name="voucherCardAccount.actionCommonInfo.extension.any" value=""/>
-      <connetorParameter xmi:type="gmap:ConnetorParameterType" xmi:id="_3UCPGG-5EeqUepDB--4z6w" name="voucherCardAccount.subscriberId.choice" value="'&amp;lt;e164Number&amp;gt;' + msisdn + '&amp;lt;/e164Number&amp;gt;'"/>
-      <connetorParameter xmi:type="gmap:ConnetorParameterType" xmi:id="_3UCPGW-5EeqUepDB--4z6w" name="voucherCardAccount.topUpKey" value="'1234567812345678'"/>
-      <connetorParameter xmi:type="gmap:ConnetorParameterType" xmi:id="_3UCPGm-5EeqUepDB--4z6w" name="voucherCardAccount.extension.@anyAttributeParam" value=""/>
-      <connetorParameter xmi:type="gmap:ConnetorParameterType" xmi:id="_3UCPG2-5EeqUepDB--4z6w" name="voucherCardAccount.extension.any" value=""/>
-      <connetorParameter xmi:type="gmap:ConnetorParameterType" xmi:id="_3UCPHG-5EeqUepDB--4z6w" name="http.authorization" value=""/>
-      <connetorParameter xmi:type="gmap:ConnetorParameterType" xmi:id="_3UCPHW-5EeqUepDB--4z6w" name="headers" value="generarHeader()"/>
-      <connetorParameter xmi:type="gmap:ConnetorParameterType" xmi:id="_3UCPHm-5EeqUepDB--4z6w" name="private" value="false"/>
+      <connetorParameter xmi:type="gmap:ConnetorParameterType" xmi:id="_B6kjYJvBEeqo57bimSOoLA" name="voucherCardAccount.actionCommonInfo.appInfo.appId" value="'P10'"/>
+      <connetorParameter xmi:type="gmap:ConnetorParameterType" xmi:id="_B6kjYZvBEeqo57bimSOoLA" name="voucherCardAccount.actionCommonInfo.appInfo.reference" value="'testing'"/>
+      <connetorParameter xmi:type="gmap:ConnetorParameterType" xmi:id="_B6kjYpvBEeqo57bimSOoLA" name="voucherCardAccount.actionCommonInfo.appInfo.extension.any" value=""/>
+      <connetorParameter xmi:type="gmap:ConnetorParameterType" xmi:id="_B6kjY5vBEeqo57bimSOoLA" name="voucherCardAccount.actionCommonInfo.appInfo.extension.@anyAttributeParam" value=""/>
+      <connetorParameter xmi:type="gmap:ConnetorParameterType" xmi:id="_B6kjZJvBEeqo57bimSOoLA" name="voucherCardAccount.actionCommonInfo.userCode" value="'IVR'"/>
+      <connetorParameter xmi:type="gmap:ConnetorParameterType" xmi:id="_B6kjZZvBEeqo57bimSOoLA" name="voucherCardAccount.actionCommonInfo.opCost" value=""/>
+      <connetorParameter xmi:type="gmap:ConnetorParameterType" xmi:id="_B6kjZpvBEeqo57bimSOoLA" name="voucherCardAccount.actionCommonInfo.opCost.@exponent" value=""/>
+      <connetorParameter xmi:type="gmap:ConnetorParameterType" xmi:id="_B6kjZ5vBEeqo57bimSOoLA" name="voucherCardAccount.actionCommonInfo.currencyCode" value=""/>
+      <connetorParameter xmi:type="gmap:ConnetorParameterType" xmi:id="_B6kjaJvBEeqo57bimSOoLA" name="voucherCardAccount.actionCommonInfo.extension.any" value=""/>
+      <connetorParameter xmi:type="gmap:ConnetorParameterType" xmi:id="_B6kjaZvBEeqo57bimSOoLA" name="voucherCardAccount.actionCommonInfo.extension.@anyAttributeParam" value=""/>
+      <connetorParameter xmi:type="gmap:ConnetorParameterType" xmi:id="_B6kjapvBEeqo57bimSOoLA" name="voucherCardAccount.subscriberId.choice" value="'&amp;lt;e164Number&amp;gt;' + msisdn + '&amp;lt;/e164Number&amp;gt;'"/>
+      <connetorParameter xmi:type="gmap:ConnetorParameterType" xmi:id="_B6kja5vBEeqo57bimSOoLA" name="voucherCardAccount.topUpKey" value="'1234567812345678'"/>
+      <connetorParameter xmi:type="gmap:ConnetorParameterType" xmi:id="_B6kjbJvBEeqo57bimSOoLA" name="voucherCardAccount.extension.any" value=""/>
+      <connetorParameter xmi:type="gmap:ConnetorParameterType" xmi:id="_B6kjbZvBEeqo57bimSOoLA" name="voucherCardAccount.extension.@anyAttributeParam" value=""/>
+      <connetorParameter xmi:type="gmap:ConnetorParameterType" xmi:id="_B6kjbpvBEeqo57bimSOoLA" name="http.authorization" value=""/>
+      <connetorParameter xmi:type="gmap:ConnetorParameterType" xmi:id="_B6kjb5vBEeqo57bimSOoLA" name="headers" value="guid()"/>
+      <connetorParameter xmi:type="gmap:ConnetorParameterType" xmi:id="_B6kjcJvBEeqo57bimSOoLA" name="privateRequest" value="false"/>
       <stdTransitionScriptLog xmi:type="gmap:StandardTransitionScriptLogType" xmi:id="_aUi7MG9cEeqWQbNrfNviJw" source="_bBogIm9bEeqWQbNrfNviJw" targetElement="_ZpKb4G9cEeqWQbNrfNviJw"/>
     </script>
   </gmap:VxmlType>
