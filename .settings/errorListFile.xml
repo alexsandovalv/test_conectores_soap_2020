@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<ErrorList>
+    <document name="globalContext.mmdiag"/>
+<document name="start.mmdiag"/>
+<document name="BalanceCobroManagementService.mmdiag"/>
+<document name="BalanceManagement.mmdiag"/>
+<document name="BoltonManagement.mmdiag"/>
+<document name="PromotionService.mmdiag"/>
+<document name="sendSMSService.mmdiag"/>
+<document name="SvaService.mmdiag"/>
+<document name="VoucherManagement.mmdiag"/>
+<document name="AccountManagement.mmdiag"/>
+</ErrorList>

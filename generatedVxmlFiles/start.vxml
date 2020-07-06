@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<vxml xmlns="http://www.w3.org/2001/vxml" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.w3.org/2001/vxml http://www.w3.org/TR/2007/REC-voicexml21-20070619/vxml.xsd" application="globalContext.vxml" version="2.1">
+    <form id="calling_number">
+        <block>
+            <assign expr="connection.ccxml.values.passertedid" name="newNumero"/>
+            <assign expr="getMsisdn(anonimo,calling_number)" name="calling_number"/>
+            <assign expr="calling_number" name="msisdn"/>
+            <assign expr="getCalledNumber(session.connection.local.uri)" name="anonimo"/>
+            <assign expr="getSessionId(session.connection.ccxml.sessionid)" name="ivr_session_id"/>
+            <assign expr="getServerIP(session.connection.ccxml.sessionid)" name="ivr_session_ip"/>
+            <assign expr="new Date()" name="yyyymmdd"/>
+            <assign expr="yyyymmdd.yyyymmdd()" name="yyyymmdd"/>
+            <assign expr="&apos;&apos;" name="ivr_level_desc"/>
+            <log label="Application.Info">numero de llamada: <value expr="calling_number+ &apos;, numero corto: &apos;+called_number+&apos;, ivr_session_id: &apos;+ivr_session_id+&apos;, ip aplicacion: &apos;+ivr_session_ip+&apos;, passertedid: &apos;+connection.ccxml.values.passertedid"/></log>
+            <goto next="#Menu_test"/>
+        </block>
+    </form>
+    <menu accept="exact" id="Menu_test">
+        <prompt>
+            <audio src="../promptFiles/audio/menu_test_ws.wav"/>
+        </prompt>
+        <choice dtmf="1" next="AccountManagement.vxml"/>
+        <choice dtmf="2" next="BalanceCobroManagementService.vxml"/>
+        <choice dtmf="3" next="BalanceManagement.vxml"/>
+        <choice dtmf="4" next="BoltonManagement.vxml"/>
+        <choice dtmf="5" next="PromotionService.vxml"/>
+        <choice dtmf="6" next="sendSMSService.vxml"/>
+        <choice dtmf="7" next="SvaService.vxml"/>
+        <choice dtmf="8" next="VoucherManagement.vxml"/>
+    </menu>
+</vxml>

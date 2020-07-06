@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<vxml xmlns="http://www.w3.org/2001/vxml" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.w3.org/2001/vxml http://www.w3.org/TR/2007/REC-voicexml21-20070619/vxml.xsd" application="globalContext.vxml" version="2.1">
+    <var expr="" name="result"/>
+    <form id="SetVariable_PROMO1213">
+        <block>
+            <assign expr="&apos;1169557096&apos;" name="msisdn"/>
+            <log label="Log"><value expr="&apos;PromotionService_RequestDoPromotionByShortCodeAndKeyword: [channel: IVR, msisdn: &apos;+msisdn+&apos;, shortCode: 3456, keyword: MULTI]&apos;"/></log>
+            <data fetchtimeout="25s" name="PromotionService" srcexpr="doPromotionByShortCodeAndKeyword_PromotionService('IVR','' + msisdn + '','3456','MULTI',null,null,false)"/>
+            <assign expr="PromotionService" name="result"/>
+            <log label="Log">PromotionService_ResponseDoPromotionByShortCodeAndKeyword: <value expr=" print_r(result)"/></log>
+            <goto next="#MenuPrincipal5334"/>
+        </block>
+    </form>
+    <catch count="1" event="error.badfetch error.semantic">
+        <prompt>
+            <audio src="../promptFiles/audio/error_ws.wav"/>
+        </prompt>
+        <goto next="#MenuPrincipal5334"/>
+    </catch>
+    <form id="MenuPrincipal5334">
+        <block>
+            <goto next="start.vxml"/>
+        </block>
+    </form>
+</vxml>

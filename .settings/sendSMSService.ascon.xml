@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="US-ASCII"?>
+<ascon version="1.2">
+<connector id="sendSMSService" label="sendSMSService" icon="sendSMSService.gif" version="1.0">
+<!--
+			Textual description of the connector
+		-->
+<description>
+			Connector to the charging database for IVR Prepaid
+		</description>
+<include copy="true" file="sendSMSService.es"/>
+<properties name="sendSMSService">
+<property name="AS_URL" value="/SOAPConnector/SOAPConnector/"/>
+<property name="application" value="sendSMSService"/>
+<property name="service" value="sendSMSService"/>
+</properties>
+</connector>
+<requests>
+<request id="sendSMSOperation" label="sendSMSOperation" function="sendSMSOperation_sendSMSService" type="JSON">
+<parameters>
+<param label="sendSMSOperationRequest.codeClient" name="sendSMSOperationRequest.codeClient" default="1" target="function" required="false">
+<description>commonNameRootEntityType</description>
+</param>
+<param label="sendSMSOperationRequest.addressTarget" name="sendSMSOperationRequest.addressTarget" default="1" target="function" required="true">
+<description>commonNameRootEntityType</description>
+</param>
+<param label="sendSMSOperationRequest.addressSource" name="sendSMSOperationRequest.addressSource" default="1" target="function" required="true">
+<description>commonNameRootEntityType</description>
+</param>
+<param label="sendSMSOperationRequest.message" name="sendSMSOperationRequest.message" default="1" target="function" required="true">
+<description>commonNameRootEntityType</description>
+</param>
+<param label="sendSMSOperationRequest.attribute.fromHourWindow" name="sendSMSOperationRequest.attribute.fromHourWindow" default="1" target="function" required="false">
+<description>integerQuantityQuantityType</description>
+</param>
+<param label="sendSMSOperationRequest.attribute.toHourWindow" name="sendSMSOperationRequest.attribute.toHourWindow" default="1" target="function" required="false">
+<description>integerQuantityQuantityType</description>
+</param>
+<param label="sendSMSOperationRequest.attribute.validityPeriod" name="sendSMSOperationRequest.attribute.validityPeriod" default="1" target="function" required="false">
+<description>integerQuantityQuantityType</description>
+</param>
+<param label="sendSMSOperationRequest.attribute.priorityFlag" name="sendSMSOperationRequest.attribute.priorityFlag" default="1" target="function" required="false">
+<description>integerQuantityQuantityType</description>
+</param>
+<param name="http.authorization" label="http.authorization" required="false" default="" target="function">
+<description/>
+</param>
+<param name="headers" label="headers" required="false" default="" target="function">
+<description/>
+</param>
+<param name="privateRequest" default="false" label="private" target="function">
+<description/>
+</param>
+</parameters>
+</request>
+</requests>
+</ascon>

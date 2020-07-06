@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<vxml xmlns="http://www.w3.org/2001/vxml" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.w3.org/2001/vxml http://www.w3.org/TR/2007/REC-voicexml21-20070619/vxml.xsd" application="globalContext.vxml" version="2.1">
+    <var expr="" name="result"/>
+    <form id="SetVariable_1">
+        <block>
+            <assign expr="&apos;1169557096&apos;" name="msisdn"/>
+            <log label="Log"><value expr="&apos;AccountManagement-Request: [CurrencyCodeType: ARS, numRegs 50, subscriberIdType: &apos;+msisdn+&apos;]&apos;"/></log>
+            <data fetchtimeout="15s" name="Script_2" srcexpr="querySubscriberBasics_AccountManagement('ARS',null,50,null,null,null,null,'&lt;e164Number&gt;' + msisdn + '&lt;/e164Number&gt;',null,null,null,guid(),false)"/>
+            <assign expr="Script_2" name="result"/>
+            <log>AccountManagement_RequestQuerySubscriberBasics: <value expr=" ivr_log_ws+&apos; &lt;==                                                                         ==&gt;&apos;+print_r(result)"/></log>
+            <prompt>
+                <audio src="../promptFiles/audio/respuesta_ok_ws.wav"/>
+            </prompt>
+            <goto next="#MenuPrincipal"/>
+        </block>
+    </form>
+    <catch count="1" event="error.badfetch error.semantic">
+        <prompt>
+            <audio src="../promptFiles/audio/error_ws.wav"/>
+        </prompt>
+        <goto next="#MenuPrincipal"/>
+    </catch>
+    <form id="MenuPrincipal">
+        <block>
+            <goto next="start.vxml"/>
+        </block>
+    </form>
+</vxml>

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<vxml xmlns="http://www.w3.org/2001/vxml" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.w3.org/2001/vxml http://www.w3.org/TR/2007/REC-voicexml21-20070619/vxml.xsd" application="globalContext.vxml" version="2.1">
+    <var expr="" name="resultSMS"/>
+    <form id="SetVariablesms64">
+        <block>
+            <assign expr="&apos;1169557096&apos;" name="msisdn"/>
+            <log label="Log"><value expr="&apos;SendSMSService_RequestSendSMSOperation [codeClient: &apos;+smsHeaderValues.codeCliente+&apos;, smsHeaderValues.codeCliente: &apos;+msisdn+&apos;, addressSource: &apos;+smsHeaderValues.addressSource+&apos;, message: &apos;+smsHeaderValues.message+&apos;, fromHourWindow: &apos;+smsHeaderValues.fromHourWindow+&apos;,toHourWindow: &apos;+smsHeaderValues.toHourWindow+&apos;, validitPeriod: &apos;+smsHeaderValues.validPeriod+&apos;, priorityFlag: &apos;+smsHeaderValues.priorityFlag+&apos;, HEADERS: &apos;+headers()+&apos;]&apos;"/></log>
+            <data fetchtimeout="25s" name="Script_1" srcexpr="sendSMSOperation_sendSMSService(smsHeaderValues.codeCliente,'' + msisdn + '',smsHeaderValues.addressSource,smsHeaderValues.message,smsHeaderValues.fromHourWindow,smsHeaderValues.toHourWindow,smsHeaderValues.validPeriod,smsHeaderValues.priorityFlag,null,headers(),false)"/>
+            <assign expr="Script_1" name="resultSMS"/>
+            <log>SendSMSService_ResponseSendSMSOperation: <value expr=" print_r(resultSMS)"/></log>
+            <prompt>
+                <audio src="../promptFiles/audio/respuesta_ok_ws.wav"/>
+            </prompt>
+            <goto next="#MenuPrincipal"/>
+        </block>
+    </form>
+    <catch count="1" event="error.badfetch error.semantic">
+        <prompt>
+            <audio src="../promptFiles/audio/error_ws.wav"/>
+        </prompt>
+        <goto next="#MenuPrincipal"/>
+    </catch>
+    <form id="MenuPrincipal">
+        <block>
+            <goto next="start.vxml"/>
+        </block>
+    </form>
+</vxml>

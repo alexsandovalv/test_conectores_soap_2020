@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<watchedvariable>
+    <documents iswatched="false" name="test_conectores_soap">
+        <document iswatched="false" name="globalContext">
+            <element id="Script_1" iswatched="false" name="Script" type="script"/>
+            <element id="Script_2" iswatched="false" name="Script" type="script"/>
+            <element id="Script_3" iswatched="false" name="Script" type="script"/>
+            <element id="Script_4" iswatched="false" name="Script" type="script"/>
+            <element id="Script_5" iswatched="false" name="Script" type="script"/>
+            <element id="Script_6" iswatched="false" name="Script" type="script"/>
+            <element id="Script_7" iswatched="false" name="Script" type="script"/>
+            <element id="Script_8" iswatched="false" name="Script" type="script"/>
+            <element id="Script_9" iswatched="false" name="Script" type="script"/>
+        <element id="Disconnect_1" iswatched="false" name="disconnect" type="disconnect"/>
+            <element id="Log_1" iswatched="false" name="" type="log"/>
+        <element id="Script_10" iswatched="false" name="Script" type="script"/>
+        </document>
+    <document iswatched="false" name="start">
+            <element id="Menu_test" iswatched="false" name="Menu_test" type="menu"/>
+        <element id="GotoTarget_1" iswatched="false" name="GotoTarget" type="gotoTarget"/>
+            <element id="GotoTarget_2" iswatched="false" name="GotoTarget" type="gotoTarget"/>
+            <element id="GotoTarget_3" iswatched="false" name="GotoTarget" type="gotoTarget"/>
+            <element id="GotoTarget_4" iswatched="false" name="GotoTarget" type="gotoTarget"/>
+            <element id="GotoTarget_5" iswatched="false" name="GotoTarget" type="gotoTarget"/>
+            <element id="GotoTarget_6" iswatched="false" name="GotoTarget" type="gotoTarget"/>
+            <element id="GotoTarget_7" iswatched="false" name="GotoTarget" type="gotoTarget"/>
+            <element id="GotoTarget_8" iswatched="false" name="GotoTarget" type="gotoTarget"/>
+        <element id="calling_number" iswatched="false" name="calling_number" type="setVariable"/>
+        <element id="Log_1" iswatched="false" name="Application.Info" type="log"/>
+        </document>
+    <document iswatched="false" name="AccountManagement">
+            <element id="MenuPrincipal" iswatched="false" name="MenuPrincipal" type="gotoTarget"/>
+        <element id="SetVariable_1" iswatched="false" name="Set Variable" type="setVariable"/>
+            <element id="Log_1" iswatched="false" name="Log" type="log"/>
+            <element id="Script_2" iswatched="false" name="qSubscriberBasics" type="script"/>
+        <element id="Play_1" iswatched="false" name="Play Message" type="play"/>
+            <element id="Play_0" iswatched="false" name="Play Message" type="play"/>
+            <element id="Log_118" iswatched="false" name="" type="log"/>
+        </document>
+    <document iswatched="false" name="BalanceCobroManagementService">
+            
+        
+            <element id="SetVariable_1" iswatched="false" name="Set Variable" type="setVariable"/>
+            <element id="Log_1" iswatched="false" name="Log" type="log"/>
+            <element id="Log_118" iswatched="false" name="" type="log"/>
+            <element id="qBalance" iswatched="false" name="qBalance" type="script"/>
+        <element id="Play_0" iswatched="false" name="Play Message" type="play"/>
+            <element id="MenuPrincipal100" iswatched="false" name="MenuPrincipal100" type="gotoTarget"/>
+        <element id="Play_1" iswatched="false" name="Play Message" type="play"/>
+        </document>
+    <document iswatched="false" name="BalanceManagement">
+            
+        <element id="Play_1" iswatched="false" name="Play Message" type="play"/>
+            
+            <element id="Log_1" iswatched="false" name="Log" type="log"/>
+            
+            
+        <element id="SetVariable_2" iswatched="false" name="Set Variable_2" type="setVariable"/>
+            <element id="Log_2" iswatched="false" name="Log" type="log"/>
+            <element id="Log_119" iswatched="false" name="" type="log"/>
+            <element id="Script_323" iswatched="false" name="qBalances" type="script"/>
+        <element id="MenuPrincipal200" iswatched="false" name="MenuPrincipal200" type="gotoTarget"/>
+        <element id="Play_2" iswatched="false" name="Play Message" type="play"/>
+        </document>
+    <document iswatched="false" name="BoltonManagement">
+            
+        
+        <element id="Play_912i" iswatched="false" name="Play Message" type="play"/>
+            <element id="Play_6494216" iswatched="false" name="Play Message" type="play"/>
+            <element id="SetVariable_3" iswatched="false" name="Set Variable" type="setVariable"/>
+            <element id="MenuPrincipal8999" iswatched="false" name="MenuPrincipal8999" type="gotoTarget"/>
+            <element id="Log_3" iswatched="false" name="Log" type="log"/>
+            <element id="Log_800054" iswatched="false" name="" type="log"/>
+        <element id="qBoltons222" iswatched="false" name="qBoltons" type="script"/>
+        </document>
+    <document iswatched="false" name="PromotionService">
+            <element id="MenuPrincipal5" iswatched="false" name="MenuPrincipal5" type="gotoTarget"/>
+        <element id="Play_1" iswatched="false" name="Play Message" type="play"/>
+            <element id="SetVariable_PROMO1213" iswatched="false" name="Set Variable" type="setVariable"/>
+            <element id="MenuPrincipal5334" iswatched="false" name="MenuPrincipal5222" type="gotoTarget"/>
+            <element id="Log_PROM34" iswatched="false" name="Log" type="log"/>
+            <element id="Log_1" iswatched="false" name="Log" type="log"/>
+            <element id="PromotionService" iswatched="false" name="PromotionService" type="script"/>
+        </document>
+    <document iswatched="false" name="sendSMSService">
+            <element id="MenuPrincipal" iswatched="false" name="MenuPrincipal" type="gotoTarget"/>
+        <element id="Script_1" iswatched="false" name="smsService" type="script"/>
+        <element id="Play_1" iswatched="false" name="Play Message" type="play"/>
+            <element id="Play_2" iswatched="false" name="Play Message" type="play"/>
+            <element id="SetVariablesms64" iswatched="false" name="Set Variablesms64" type="setVariable"/>
+            <element id="Log_VCHE34" iswatched="false" name="Log" type="log"/>
+            <element id="Log_vocher800054" iswatched="false" name="" type="log"/>
+        </document>
+    <document iswatched="false" name="SvaService">
+            <element id="MenuPrincipal" iswatched="false" name="MenuPrincipal" type="gotoTarget"/>
+        <element id="MenuPrincipal7" iswatched="false" name="MenuPrincipal7" type="gotoTarget"/>
+        <element id="Play_sva1645" iswatched="false" name="Play Message" type="play"/>
+            <element id="Play_sva912" iswatched="false" name="Play Message" type="play"/>
+            <element id="SetVariable_sva122" iswatched="false" name="Set Variable" type="setVariable"/>
+            <element id="Log_140" iswatched="false" name="" type="log"/>
+            <element id="Log_141" iswatched="false" name="" type="log"/>
+            <element id="SvaService" iswatched="false" name="SvaService" type="script"/>
+        </document>
+    <document iswatched="false" name="VoucherManagement">
+            <element id="MenuPrincipal8" iswatched="false" name="MenuPrincipal8" type="gotoTarget"/>
+        <element id="Play_1" iswatched="false" name="Play Message" type="play"/>
+            <element id="SetVariable_3" iswatched="false" name="Set Variable" type="setVariable"/>
+            <element id="Log_VCHE34" iswatched="false" name="Log" type="log"/>
+            <element id="Log_vocher800054" iswatched="false" name="" type="log"/>
+            <element id="Script_3" iswatched="false" name="vCardAccount" type="script"/>
+        </document>
+    </documents>
+</watchedvariable>

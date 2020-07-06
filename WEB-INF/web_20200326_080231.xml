@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app version="2.4" xmlns="http://java.sun.com/xml/ns/j2ee"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://java.sun.com/xml/ns/j2ee web-app_2_4.xsd">
+    <display-name>Welcome to test_conectores_soap</display-name>
+    <description>Welcome to test_conectores_soap</description>
+    <!--
+ The welcome-file element contains file name to use as a default 
+ welcome file, such as index.vxml 
+
+ Used in: welcome-file-list. 
+
+-->
+    <!--
+ <welcome-file-list> 
+ 	 <welcome-file>index.vxml</welcome-file> 
+ </welcome-file-list> 
+-->
+    <!--
+ The session-timeout element defines the default session timeout 
+ interval for all sessions created in this web application. The  
+ specified timeout must be expressed in a whole number of minutes. 
+ If the timeout is 0 or less, the container ensures the default 
+ behavior of sessions is never to time out. 
+
+ Used in: session-config  . 
+
+-->
+    <!--
+ <session-config> 
+ 	 <session-timeout>30</session-timeout> 
+ </session-config> 
+-->
+</web-app>

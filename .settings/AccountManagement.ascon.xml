@@ -1,0 +1,1926 @@
+<?xml version="1.0" encoding="US-ASCII"?>
+<ascon version="1.2">
+    <connector id="AccountManagement" label="AccountManagement" icon="AccountManagement.gif" version="1.0">
+        <!--
+			Textual description of the connector
+		-->
+        <description>
+			Connector to the charging database for IVR Prepaid
+		</description>
+        <include copy="true" file="AccountManagement.es" />
+        <properties name="AccountManagement">
+            <property name="AS_URL" value="/SOAPConnector/SOAPConnector/" />
+            <property name="application" value="AccountManagement" />
+            <property name="service" value="AccountManagement" />
+        </properties>
+    </connector>
+    <requests>
+<!--         <request id="createSubscriber" label="createSubscriber" function="createSubscriber_AccountManagement" type="JSON">
+            <parameters>
+                <param label="createSubscriber.actionCommonInfo.appInfo.appId" name="createSubscriber.actionCommonInfo.appInfo.appId" default="" target="function" required="true">
+                    <description>appId is of string type.</description>
+                </param>
+                <param label="createSubscriber.actionCommonInfo.appInfo.reference" name="createSubscriber.actionCommonInfo.appInfo.reference" default="" target="function" required="true">
+                    <description>reference is of string type.</description>
+                </param>
+                <param label="createSubscriber.actionCommonInfo.appInfo.extension.@anyAttributeParam" name="createSubscriber.actionCommonInfo.appInfo.extension.@anyAttributeParam" default="" target="function" required="false">
+                    <description>Additional attributes for element extension</description>
+                </param>
+                <param label="createSubscriber.actionCommonInfo.appInfo.extension.any" name="createSubscriber.actionCommonInfo.appInfo.extension.any" default="" target="function" required="false">
+                    <description>You may enter ANY elements at this point</description>
+                </param>
+                <param label="createSubscriber.actionCommonInfo.userCode" name="createSubscriber.actionCommonInfo.userCode" default="" target="function" required="false">
+                    <description>userCode is of string type.</description>
+                </param>
+                <param label="createSubscriber.actionCommonInfo.opCost" name="createSubscriber.actionCommonInfo.opCost" default="" target="function" required="false">
+                    <description>opCost is of long type.</description>
+                </param>
+                <param label="createSubscriber.actionCommonInfo.opCost.@exponent" name="createSubscriber.actionCommonInfo.opCost.@exponent" default="" target="function" required="false">
+                    <description>exponent is of int type.</description>
+                </param>
+                <param label="createSubscriber.actionCommonInfo.currencyCode" name="createSubscriber.actionCommonInfo.currencyCode" default="" target="function" required="false">
+                    <description>CurrencyCodeType</description>
+                </param>
+                <param label="createSubscriber.actionCommonInfo.extension.@anyAttributeParam" name="createSubscriber.actionCommonInfo.extension.@anyAttributeParam" default="" target="function" required="false">
+                    <description>Additional attributes for element extension</description>
+                </param>
+                <param label="createSubscriber.actionCommonInfo.extension.any" name="createSubscriber.actionCommonInfo.extension.any" default="" target="function" required="false">
+                    <description>You may enter ANY elements at this point</description>
+                </param>
+                <param label="createSubscriber.subscriberId.choice" name="createSubscriber.subscriberId.choice" default="" target="function" required="false">
+                    <description>SubscriberIdType</description>
+                </param>
+                <param label="createSubscriber.accountProfileId" name="createSubscriber.accountProfileId" default="" target="function" required="true">
+                    <description>accountProfileId is of string type.</description>
+                </param>
+                <param label="createSubscriber.serviceProviderId" name="createSubscriber.serviceProviderId" default="" target="function" required="true">
+                    <description>serviceProviderId is of string type.</description>
+                </param>
+                <param label="createSubscriber.networkCardInfo.imsi" name="createSubscriber.networkCardInfo.imsi" default="" target="function" required="false">
+                    <description>ImsiType</description>
+                </param>
+                <param label="createSubscriber.networkCardInfo.iccNumber" name="createSubscriber.networkCardInfo.iccNumber" default="" target="function" required="false">
+                    <description>ICCNumberType</description>
+                </param>
+                <param label="createSubscriber.networkCardInfo.IMEI" name="createSubscriber.networkCardInfo.IMEI" default="" target="function" required="false">
+                    <description>ImeiType</description>
+                </param>
+                <param label="createSubscriber.networkCardInfo.extension.@anyAttributeParam" name="createSubscriber.networkCardInfo.extension.@anyAttributeParam" default="" target="function" required="false">
+                    <description>Additional attributes for element extension</description>
+                </param>
+                <param label="createSubscriber.networkCardInfo.extension.any" name="createSubscriber.networkCardInfo.extension.any" default="" target="function" required="false">
+                    <description>You may enter ANY elements at this point</description>
+                </param>
+                <param label="createSubscriber.messageNotificationEventFlag" name="createSubscriber.messageNotificationEventFlag" default="" target="function" required="false">
+                    <description>FlagType</description>
+                </param>
+                <param label="createSubscriber.initialBalance" name="createSubscriber.initialBalance" default="" target="function" required="false">
+                    <description>initialBalance is of long type.</description>
+                </param>
+                <param label="createSubscriber.initialBalance.@exponent" name="createSubscriber.initialBalance.@exponent" default="" target="function" required="false">
+                    <description>exponent is of int type.</description>
+                </param>
+                <param label="createSubscriber.negativeBalanceUsageFlag" name="createSubscriber.negativeBalanceUsageFlag" default="" target="function" required="false">
+                    <description>FlagType</description>
+                </param>
+                <param label="createSubscriber.subscriberExtendedInfo.taxCode" name="createSubscriber.subscriberExtendedInfo.taxCode" default="" target="function" required="false">
+                    <description>taxCode is of string type.</description>
+                </param>
+                <param label="createSubscriber.subscriberExtendedInfo.genericRatingParameter" name="createSubscriber.subscriberExtendedInfo.genericRatingParameter" default="" target="function" required="false">
+                    <description>genericRatingParameter is of string type.</description>
+                </param>
+                <param label="createSubscriber.subscriberExtendedInfo.subscriptionArea" name="createSubscriber.subscriberExtendedInfo.subscriptionArea" default="" target="function" required="false">
+                    <description>subscriptionArea is of string type.</description>
+                </param>
+                <param label="createSubscriber.subscriberExtendedInfo.ocsreNodeId" name="createSubscriber.subscriberExtendedInfo.ocsreNodeId" default="" target="function" required="false">
+                    <description>ocsreNodeId is of string type.</description>
+                </param>
+                <param label="createSubscriber.subscriberExtendedInfo.geographicArea" name="createSubscriber.subscriberExtendedInfo.geographicArea" default="" target="function" required="false">
+                    <description>geographicArea is of string type.</description>
+                </param>
+                <param label="createSubscriber.subscriberExtendedInfo.billingCycleCode" name="createSubscriber.subscriberExtendedInfo.billingCycleCode" default="" target="function" required="false">
+                    <description>billingCycleCode is of string type.</description>
+                </param>
+                <param label="createSubscriber.subscriberExtendedInfo.extension.@anyAttributeParam" name="createSubscriber.subscriberExtendedInfo.extension.@anyAttributeParam" default="" target="function" required="false">
+                    <description>Additional attributes for element extension</description>
+                </param>
+                <param label="createSubscriber.subscriberExtendedInfo.extension.any" name="createSubscriber.subscriberExtendedInfo.extension.any" default="" target="function" required="false">
+                    <description>You may enter ANY elements at this point</description>
+                </param>
+                <param label="createSubscriber.extension.@anyAttributeParam" name="createSubscriber.extension.@anyAttributeParam" default="" target="function" required="false">
+                    <description>Additional attributes for element extension</description>
+                </param>
+                <param label="createSubscriber.extension.any" name="createSubscriber.extension.any" default="" target="function" required="false">
+                    <description>You may enter ANY elements at this point</description>
+                </param>
+                <param name="http.authorization" label="http.authorization" required="false" default="" target="function">
+                    <description />
+                </param>
+                <param name="headers" label="headers" required="false" default="" target="function">
+                    <description />
+                </param>
+                <param name="privateRequest" default="false" label="private" target="function">
+                    <description />
+                </param>
+            </parameters>
+        </request>
+        <request id="changeSubscriber" label="changeSubscriber" function="changeSubscriber_AccountManagement" type="JSON">
+            <parameters>
+                <param label="changeSubscriber.actionCommonInfo.appInfo.appId" name="changeSubscriber.actionCommonInfo.appInfo.appId" default="" target="function" required="true">
+                    <description>appId is of string type.</description>
+                </param>
+                <param label="changeSubscriber.actionCommonInfo.appInfo.reference" name="changeSubscriber.actionCommonInfo.appInfo.reference" default="" target="function" required="true">
+                    <description>reference is of string type.</description>
+                </param>
+                <param label="changeSubscriber.actionCommonInfo.appInfo.extension.@anyAttributeParam" name="changeSubscriber.actionCommonInfo.appInfo.extension.@anyAttributeParam" default="" target="function" required="false">
+                    <description>Additional attributes for element extension</description>
+                </param>
+                <param label="changeSubscriber.actionCommonInfo.appInfo.extension.any" name="changeSubscriber.actionCommonInfo.appInfo.extension.any" default="" target="function" required="false">
+                    <description>You may enter ANY elements at this point</description>
+                </param>
+                <param label="changeSubscriber.actionCommonInfo.userCode" name="changeSubscriber.actionCommonInfo.userCode" default="" target="function" required="false">
+                    <description>userCode is of string type.</description>
+                </param>
+                <param label="changeSubscriber.actionCommonInfo.opCost" name="changeSubscriber.actionCommonInfo.opCost" default="" target="function" required="false">
+                    <description>opCost is of long type.</description>
+                </param>
+                <param label="changeSubscriber.actionCommonInfo.opCost.@exponent" name="changeSubscriber.actionCommonInfo.opCost.@exponent" default="" target="function" required="false">
+                    <description>exponent is of int type.</description>
+                </param>
+                <param label="changeSubscriber.actionCommonInfo.currencyCode" name="changeSubscriber.actionCommonInfo.currencyCode" default="" target="function" required="false">
+                    <description>CurrencyCodeType</description>
+                </param>
+                <param label="changeSubscriber.actionCommonInfo.extension.@anyAttributeParam" name="changeSubscriber.actionCommonInfo.extension.@anyAttributeParam" default="" target="function" required="false">
+                    <description>Additional attributes for element extension</description>
+                </param>
+                <param label="changeSubscriber.actionCommonInfo.extension.any" name="changeSubscriber.actionCommonInfo.extension.any" default="" target="function" required="false">
+                    <description>You may enter ANY elements at this point</description>
+                </param>
+                <param label="changeSubscriber.subscriberId.choice" name="changeSubscriber.subscriberId.choice" default="" target="function" required="false">
+                    <description>SubscriberIdType</description>
+                </param>
+                <param label="changeSubscriber.networkCardInfo.imsi" name="changeSubscriber.networkCardInfo.imsi" default="" target="function" required="false">
+                    <description>ImsiType</description>
+                </param>
+                <param label="changeSubscriber.networkCardInfo.iccNumber" name="changeSubscriber.networkCardInfo.iccNumber" default="" target="function" required="false">
+                    <description>ICCNumberType</description>
+                </param>
+                <param label="changeSubscriber.networkCardInfo.IMEI" name="changeSubscriber.networkCardInfo.IMEI" default="" target="function" required="false">
+                    <description>ImeiType</description>
+                </param>
+                <param label="changeSubscriber.networkCardInfo.extension.@anyAttributeParam" name="changeSubscriber.networkCardInfo.extension.@anyAttributeParam" default="" target="function" required="false">
+                    <description>Additional attributes for element extension</description>
+                </param>
+                <param label="changeSubscriber.networkCardInfo.extension.any" name="changeSubscriber.networkCardInfo.extension.any" default="" target="function" required="false">
+                    <description>You may enter ANY elements at this point</description>
+                </param>
+                <param label="changeSubscriber.messageNotificationEventFlag" name="changeSubscriber.messageNotificationEventFlag" default="" target="function" required="false">
+                    <description>FlagType</description>
+                </param>
+                <param label="changeSubscriber.negativeBalanceUsageFlag" name="changeSubscriber.negativeBalanceUsageFlag" default="" target="function" required="false">
+                    <description>FlagType</description>
+                </param>
+                <param label="changeSubscriber.subscriberExtendedInfo.taxCode" name="changeSubscriber.subscriberExtendedInfo.taxCode" default="" target="function" required="false">
+                    <description>taxCode is of string type.</description>
+                </param>
+                <param label="changeSubscriber.subscriberExtendedInfo.genericRatingParameter" name="changeSubscriber.subscriberExtendedInfo.genericRatingParameter" default="" target="function" required="false">
+                    <description>genericRatingParameter is of string type.</description>
+                </param>
+                <param label="changeSubscriber.subscriberExtendedInfo.subscriptionArea" name="changeSubscriber.subscriberExtendedInfo.subscriptionArea" default="" target="function" required="false">
+                    <description>subscriptionArea is of string type.</description>
+                </param>
+                <param label="changeSubscriber.subscriberExtendedInfo.ocsreNodeId" name="changeSubscriber.subscriberExtendedInfo.ocsreNodeId" default="" target="function" required="false">
+                    <description>ocsreNodeId is of string type.</description>
+                </param>
+                <param label="changeSubscriber.subscriberExtendedInfo.geographicArea" name="changeSubscriber.subscriberExtendedInfo.geographicArea" default="" target="function" required="false">
+                    <description>geographicArea is of string type.</description>
+                </param>
+                <param label="changeSubscriber.subscriberExtendedInfo.billingCycleCode" name="changeSubscriber.subscriberExtendedInfo.billingCycleCode" default="" target="function" required="false">
+                    <description>billingCycleCode is of string type.</description>
+                </param>
+                <param label="changeSubscriber.subscriberExtendedInfo.extension.@anyAttributeParam" name="changeSubscriber.subscriberExtendedInfo.extension.@anyAttributeParam" default="" target="function" required="false">
+                    <description>Additional attributes for element extension</description>
+                </param>
+                <param label="changeSubscriber.subscriberExtendedInfo.extension.any" name="changeSubscriber.subscriberExtendedInfo.extension.any" default="" target="function" required="false">
+                    <description>You may enter ANY elements at this point</description>
+                </param>
+                <param label="changeSubscriber.actionCauseCode" name="changeSubscriber.actionCauseCode" default="" target="function" required="false">
+                    <description>actionCauseCode is of string type.</description>
+                </param>
+                <param label="changeSubscriber.extension.@anyAttributeParam" name="changeSubscriber.extension.@anyAttributeParam" default="" target="function" required="false">
+                    <description>Additional attributes for element extension</description>
+                </param>
+                <param label="changeSubscriber.extension.any" name="changeSubscriber.extension.any" default="" target="function" required="false">
+                    <description>You may enter ANY elements at this point</description>
+                </param>
+                <param name="http.authorization" label="http.authorization" required="false" default="" target="function">
+                    <description />
+                </param>
+                <param name="headers" label="headers" required="false" default="" target="function">
+                    <description />
+                </param>
+                <param name="privateRequest" default="false" label="private" target="function">
+                    <description />
+                </param>
+            </parameters>
+        </request>
+        <request id="deleteSubscriber" label="deleteSubscriber" function="deleteSubscriber_AccountManagement" type="JSON">
+            <parameters>
+                <param label="deleteSubscriber.actionCommonInfo.appInfo.appId" name="deleteSubscriber.actionCommonInfo.appInfo.appId" default="" target="function" required="true">
+                    <description>appId is of string type.</description>
+                </param>
+                <param label="deleteSubscriber.actionCommonInfo.appInfo.reference" name="deleteSubscriber.actionCommonInfo.appInfo.reference" default="" target="function" required="true">
+                    <description>reference is of string type.</description>
+                </param>
+                <param label="deleteSubscriber.actionCommonInfo.appInfo.extension.@anyAttributeParam" name="deleteSubscriber.actionCommonInfo.appInfo.extension.@anyAttributeParam" default="" target="function" required="false">
+                    <description>Additional attributes for element extension</description>
+                </param>
+                <param label="deleteSubscriber.actionCommonInfo.appInfo.extension.any" name="deleteSubscriber.actionCommonInfo.appInfo.extension.any" default="" target="function" required="false">
+                    <description>You may enter ANY elements at this point</description>
+                </param>
+                <param label="deleteSubscriber.actionCommonInfo.userCode" name="deleteSubscriber.actionCommonInfo.userCode" default="" target="function" required="false">
+                    <description>userCode is of string type.</description>
+                </param>
+                <param label="deleteSubscriber.actionCommonInfo.opCost" name="deleteSubscriber.actionCommonInfo.opCost" default="" target="function" required="false">
+                    <description>opCost is of long type.</description>
+                </param>
+                <param label="deleteSubscriber.actionCommonInfo.opCost.@exponent" name="deleteSubscriber.actionCommonInfo.opCost.@exponent" default="" target="function" required="false">
+                    <description>exponent is of int type.</description>
+                </param>
+                <param label="deleteSubscriber.actionCommonInfo.currencyCode" name="deleteSubscriber.actionCommonInfo.currencyCode" default="" target="function" required="false">
+                    <description>CurrencyCodeType</description>
+                </param>
+                <param label="deleteSubscriber.actionCommonInfo.extension.@anyAttributeParam" name="deleteSubscriber.actionCommonInfo.extension.@anyAttributeParam" default="" target="function" required="false">
+                    <description>Additional attributes for element extension</description>
+                </param>
+                <param label="deleteSubscriber.actionCommonInfo.extension.any" name="deleteSubscriber.actionCommonInfo.extension.any" default="" target="function" required="false">
+                    <description>You may enter ANY elements at this point</description>
+                </param>
+                <param label="deleteSubscriber.subscriberId.choice" name="deleteSubscriber.subscriberId.choice" default="" target="function" required="false">
+                    <description>SubscriberIdType</description>
+                </param>
+                <param label="deleteSubscriber.cancellableFlag" name="deleteSubscriber.cancellableFlag" default="" target="function" required="true">
+                    <description>FlagType</description>
+                </param>
+                <param label="deleteSubscriber.actionCauseCode" name="deleteSubscriber.actionCauseCode" default="" target="function" required="false">
+                    <description>actionCauseCode is of string type.</description>
+                </param>
+                <param label="deleteSubscriber.extension.@anyAttributeParam" name="deleteSubscriber.extension.@anyAttributeParam" default="" target="function" required="false">
+                    <description>Additional attributes for element extension</description>
+                </param>
+                <param label="deleteSubscriber.extension.any" name="deleteSubscriber.extension.any" default="" target="function" required="false">
+                    <description>You may enter ANY elements at this point</description>
+                </param>
+                <param name="http.authorization" label="http.authorization" required="false" default="" target="function">
+                    <description />
+                </param>
+                <param name="headers" label="headers" required="false" default="" target="function">
+                    <description />
+                </param>
+                <param name="privateRequest" default="false" label="private" target="function">
+                    <description />
+                </param>
+            </parameters>
+        </request>
+        <request id="activateSubscriber" label="activateSubscriber" function="activateSubscriber_AccountManagement" type="JSON">
+            <parameters>
+                <param label="activateSubscriber.actionCommonInfo.appInfo.appId" name="activateSubscriber.actionCommonInfo.appInfo.appId" default="" target="function" required="true">
+                    <description>appId is of string type.</description>
+                </param>
+                <param label="activateSubscriber.actionCommonInfo.appInfo.reference" name="activateSubscriber.actionCommonInfo.appInfo.reference" default="" target="function" required="true">
+                    <description>reference is of string type.</description>
+                </param>
+                <param label="activateSubscriber.actionCommonInfo.appInfo.extension.@anyAttributeParam" name="activateSubscriber.actionCommonInfo.appInfo.extension.@anyAttributeParam" default="" target="function" required="false">
+                    <description>Additional attributes for element extension</description>
+                </param>
+                <param label="activateSubscriber.actionCommonInfo.appInfo.extension.any" name="activateSubscriber.actionCommonInfo.appInfo.extension.any" default="" target="function" required="false">
+                    <description>You may enter ANY elements at this point</description>
+                </param>
+                <param label="activateSubscriber.actionCommonInfo.userCode" name="activateSubscriber.actionCommonInfo.userCode" default="" target="function" required="false">
+                    <description>userCode is of string type.</description>
+                </param>
+                <param label="activateSubscriber.actionCommonInfo.opCost" name="activateSubscriber.actionCommonInfo.opCost" default="" target="function" required="false">
+                    <description>opCost is of long type.</description>
+                </param>
+                <param label="activateSubscriber.actionCommonInfo.opCost.@exponent" name="activateSubscriber.actionCommonInfo.opCost.@exponent" default="" target="function" required="false">
+                    <description>exponent is of int type.</description>
+                </param>
+                <param label="activateSubscriber.actionCommonInfo.currencyCode" name="activateSubscriber.actionCommonInfo.currencyCode" default="" target="function" required="false">
+                    <description>CurrencyCodeType</description>
+                </param>
+                <param label="activateSubscriber.actionCommonInfo.extension.@anyAttributeParam" name="activateSubscriber.actionCommonInfo.extension.@anyAttributeParam" default="" target="function" required="false">
+                    <description>Additional attributes for element extension</description>
+                </param>
+                <param label="activateSubscriber.actionCommonInfo.extension.any" name="activateSubscriber.actionCommonInfo.extension.any" default="" target="function" required="false">
+                    <description>You may enter ANY elements at this point</description>
+                </param>
+                <param label="activateSubscriber.subscriberId.choice" name="activateSubscriber.subscriberId.choice" default="" target="function" required="false">
+                    <description>SubscriberIdType</description>
+                </param>
+                <param label="activateSubscriber.extension.@anyAttributeParam" name="activateSubscriber.extension.@anyAttributeParam" default="" target="function" required="false">
+                    <description>Additional attributes for element extension</description>
+                </param>
+                <param label="activateSubscriber.extension.any" name="activateSubscriber.extension.any" default="" target="function" required="false">
+                    <description>You may enter ANY elements at this point</description>
+                </param>
+                <param name="http.authorization" label="http.authorization" required="false" default="" target="function">
+                    <description />
+                </param>
+                <param name="headers" label="headers" required="false" default="" target="function">
+                    <description />
+                </param>
+                <param name="privateRequest" default="false" label="private" target="function">
+                    <description />
+                </param>
+            </parameters>
+        </request>
+        <request id="suspendScheduledSubscriber" label="suspendScheduledSubscriber" function="suspendScheduledSubscriber_AccountManagement" type="JSON">
+            <parameters>
+                <param label="suspendScheduledSubscriber.actionCommonInfo.appInfo.appId" name="suspendScheduledSubscriber.actionCommonInfo.appInfo.appId" default="" target="function" required="true">
+                    <description>appId is of string type.</description>
+                </param>
+                <param label="suspendScheduledSubscriber.actionCommonInfo.appInfo.reference" name="suspendScheduledSubscriber.actionCommonInfo.appInfo.reference" default="" target="function" required="true">
+                    <description>reference is of string type.</description>
+                </param>
+                <param label="suspendScheduledSubscriber.actionCommonInfo.appInfo.extension.@anyAttributeParam" name="suspendScheduledSubscriber.actionCommonInfo.appInfo.extension.@anyAttributeParam" default="" target="function" required="false">
+                    <description>Additional attributes for element extension</description>
+                </param>
+                <param label="suspendScheduledSubscriber.actionCommonInfo.appInfo.extension.any" name="suspendScheduledSubscriber.actionCommonInfo.appInfo.extension.any" default="" target="function" required="false">
+                    <description>You may enter ANY elements at this point</description>
+                </param>
+                <param label="suspendScheduledSubscriber.actionCommonInfo.userCode" name="suspendScheduledSubscriber.actionCommonInfo.userCode" default="" target="function" required="false">
+                    <description>userCode is of string type.</description>
+                </param>
+                <param label="suspendScheduledSubscriber.actionCommonInfo.opCost" name="suspendScheduledSubscriber.actionCommonInfo.opCost" default="" target="function" required="false">
+                    <description>opCost is of long type.</description>
+                </param>
+                <param label="suspendScheduledSubscriber.actionCommonInfo.opCost.@exponent" name="suspendScheduledSubscriber.actionCommonInfo.opCost.@exponent" default="" target="function" required="false">
+                    <description>exponent is of int type.</description>
+                </param>
+                <param label="suspendScheduledSubscriber.actionCommonInfo.currencyCode" name="suspendScheduledSubscriber.actionCommonInfo.currencyCode" default="" target="function" required="false">
+                    <description>CurrencyCodeType</description>
+                </param>
+                <param label="suspendScheduledSubscriber.actionCommonInfo.extension.@anyAttributeParam" name="suspendScheduledSubscriber.actionCommonInfo.extension.@anyAttributeParam" default="" target="function" required="false">
+                    <description>Additional attributes for element extension</description>
+                </param>
+                <param label="suspendScheduledSubscriber.actionCommonInfo.extension.any" name="suspendScheduledSubscriber.actionCommonInfo.extension.any" default="" target="function" required="false">
+                    <description>You may enter ANY elements at this point</description>
+                </param>
+                <param label="suspendScheduledSubscriber.subscriberId.choice" name="suspendScheduledSubscriber.subscriberId.choice" default="" target="function" required="false">
+                    <description>SubscriberIdType</description>
+                </param>
+                <param label="suspendScheduledSubscriber.actionCauseCode" name="suspendScheduledSubscriber.actionCauseCode" default="" target="function" required="false">
+                    <description>actionCauseCode is of string type.</description>
+                </param>
+                <param label="suspendScheduledSubscriber.suspensionTime" name="suspendScheduledSubscriber.suspensionTime" default="" target="function" required="false">
+                    <description>suspensionTime is of duration type.</description>
+                </param>
+                <param label="suspendScheduledSubscriber.extension.@anyAttributeParam" name="suspendScheduledSubscriber.extension.@anyAttributeParam" default="" target="function" required="false">
+                    <description>Additional attributes for element extension</description>
+                </param>
+                <param label="suspendScheduledSubscriber.extension.any" name="suspendScheduledSubscriber.extension.any" default="" target="function" required="false">
+                    <description>You may enter ANY elements at this point</description>
+                </param>
+                <param name="http.authorization" label="http.authorization" required="false" default="" target="function">
+                    <description />
+                </param>
+                <param name="headers" label="headers" required="false" default="" target="function">
+                    <description />
+                </param>
+                <param name="privateRequest" default="false" label="private" target="function">
+                    <description />
+                </param>
+            </parameters>
+        </request>
+        <request id="suspendSubscriber" label="suspendSubscriber" function="suspendSubscriber_AccountManagement" type="JSON">
+            <parameters>
+                <param label="suspendSubscriber.actionCommonInfo.appInfo.appId" name="suspendSubscriber.actionCommonInfo.appInfo.appId" default="" target="function" required="true">
+                    <description>appId is of string type.</description>
+                </param>
+                <param label="suspendSubscriber.actionCommonInfo.appInfo.reference" name="suspendSubscriber.actionCommonInfo.appInfo.reference" default="" target="function" required="true">
+                    <description>reference is of string type.</description>
+                </param>
+                <param label="suspendSubscriber.actionCommonInfo.appInfo.extension.@anyAttributeParam" name="suspendSubscriber.actionCommonInfo.appInfo.extension.@anyAttributeParam" default="" target="function" required="false">
+                    <description>Additional attributes for element extension</description>
+                </param>
+                <param label="suspendSubscriber.actionCommonInfo.appInfo.extension.any" name="suspendSubscriber.actionCommonInfo.appInfo.extension.any" default="" target="function" required="false">
+                    <description>You may enter ANY elements at this point</description>
+                </param>
+                <param label="suspendSubscriber.actionCommonInfo.userCode" name="suspendSubscriber.actionCommonInfo.userCode" default="" target="function" required="false">
+                    <description>userCode is of string type.</description>
+                </param>
+                <param label="suspendSubscriber.actionCommonInfo.opCost" name="suspendSubscriber.actionCommonInfo.opCost" default="" target="function" required="false">
+                    <description>opCost is of long type.</description>
+                </param>
+                <param label="suspendSubscriber.actionCommonInfo.opCost.@exponent" name="suspendSubscriber.actionCommonInfo.opCost.@exponent" default="" target="function" required="false">
+                    <description>exponent is of int type.</description>
+                </param>
+                <param label="suspendSubscriber.actionCommonInfo.currencyCode" name="suspendSubscriber.actionCommonInfo.currencyCode" default="" target="function" required="false">
+                    <description>CurrencyCodeType</description>
+                </param>
+                <param label="suspendSubscriber.actionCommonInfo.extension.@anyAttributeParam" name="suspendSubscriber.actionCommonInfo.extension.@anyAttributeParam" default="" target="function" required="false">
+                    <description>Additional attributes for element extension</description>
+                </param>
+                <param label="suspendSubscriber.actionCommonInfo.extension.any" name="suspendSubscriber.actionCommonInfo.extension.any" default="" target="function" required="false">
+                    <description>You may enter ANY elements at this point</description>
+                </param>
+                <param label="suspendSubscriber.subscriberId.choice" name="suspendSubscriber.subscriberId.choice" default="" target="function" required="false">
+                    <description>SubscriberIdType</description>
+                </param>
+                <param label="suspendSubscriber.actionCauseCode" name="suspendSubscriber.actionCauseCode" default="" target="function" required="false">
+                    <description>actionCauseCode is of string type.</description>
+                </param>
+                <param label="suspendSubscriber.extension.@anyAttributeParam" name="suspendSubscriber.extension.@anyAttributeParam" default="" target="function" required="false">
+                    <description>Additional attributes for element extension</description>
+                </param>
+                <param label="suspendSubscriber.extension.any" name="suspendSubscriber.extension.any" default="" target="function" required="false">
+                    <description>You may enter ANY elements at this point</description>
+                </param>
+                <param name="http.authorization" label="http.authorization" required="false" default="" target="function">
+                    <description />
+                </param>
+                <param name="headers" label="headers" required="false" default="" target="function">
+                    <description />
+                </param>
+                <param name="privateRequest" default="false" label="private" target="function">
+                    <description />
+                </param>
+            </parameters>
+        </request>
+        <request id="cancelSubscriberSuspension" label="cancelSubscriberSuspension" function="cancelSubscriberSuspension_AccountManagement" type="JSON">
+            <parameters>
+                <param label="cancelSubscriberSuspension.actionCommonInfo.appInfo.appId" name="cancelSubscriberSuspension.actionCommonInfo.appInfo.appId" default="" target="function" required="true">
+                    <description>appId is of string type.</description>
+                </param>
+                <param label="cancelSubscriberSuspension.actionCommonInfo.appInfo.reference" name="cancelSubscriberSuspension.actionCommonInfo.appInfo.reference" default="" target="function" required="true">
+                    <description>reference is of string type.</description>
+                </param>
+                <param label="cancelSubscriberSuspension.actionCommonInfo.appInfo.extension.@anyAttributeParam" name="cancelSubscriberSuspension.actionCommonInfo.appInfo.extension.@anyAttributeParam" default="" target="function" required="false">
+                    <description>Additional attributes for element extension</description>
+                </param>
+                <param label="cancelSubscriberSuspension.actionCommonInfo.appInfo.extension.any" name="cancelSubscriberSuspension.actionCommonInfo.appInfo.extension.any" default="" target="function" required="false">
+                    <description>You may enter ANY elements at this point</description>
+                </param>
+                <param label="cancelSubscriberSuspension.actionCommonInfo.userCode" name="cancelSubscriberSuspension.actionCommonInfo.userCode" default="" target="function" required="false">
+                    <description>userCode is of string type.</description>
+                </param>
+                <param label="cancelSubscriberSuspension.actionCommonInfo.opCost" name="cancelSubscriberSuspension.actionCommonInfo.opCost" default="" target="function" required="false">
+                    <description>opCost is of long type.</description>
+                </param>
+                <param label="cancelSubscriberSuspension.actionCommonInfo.opCost.@exponent" name="cancelSubscriberSuspension.actionCommonInfo.opCost.@exponent" default="" target="function" required="false">
+                    <description>exponent is of int type.</description>
+                </param>
+                <param label="cancelSubscriberSuspension.actionCommonInfo.currencyCode" name="cancelSubscriberSuspension.actionCommonInfo.currencyCode" default="" target="function" required="false">
+                    <description>CurrencyCodeType</description>
+                </param>
+                <param label="cancelSubscriberSuspension.actionCommonInfo.extension.@anyAttributeParam" name="cancelSubscriberSuspension.actionCommonInfo.extension.@anyAttributeParam" default="" target="function" required="false">
+                    <description>Additional attributes for element extension</description>
+                </param>
+                <param label="cancelSubscriberSuspension.actionCommonInfo.extension.any" name="cancelSubscriberSuspension.actionCommonInfo.extension.any" default="" target="function" required="false">
+                    <description>You may enter ANY elements at this point</description>
+                </param>
+                <param label="cancelSubscriberSuspension.subscriberId.choice" name="cancelSubscriberSuspension.subscriberId.choice" default="" target="function" required="false">
+                    <description>SubscriberIdType</description>
+                </param>
+                <param label="cancelSubscriberSuspension.extension.@anyAttributeParam" name="cancelSubscriberSuspension.extension.@anyAttributeParam" default="" target="function" required="false">
+                    <description>Additional attributes for element extension</description>
+                </param>
+                <param label="cancelSubscriberSuspension.extension.any" name="cancelSubscriberSuspension.extension.any" default="" target="function" required="false">
+                    <description>You may enter ANY elements at this point</description>
+                </param>
+                <param name="http.authorization" label="http.authorization" required="false" default="" target="function">
+                    <description />
+                </param>
+                <param name="headers" label="headers" required="false" default="" target="function">
+                    <description />
+                </param>
+                <param name="privateRequest" default="false" label="private" target="function">
+                    <description />
+                </param>
+            </parameters>
+        </request>
+        <request id="changeSubscriberId" label="changeSubscriberId" function="changeSubscriberId_AccountManagement" type="JSON">
+            <parameters>
+                <param label="changeSubscriberId.actionCommonInfo.appInfo.appId" name="changeSubscriberId.actionCommonInfo.appInfo.appId" default="" target="function" required="true">
+                    <description>appId is of string type.</description>
+                </param>
+                <param label="changeSubscriberId.actionCommonInfo.appInfo.reference" name="changeSubscriberId.actionCommonInfo.appInfo.reference" default="" target="function" required="true">
+                    <description>reference is of string type.</description>
+                </param>
+                <param label="changeSubscriberId.actionCommonInfo.appInfo.extension.@anyAttributeParam" name="changeSubscriberId.actionCommonInfo.appInfo.extension.@anyAttributeParam" default="" target="function" required="false">
+                    <description>Additional attributes for element extension</description>
+                </param>
+                <param label="changeSubscriberId.actionCommonInfo.appInfo.extension.any" name="changeSubscriberId.actionCommonInfo.appInfo.extension.any" default="" target="function" required="false">
+                    <description>You may enter ANY elements at this point</description>
+                </param>
+                <param label="changeSubscriberId.actionCommonInfo.userCode" name="changeSubscriberId.actionCommonInfo.userCode" default="" target="function" required="false">
+                    <description>userCode is of string type.</description>
+                </param>
+                <param label="changeSubscriberId.actionCommonInfo.opCost" name="changeSubscriberId.actionCommonInfo.opCost" default="" target="function" required="false">
+                    <description>opCost is of long type.</description>
+                </param>
+                <param label="changeSubscriberId.actionCommonInfo.opCost.@exponent" name="changeSubscriberId.actionCommonInfo.opCost.@exponent" default="" target="function" required="false">
+                    <description>exponent is of int type.</description>
+                </param>
+                <param label="changeSubscriberId.actionCommonInfo.currencyCode" name="changeSubscriberId.actionCommonInfo.currencyCode" default="" target="function" required="false">
+                    <description>CurrencyCodeType</description>
+                </param>
+                <param label="changeSubscriberId.actionCommonInfo.extension.@anyAttributeParam" name="changeSubscriberId.actionCommonInfo.extension.@anyAttributeParam" default="" target="function" required="false">
+                    <description>Additional attributes for element extension</description>
+                </param>
+                <param label="changeSubscriberId.actionCommonInfo.extension.any" name="changeSubscriberId.actionCommonInfo.extension.any" default="" target="function" required="false">
+                    <description>You may enter ANY elements at this point</description>
+                </param>
+                <param label="changeSubscriberId.subscriberId.choice" name="changeSubscriberId.subscriberId.choice" default="" target="function" required="false">
+                    <description>SubscriberIdType</description>
+                </param>
+                <param label="changeSubscriberId.newSubscriberId.choice" name="changeSubscriberId.newSubscriberId.choice" default="" target="function" required="true">
+                    <description>SubscriberIdType</description>
+                </param>
+                <param label="changeSubscriberId.portabilityRoutingPrefix" name="changeSubscriberId.portabilityRoutingPrefix" default="" target="function" required="false">
+                    <description>portabilityRoutingPrefix is of string type.</description>
+                </param>
+                <param label="changeSubscriberId.extension.@anyAttributeParam" name="changeSubscriberId.extension.@anyAttributeParam" default="" target="function" required="false">
+                    <description>Additional attributes for element extension</description>
+                </param>
+                <param label="changeSubscriberId.extension.any" name="changeSubscriberId.extension.any" default="" target="function" required="false">
+                    <description>You may enter ANY elements at this point</description>
+                </param>
+                <param name="http.authorization" label="http.authorization" required="false" default="" target="function">
+                    <description />
+                </param>
+                <param name="headers" label="headers" required="false" default="" target="function">
+                    <description />
+                </param>
+                <param name="privateRequest" default="false" label="private" target="function">
+                    <description />
+                </param>
+            </parameters>
+        </request>
+        <request id="changeTariffPlanId" label="changeTariffPlanId" function="changeTariffPlanId_AccountManagement" type="JSON">
+            <parameters>
+                <param label="changeTariffPlanId.actionCommonInfo.appInfo.appId" name="changeTariffPlanId.actionCommonInfo.appInfo.appId" default="" target="function" required="true">
+                    <description>appId is of string type.</description>
+                </param>
+                <param label="changeTariffPlanId.actionCommonInfo.appInfo.reference" name="changeTariffPlanId.actionCommonInfo.appInfo.reference" default="" target="function" required="true">
+                    <description>reference is of string type.</description>
+                </param>
+                <param label="changeTariffPlanId.actionCommonInfo.appInfo.extension.@anyAttributeParam" name="changeTariffPlanId.actionCommonInfo.appInfo.extension.@anyAttributeParam" default="" target="function" required="false">
+                    <description>Additional attributes for element extension</description>
+                </param>
+                <param label="changeTariffPlanId.actionCommonInfo.appInfo.extension.any" name="changeTariffPlanId.actionCommonInfo.appInfo.extension.any" default="" target="function" required="false">
+                    <description>You may enter ANY elements at this point</description>
+                </param>
+                <param label="changeTariffPlanId.actionCommonInfo.userCode" name="changeTariffPlanId.actionCommonInfo.userCode" default="" target="function" required="false">
+                    <description>userCode is of string type.</description>
+                </param>
+                <param label="changeTariffPlanId.actionCommonInfo.opCost" name="changeTariffPlanId.actionCommonInfo.opCost" default="" target="function" required="false">
+                    <description>opCost is of long type.</description>
+                </param>
+                <param label="changeTariffPlanId.actionCommonInfo.opCost.@exponent" name="changeTariffPlanId.actionCommonInfo.opCost.@exponent" default="" target="function" required="false">
+                    <description>exponent is of int type.</description>
+                </param>
+                <param label="changeTariffPlanId.actionCommonInfo.currencyCode" name="changeTariffPlanId.actionCommonInfo.currencyCode" default="" target="function" required="false">
+                    <description>CurrencyCodeType</description>
+                </param>
+                <param label="changeTariffPlanId.actionCommonInfo.extension.@anyAttributeParam" name="changeTariffPlanId.actionCommonInfo.extension.@anyAttributeParam" default="" target="function" required="false">
+                    <description>Additional attributes for element extension</description>
+                </param>
+                <param label="changeTariffPlanId.actionCommonInfo.extension.any" name="changeTariffPlanId.actionCommonInfo.extension.any" default="" target="function" required="false">
+                    <description>You may enter ANY elements at this point</description>
+                </param>
+                <param label="changeTariffPlanId.subscriberId.choice" name="changeTariffPlanId.subscriberId.choice" default="" target="function" required="false">
+                    <description>SubscriberIdType</description>
+                </param>
+                <param label="changeTariffPlanId.tariffPlanId" name="changeTariffPlanId.tariffPlanId" default="" target="function" required="true">
+                    <description>tariffPlanId is of string type.</description>
+                </param>
+                <param label="changeTariffPlanId.timeInterval.startTime.choice" name="changeTariffPlanId.timeInterval.startTime.choice" default="" target="function" required="false">
+                    <description>TimeType</description>
+                </param>
+                <param label="changeTariffPlanId.timeInterval.endTime.choice" name="changeTariffPlanId.timeInterval.endTime.choice" default="" target="function" required="false">
+                    <description>TimeType</description>
+                </param>
+                <param label="changeTariffPlanId.timeInterval.extension.@anyAttributeParam" name="changeTariffPlanId.timeInterval.extension.@anyAttributeParam" default="" target="function" required="false">
+                    <description>Additional attributes for element extension</description>
+                </param>
+                <param label="changeTariffPlanId.timeInterval.extension.any" name="changeTariffPlanId.timeInterval.extension.any" default="" target="function" required="false">
+                    <description>You may enter ANY elements at this point</description>
+                </param>
+                <param label="changeTariffPlanId.extension.@anyAttributeParam" name="changeTariffPlanId.extension.@anyAttributeParam" default="" target="function" required="false">
+                    <description>Additional attributes for element extension</description>
+                </param>
+                <param label="changeTariffPlanId.extension.any" name="changeTariffPlanId.extension.any" default="" target="function" required="false">
+                    <description>You may enter ANY elements at this point</description>
+                </param>
+                <param name="http.authorization" label="http.authorization" required="false" default="" target="function">
+                    <description />
+                </param>
+                <param name="headers" label="headers" required="false" default="" target="function">
+                    <description />
+                </param>
+                <param name="privateRequest" default="false" label="private" target="function">
+                    <description />
+                </param>
+            </parameters>
+        </request>
+        <request id="notifyPortability" label="notifyPortability" function="notifyPortability_AccountManagement" type="JSON">
+            <parameters>
+                <param label="notifyPortability.actionCommonInfo.appInfo.appId" name="notifyPortability.actionCommonInfo.appInfo.appId" default="" target="function" required="true">
+                    <description>appId is of string type.</description>
+                </param>
+                <param label="notifyPortability.actionCommonInfo.appInfo.reference" name="notifyPortability.actionCommonInfo.appInfo.reference" default="" target="function" required="true">
+                    <description>reference is of string type.</description>
+                </param>
+                <param label="notifyPortability.actionCommonInfo.appInfo.extension.@anyAttributeParam" name="notifyPortability.actionCommonInfo.appInfo.extension.@anyAttributeParam" default="" target="function" required="false">
+                    <description>Additional attributes for element extension</description>
+                </param>
+                <param label="notifyPortability.actionCommonInfo.appInfo.extension.any" name="notifyPortability.actionCommonInfo.appInfo.extension.any" default="" target="function" required="false">
+                    <description>You may enter ANY elements at this point</description>
+                </param>
+                <param label="notifyPortability.actionCommonInfo.userCode" name="notifyPortability.actionCommonInfo.userCode" default="" target="function" required="false">
+                    <description>userCode is of string type.</description>
+                </param>
+                <param label="notifyPortability.actionCommonInfo.opCost" name="notifyPortability.actionCommonInfo.opCost" default="" target="function" required="false">
+                    <description>opCost is of long type.</description>
+                </param>
+                <param label="notifyPortability.actionCommonInfo.opCost.@exponent" name="notifyPortability.actionCommonInfo.opCost.@exponent" default="" target="function" required="false">
+                    <description>exponent is of int type.</description>
+                </param>
+                <param label="notifyPortability.actionCommonInfo.currencyCode" name="notifyPortability.actionCommonInfo.currencyCode" default="" target="function" required="false">
+                    <description>CurrencyCodeType</description>
+                </param>
+                <param label="notifyPortability.actionCommonInfo.extension.@anyAttributeParam" name="notifyPortability.actionCommonInfo.extension.@anyAttributeParam" default="" target="function" required="false">
+                    <description>Additional attributes for element extension</description>
+                </param>
+                <param label="notifyPortability.actionCommonInfo.extension.any" name="notifyPortability.actionCommonInfo.extension.any" default="" target="function" required="false">
+                    <description>You may enter ANY elements at this point</description>
+                </param>
+                <param label="notifyPortability.subscriberId.choice" name="notifyPortability.subscriberId.choice" default="" target="function" required="false">
+                    <description>SubscriberIdType</description>
+                </param>
+                <param label="notifyPortability.opPortabilityId" name="notifyPortability.opPortabilityId" default="" target="function" required="true">
+                    <description>opPortabilityId is of string type.</description>
+                </param>
+                <param label="notifyPortability.originNetworkCode" name="notifyPortability.originNetworkCode" default="" target="function" required="false">
+                    <description>originNetworkCode is of string type.</description>
+                </param>
+                <param label="notifyPortability.destinationNetworkCode" name="notifyPortability.destinationNetworkCode" default="" target="function" required="false">
+                    <description>destinationNetworkCode is of string type.</description>
+                </param>
+                <param label="notifyPortability.extension.@anyAttributeParam" name="notifyPortability.extension.@anyAttributeParam" default="" target="function" required="false">
+                    <description>Additional attributes for element extension</description>
+                </param>
+                <param label="notifyPortability.extension.any" name="notifyPortability.extension.any" default="" target="function" required="false">
+                    <description>You may enter ANY elements at this point</description>
+                </param>
+                <param name="http.authorization" label="http.authorization" required="false" default="" target="function">
+                    <description />
+                </param>
+                <param name="headers" label="headers" required="false" default="" target="function">
+                    <description />
+                </param>
+                <param name="privateRequest" default="false" label="private" target="function">
+                    <description />
+                </param>
+            </parameters>
+        </request>
+ -->       
+        <request id="querySubscriberBasics" label="querySubscriberBasics" function="querySubscriberBasics_AccountManagement" type="JSON">
+            <parameters>
+                <param label="querySubscriberBasics.queryCommonInfo.currencyCode" name="querySubscriberBasics.queryCommonInfo.currencyCode" default="" target="function" required="false">
+                    <description>CurrencyCodeType</description>
+                </param>
+                <param label="querySubscriberBasics.queryCommonInfo.pagingInfo.token" name="querySubscriberBasics.queryCommonInfo.pagingInfo.token" default="" target="function" required="false">
+                    <description>token is of string type.</description>
+                </param>
+                <param label="querySubscriberBasics.queryCommonInfo.pagingInfo.numRegs" name="querySubscriberBasics.queryCommonInfo.pagingInfo.numRegs" default="" target="function" required="false">
+                    <description>numRegs is of int type.</description>
+                </param>
+                <param label="querySubscriberBasics.queryCommonInfo.pagingInfo.extension.@anyAttributeParam" name="querySubscriberBasics.queryCommonInfo.pagingInfo.extension.@anyAttributeParam" default="" target="function" required="false">
+                    <description>Additional attributes for element extension</description>
+                </param>
+                <param label="querySubscriberBasics.queryCommonInfo.pagingInfo.extension.any" name="querySubscriberBasics.queryCommonInfo.pagingInfo.extension.any" default="" target="function" required="false">
+                    <description>You may enter ANY elements at this point</description>
+                </param>
+                <param label="querySubscriberBasics.queryCommonInfo.extension.@anyAttributeParam" name="querySubscriberBasics.queryCommonInfo.extension.@anyAttributeParam" default="" target="function" required="false">
+                    <description>Additional attributes for element extension</description>
+                </param>
+                <param label="querySubscriberBasics.queryCommonInfo.extension.any" name="querySubscriberBasics.queryCommonInfo.extension.any" default="" target="function" required="false">
+                    <description>You may enter ANY elements at this point</description>
+                </param>
+                <param label="querySubscriberBasics.subscriberId.choice" name="querySubscriberBasics.subscriberId.choice" default="" target="function" required="false">
+                    <description>SubscriberIdType</description>
+                </param>
+                <param label="querySubscriberBasics.extension.@anyAttributeParam" name="querySubscriberBasics.extension.@anyAttributeParam" default="" target="function" required="false">
+                    <description>Additional attributes for element extension</description>
+                </param>
+                <param label="querySubscriberBasics.extension.any" name="querySubscriberBasics.extension.any" default="" target="function" required="false">
+                    <description>You may enter ANY elements at this point</description>
+                </param>
+                <param name="http.authorization" label="http.authorization" required="false" default="" target="function">
+                    <description />
+                </param>
+                <param name="headers" label="headers" required="false" default="" target="function">
+                    <description />
+                </param>
+                <param name="privateRequest" default="false" label="private" target="function">
+                    <description />
+                </param>
+            </parameters>
+        </request>
+<!--         <request id="querySubscriberDetails" label="querySubscriberDetails" function="querySubscriberDetails_AccountManagement" type="JSON">
+            <parameters>
+                <param label="querySubscriberDetails.queryCommonInfo.currencyCode" name="querySubscriberDetails.queryCommonInfo.currencyCode" default="" target="function" required="false">
+                    <description>CurrencyCodeType</description>
+                </param>
+                <param label="querySubscriberDetails.queryCommonInfo.pagingInfo.token" name="querySubscriberDetails.queryCommonInfo.pagingInfo.token" default="" target="function" required="false">
+                    <description>token is of string type.</description>
+                </param>
+                <param label="querySubscriberDetails.queryCommonInfo.pagingInfo.numRegs" name="querySubscriberDetails.queryCommonInfo.pagingInfo.numRegs" default="" target="function" required="false">
+                    <description>numRegs is of int type.</description>
+                </param>
+                <param label="querySubscriberDetails.queryCommonInfo.pagingInfo.extension.@anyAttributeParam" name="querySubscriberDetails.queryCommonInfo.pagingInfo.extension.@anyAttributeParam" default="" target="function" required="false">
+                    <description>Additional attributes for element extension</description>
+                </param>
+                <param label="querySubscriberDetails.queryCommonInfo.pagingInfo.extension.any" name="querySubscriberDetails.queryCommonInfo.pagingInfo.extension.any" default="" target="function" required="false">
+                    <description>You may enter ANY elements at this point</description>
+                </param>
+                <param label="querySubscriberDetails.queryCommonInfo.extension.@anyAttributeParam" name="querySubscriberDetails.queryCommonInfo.extension.@anyAttributeParam" default="" target="function" required="false">
+                    <description>Additional attributes for element extension</description>
+                </param>
+                <param label="querySubscriberDetails.queryCommonInfo.extension.any" name="querySubscriberDetails.queryCommonInfo.extension.any" default="" target="function" required="false">
+                    <description>You may enter ANY elements at this point</description>
+                </param>
+                <param label="querySubscriberDetails.subscriberId.choice" name="querySubscriberDetails.subscriberId.choice" default="" target="function" required="false">
+                    <description>SubscriberIdType</description>
+                </param>
+                <param label="querySubscriberDetails.extension.@anyAttributeParam" name="querySubscriberDetails.extension.@anyAttributeParam" default="" target="function" required="false">
+                    <description>Additional attributes for element extension</description>
+                </param>
+                <param label="querySubscriberDetails.extension.any" name="querySubscriberDetails.extension.any" default="" target="function" required="false">
+                    <description>You may enter ANY elements at this point</description>
+                </param>
+                <param name="http.authorization" label="http.authorization" required="false" default="" target="function">
+                    <description />
+                </param>
+                <param name="headers" label="headers" required="false" default="" target="function">
+                    <description />
+                </param>
+                <param name="privateRequest" default="false" label="private" target="function">
+                    <description />
+                </param>
+            </parameters>
+        </request>
+        <request id="cancelSubscriberDeletion" label="cancelSubscriberDeletion" function="cancelSubscriberDeletion_AccountManagement" type="JSON">
+            <parameters>
+                <param label="cancelSubscriberDeletion.actionCommonInfo.appInfo.appId" name="cancelSubscriberDeletion.actionCommonInfo.appInfo.appId" default="" target="function" required="true">
+                    <description>appId is of string type.</description>
+                </param>
+                <param label="cancelSubscriberDeletion.actionCommonInfo.appInfo.reference" name="cancelSubscriberDeletion.actionCommonInfo.appInfo.reference" default="" target="function" required="true">
+                    <description>reference is of string type.</description>
+                </param>
+                <param label="cancelSubscriberDeletion.actionCommonInfo.appInfo.extension.@anyAttributeParam" name="cancelSubscriberDeletion.actionCommonInfo.appInfo.extension.@anyAttributeParam" default="" target="function" required="false">
+                    <description>Additional attributes for element extension</description>
+                </param>
+                <param label="cancelSubscriberDeletion.actionCommonInfo.appInfo.extension.any" name="cancelSubscriberDeletion.actionCommonInfo.appInfo.extension.any" default="" target="function" required="false">
+                    <description>You may enter ANY elements at this point</description>
+                </param>
+                <param label="cancelSubscriberDeletion.actionCommonInfo.userCode" name="cancelSubscriberDeletion.actionCommonInfo.userCode" default="" target="function" required="false">
+                    <description>userCode is of string type.</description>
+                </param>
+                <param label="cancelSubscriberDeletion.actionCommonInfo.opCost" name="cancelSubscriberDeletion.actionCommonInfo.opCost" default="" target="function" required="false">
+                    <description>opCost is of long type.</description>
+                </param>
+                <param label="cancelSubscriberDeletion.actionCommonInfo.opCost.@exponent" name="cancelSubscriberDeletion.actionCommonInfo.opCost.@exponent" default="" target="function" required="false">
+                    <description>exponent is of int type.</description>
+                </param>
+                <param label="cancelSubscriberDeletion.actionCommonInfo.currencyCode" name="cancelSubscriberDeletion.actionCommonInfo.currencyCode" default="" target="function" required="false">
+                    <description>CurrencyCodeType</description>
+                </param>
+                <param label="cancelSubscriberDeletion.actionCommonInfo.extension.@anyAttributeParam" name="cancelSubscriberDeletion.actionCommonInfo.extension.@anyAttributeParam" default="" target="function" required="false">
+                    <description>Additional attributes for element extension</description>
+                </param>
+                <param label="cancelSubscriberDeletion.actionCommonInfo.extension.any" name="cancelSubscriberDeletion.actionCommonInfo.extension.any" default="" target="function" required="false">
+                    <description>You may enter ANY elements at this point</description>
+                </param>
+                <param label="cancelSubscriberDeletion.subscriberId.choice" name="cancelSubscriberDeletion.subscriberId.choice" default="" target="function" required="false">
+                    <description>SubscriberIdType</description>
+                </param>
+                <param label="cancelSubscriberDeletion.extension.@anyAttributeParam" name="cancelSubscriberDeletion.extension.@anyAttributeParam" default="" target="function" required="false">
+                    <description>Additional attributes for element extension</description>
+                </param>
+                <param label="cancelSubscriberDeletion.extension.any" name="cancelSubscriberDeletion.extension.any" default="" target="function" required="false">
+                    <description>You may enter ANY elements at this point</description>
+                </param>
+                <param name="http.authorization" label="http.authorization" required="false" default="" target="function">
+                    <description />
+                </param>
+                <param name="headers" label="headers" required="false" default="" target="function">
+                    <description />
+                </param>
+                <param name="privateRequest" default="false" label="private" target="function">
+                    <description />
+                </param>
+            </parameters>
+        </request>
+        <request id="subscribeHomeZone" label="subscribeHomeZone" function="subscribeHomeZone_AccountManagement" type="JSON">
+            <parameters>
+                <param label="subscribeHomeZone.actionCommonInfo.appInfo.appId" name="subscribeHomeZone.actionCommonInfo.appInfo.appId" default="" target="function" required="true">
+                    <description>appId is of string type.</description>
+                </param>
+                <param label="subscribeHomeZone.actionCommonInfo.appInfo.reference" name="subscribeHomeZone.actionCommonInfo.appInfo.reference" default="" target="function" required="true">
+                    <description>reference is of string type.</description>
+                </param>
+                <param label="subscribeHomeZone.actionCommonInfo.appInfo.extension.@anyAttributeParam" name="subscribeHomeZone.actionCommonInfo.appInfo.extension.@anyAttributeParam" default="" target="function" required="false">
+                    <description>Additional attributes for element extension</description>
+                </param>
+                <param label="subscribeHomeZone.actionCommonInfo.appInfo.extension.any" name="subscribeHomeZone.actionCommonInfo.appInfo.extension.any" default="" target="function" required="false">
+                    <description>You may enter ANY elements at this point</description>
+                </param>
+                <param label="subscribeHomeZone.actionCommonInfo.userCode" name="subscribeHomeZone.actionCommonInfo.userCode" default="" target="function" required="false">
+                    <description>userCode is of string type.</description>
+                </param>
+                <param label="subscribeHomeZone.actionCommonInfo.opCost" name="subscribeHomeZone.actionCommonInfo.opCost" default="" target="function" required="false">
+                    <description>opCost is of long type.</description>
+                </param>
+                <param label="subscribeHomeZone.actionCommonInfo.opCost.@exponent" name="subscribeHomeZone.actionCommonInfo.opCost.@exponent" default="" target="function" required="false">
+                    <description>exponent is of int type.</description>
+                </param>
+                <param label="subscribeHomeZone.actionCommonInfo.currencyCode" name="subscribeHomeZone.actionCommonInfo.currencyCode" default="" target="function" required="false">
+                    <description>CurrencyCodeType</description>
+                </param>
+                <param label="subscribeHomeZone.actionCommonInfo.extension.@anyAttributeParam" name="subscribeHomeZone.actionCommonInfo.extension.@anyAttributeParam" default="" target="function" required="false">
+                    <description>Additional attributes for element extension</description>
+                </param>
+                <param label="subscribeHomeZone.actionCommonInfo.extension.any" name="subscribeHomeZone.actionCommonInfo.extension.any" default="" target="function" required="false">
+                    <description>You may enter ANY elements at this point</description>
+                </param>
+                <param label="subscribeHomeZone.subscriberId.choice" name="subscribeHomeZone.subscriberId.choice" default="" target="function" required="false">
+                    <description>SubscriberIdType</description>
+                </param>
+                <param label="subscribeHomeZone.ZIPCode" name="subscribeHomeZone.ZIPCode" default="" target="function" required="false">
+                    <description>ZIPCode is of string type.</description>
+                </param>
+                <param label="subscribeHomeZone.homeZoneLocationNumberInfoList.locationNumberId" name="subscribeHomeZone.homeZoneLocationNumberInfoList.locationNumberId" default="" target="function" required="false">
+                    <description>locationNumberId is of string type.</description>
+                </param>
+                <param label="subscribeHomeZone.homeZoneLocationNumberInfoList.extension.@anyAttributeParam" name="subscribeHomeZone.homeZoneLocationNumberInfoList.extension.@anyAttributeParam" default="" target="function" required="false">
+                    <description>Additional attributes for element extension</description>
+                </param>
+                <param label="subscribeHomeZone.homeZoneLocationNumberInfoList.extension.any" name="subscribeHomeZone.homeZoneLocationNumberInfoList.extension.any" default="" target="function" required="false">
+                    <description>You may enter ANY elements at this point</description>
+                </param>
+                <param label="subscribeHomeZone.extension.@anyAttributeParam" name="subscribeHomeZone.extension.@anyAttributeParam" default="" target="function" required="false">
+                    <description>Additional attributes for element extension</description>
+                </param>
+                <param label="subscribeHomeZone.extension.any" name="subscribeHomeZone.extension.any" default="" target="function" required="false">
+                    <description>You may enter ANY elements at this point</description>
+                </param>
+                <param name="http.authorization" label="http.authorization" required="false" default="" target="function">
+                    <description />
+                </param>
+                <param name="headers" label="headers" required="false" default="" target="function">
+                    <description />
+                </param>
+                <param name="privateRequest" default="false" label="private" target="function">
+                    <description />
+                </param>
+            </parameters>
+        </request>
+        <request id="changeHomeZone" label="changeHomeZone" function="changeHomeZone_AccountManagement" type="JSON">
+            <parameters>
+                <param label="changeHomeZone.actionCommonInfo.appInfo.appId" name="changeHomeZone.actionCommonInfo.appInfo.appId" default="" target="function" required="true">
+                    <description>appId is of string type.</description>
+                </param>
+                <param label="changeHomeZone.actionCommonInfo.appInfo.reference" name="changeHomeZone.actionCommonInfo.appInfo.reference" default="" target="function" required="true">
+                    <description>reference is of string type.</description>
+                </param>
+                <param label="changeHomeZone.actionCommonInfo.appInfo.extension.@anyAttributeParam" name="changeHomeZone.actionCommonInfo.appInfo.extension.@anyAttributeParam" default="" target="function" required="false">
+                    <description>Additional attributes for element extension</description>
+                </param>
+                <param label="changeHomeZone.actionCommonInfo.appInfo.extension.any" name="changeHomeZone.actionCommonInfo.appInfo.extension.any" default="" target="function" required="false">
+                    <description>You may enter ANY elements at this point</description>
+                </param>
+                <param label="changeHomeZone.actionCommonInfo.userCode" name="changeHomeZone.actionCommonInfo.userCode" default="" target="function" required="false">
+                    <description>userCode is of string type.</description>
+                </param>
+                <param label="changeHomeZone.actionCommonInfo.opCost" name="changeHomeZone.actionCommonInfo.opCost" default="" target="function" required="false">
+                    <description>opCost is of long type.</description>
+                </param>
+                <param label="changeHomeZone.actionCommonInfo.opCost.@exponent" name="changeHomeZone.actionCommonInfo.opCost.@exponent" default="" target="function" required="false">
+                    <description>exponent is of int type.</description>
+                </param>
+                <param label="changeHomeZone.actionCommonInfo.currencyCode" name="changeHomeZone.actionCommonInfo.currencyCode" default="" target="function" required="false">
+                    <description>CurrencyCodeType</description>
+                </param>
+                <param label="changeHomeZone.actionCommonInfo.extension.@anyAttributeParam" name="changeHomeZone.actionCommonInfo.extension.@anyAttributeParam" default="" target="function" required="false">
+                    <description>Additional attributes for element extension</description>
+                </param>
+                <param label="changeHomeZone.actionCommonInfo.extension.any" name="changeHomeZone.actionCommonInfo.extension.any" default="" target="function" required="false">
+                    <description>You may enter ANY elements at this point</description>
+                </param>
+                <param label="changeHomeZone.subscriberId.choice" name="changeHomeZone.subscriberId.choice" default="" target="function" required="false">
+                    <description>SubscriberIdType</description>
+                </param>
+                <param label="changeHomeZone.ZIPCode" name="changeHomeZone.ZIPCode" default="" target="function" required="false">
+                    <description>ZIPCode is of string type.</description>
+                </param>
+                <param label="changeHomeZone.homeZoneLocationNumberInfoList.locationNumberId" name="changeHomeZone.homeZoneLocationNumberInfoList.locationNumberId" default="" target="function" required="false">
+                    <description>locationNumberId is of string type.</description>
+                </param>
+                <param label="changeHomeZone.homeZoneLocationNumberInfoList.extension.@anyAttributeParam" name="changeHomeZone.homeZoneLocationNumberInfoList.extension.@anyAttributeParam" default="" target="function" required="false">
+                    <description>Additional attributes for element extension</description>
+                </param>
+                <param label="changeHomeZone.homeZoneLocationNumberInfoList.extension.any" name="changeHomeZone.homeZoneLocationNumberInfoList.extension.any" default="" target="function" required="false">
+                    <description>You may enter ANY elements at this point</description>
+                </param>
+                <param label="changeHomeZone.extension.@anyAttributeParam" name="changeHomeZone.extension.@anyAttributeParam" default="" target="function" required="false">
+                    <description>Additional attributes for element extension</description>
+                </param>
+                <param label="changeHomeZone.extension.any" name="changeHomeZone.extension.any" default="" target="function" required="false">
+                    <description>You may enter ANY elements at this point</description>
+                </param>
+                <param name="http.authorization" label="http.authorization" required="false" default="" target="function">
+                    <description />
+                </param>
+                <param name="headers" label="headers" required="false" default="" target="function">
+                    <description />
+                </param>
+                <param name="privateRequest" default="false" label="private" target="function">
+                    <description />
+                </param>
+            </parameters>
+        </request>
+        <request id="unsubscribeHomeZone" label="unsubscribeHomeZone" function="unsubscribeHomeZone_AccountManagement" type="JSON">
+            <parameters>
+                <param label="unsubscribeHomeZone.actionCommonInfo.appInfo.appId" name="unsubscribeHomeZone.actionCommonInfo.appInfo.appId" default="" target="function" required="true">
+                    <description>appId is of string type.</description>
+                </param>
+                <param label="unsubscribeHomeZone.actionCommonInfo.appInfo.reference" name="unsubscribeHomeZone.actionCommonInfo.appInfo.reference" default="" target="function" required="true">
+                    <description>reference is of string type.</description>
+                </param>
+                <param label="unsubscribeHomeZone.actionCommonInfo.appInfo.extension.@anyAttributeParam" name="unsubscribeHomeZone.actionCommonInfo.appInfo.extension.@anyAttributeParam" default="" target="function" required="false">
+                    <description>Additional attributes for element extension</description>
+                </param>
+                <param label="unsubscribeHomeZone.actionCommonInfo.appInfo.extension.any" name="unsubscribeHomeZone.actionCommonInfo.appInfo.extension.any" default="" target="function" required="false">
+                    <description>You may enter ANY elements at this point</description>
+                </param>
+                <param label="unsubscribeHomeZone.actionCommonInfo.userCode" name="unsubscribeHomeZone.actionCommonInfo.userCode" default="" target="function" required="false">
+                    <description>userCode is of string type.</description>
+                </param>
+                <param label="unsubscribeHomeZone.actionCommonInfo.opCost" name="unsubscribeHomeZone.actionCommonInfo.opCost" default="" target="function" required="false">
+                    <description>opCost is of long type.</description>
+                </param>
+                <param label="unsubscribeHomeZone.actionCommonInfo.opCost.@exponent" name="unsubscribeHomeZone.actionCommonInfo.opCost.@exponent" default="" target="function" required="false">
+                    <description>exponent is of int type.</description>
+                </param>
+                <param label="unsubscribeHomeZone.actionCommonInfo.currencyCode" name="unsubscribeHomeZone.actionCommonInfo.currencyCode" default="" target="function" required="false">
+                    <description>CurrencyCodeType</description>
+                </param>
+                <param label="unsubscribeHomeZone.actionCommonInfo.extension.@anyAttributeParam" name="unsubscribeHomeZone.actionCommonInfo.extension.@anyAttributeParam" default="" target="function" required="false">
+                    <description>Additional attributes for element extension</description>
+                </param>
+                <param label="unsubscribeHomeZone.actionCommonInfo.extension.any" name="unsubscribeHomeZone.actionCommonInfo.extension.any" default="" target="function" required="false">
+                    <description>You may enter ANY elements at this point</description>
+                </param>
+                <param label="unsubscribeHomeZone.subscriberId.choice" name="unsubscribeHomeZone.subscriberId.choice" default="" target="function" required="false">
+                    <description>SubscriberIdType</description>
+                </param>
+                <param label="unsubscribeHomeZone.extension.@anyAttributeParam" name="unsubscribeHomeZone.extension.@anyAttributeParam" default="" target="function" required="false">
+                    <description>Additional attributes for element extension</description>
+                </param>
+                <param label="unsubscribeHomeZone.extension.any" name="unsubscribeHomeZone.extension.any" default="" target="function" required="false">
+                    <description>You may enter ANY elements at this point</description>
+                </param>
+                <param name="http.authorization" label="http.authorization" required="false" default="" target="function">
+                    <description />
+                </param>
+                <param name="headers" label="headers" required="false" default="" target="function">
+                    <description />
+                </param>
+                <param name="privateRequest" default="false" label="private" target="function">
+                    <description />
+                </param>
+            </parameters>
+        </request>
+        <request id="queryHomeZone" label="queryHomeZone" function="queryHomeZone_AccountManagement" type="JSON">
+            <parameters>
+                <param label="queryHomeZone.queryCommonInfo.currencyCode" name="queryHomeZone.queryCommonInfo.currencyCode" default="" target="function" required="false">
+                    <description>CurrencyCodeType</description>
+                </param>
+                <param label="queryHomeZone.queryCommonInfo.pagingInfo.token" name="queryHomeZone.queryCommonInfo.pagingInfo.token" default="" target="function" required="false">
+                    <description>token is of string type.</description>
+                </param>
+                <param label="queryHomeZone.queryCommonInfo.pagingInfo.numRegs" name="queryHomeZone.queryCommonInfo.pagingInfo.numRegs" default="" target="function" required="false">
+                    <description>numRegs is of int type.</description>
+                </param>
+                <param label="queryHomeZone.queryCommonInfo.pagingInfo.extension.@anyAttributeParam" name="queryHomeZone.queryCommonInfo.pagingInfo.extension.@anyAttributeParam" default="" target="function" required="false">
+                    <description>Additional attributes for element extension</description>
+                </param>
+                <param label="queryHomeZone.queryCommonInfo.pagingInfo.extension.any" name="queryHomeZone.queryCommonInfo.pagingInfo.extension.any" default="" target="function" required="false">
+                    <description>You may enter ANY elements at this point</description>
+                </param>
+                <param label="queryHomeZone.queryCommonInfo.extension.@anyAttributeParam" name="queryHomeZone.queryCommonInfo.extension.@anyAttributeParam" default="" target="function" required="false">
+                    <description>Additional attributes for element extension</description>
+                </param>
+                <param label="queryHomeZone.queryCommonInfo.extension.any" name="queryHomeZone.queryCommonInfo.extension.any" default="" target="function" required="false">
+                    <description>You may enter ANY elements at this point</description>
+                </param>
+                <param label="queryHomeZone.subscriberId.choice" name="queryHomeZone.subscriberId.choice" default="" target="function" required="false">
+                    <description>SubscriberIdType</description>
+                </param>
+                <param label="queryHomeZone.opReference.opId" name="queryHomeZone.opReference.opId" default="" target="function" required="true">
+                    <description>opId is of string type.</description>
+                </param>
+                <param label="queryHomeZone.opReference.opSubIdList.opId" name="queryHomeZone.opReference.opSubIdList.opId" default="" target="function" required="false">
+                    <description>opId is of string type.</description>
+                </param>
+                <param label="queryHomeZone.opReference.opSubIdList.extension.@anyAttributeParam" name="queryHomeZone.opReference.opSubIdList.extension.@anyAttributeParam" default="" target="function" required="false">
+                    <description>Additional attributes for element extension</description>
+                </param>
+                <param label="queryHomeZone.opReference.opSubIdList.extension.any" name="queryHomeZone.opReference.opSubIdList.extension.any" default="" target="function" required="false">
+                    <description>You may enter ANY elements at this point</description>
+                </param>
+                <param label="queryHomeZone.opReference.extension.@anyAttributeParam" name="queryHomeZone.opReference.extension.@anyAttributeParam" default="" target="function" required="false">
+                    <description>Additional attributes for element extension</description>
+                </param>
+                <param label="queryHomeZone.opReference.extension.any" name="queryHomeZone.opReference.extension.any" default="" target="function" required="false">
+                    <description>You may enter ANY elements at this point</description>
+                </param>
+                <param label="queryHomeZone.extension.@anyAttributeParam" name="queryHomeZone.extension.@anyAttributeParam" default="" target="function" required="false">
+                    <description>Additional attributes for element extension</description>
+                </param>
+                <param label="queryHomeZone.extension.any" name="queryHomeZone.extension.any" default="" target="function" required="false">
+                    <description>You may enter ANY elements at this point</description>
+                </param>
+                <param name="http.authorization" label="http.authorization" required="false" default="" target="function">
+                    <description />
+                </param>
+                <param name="headers" label="headers" required="false" default="" target="function">
+                    <description />
+                </param>
+                <param name="privateRequest" default="false" label="private" target="function">
+                    <description />
+                </param>
+            </parameters>
+        </request>
+        <request id="changeServicePlans" label="changeServicePlans" function="changeServicePlans_AccountManagement" type="JSON">
+            <parameters>
+                <param label="changeServicePlans.actionCommonInfo.appInfo.appId" name="changeServicePlans.actionCommonInfo.appInfo.appId" default="" target="function" required="true">
+                    <description>appId is of string type.</description>
+                </param>
+                <param label="changeServicePlans.actionCommonInfo.appInfo.reference" name="changeServicePlans.actionCommonInfo.appInfo.reference" default="" target="function" required="true">
+                    <description>reference is of string type.</description>
+                </param>
+                <param label="changeServicePlans.actionCommonInfo.appInfo.extension.@anyAttributeParam" name="changeServicePlans.actionCommonInfo.appInfo.extension.@anyAttributeParam" default="" target="function" required="false">
+                    <description>Additional attributes for element extension</description>
+                </param>
+                <param label="changeServicePlans.actionCommonInfo.appInfo.extension.any" name="changeServicePlans.actionCommonInfo.appInfo.extension.any" default="" target="function" required="false">
+                    <description>You may enter ANY elements at this point</description>
+                </param>
+                <param label="changeServicePlans.actionCommonInfo.userCode" name="changeServicePlans.actionCommonInfo.userCode" default="" target="function" required="false">
+                    <description>userCode is of string type.</description>
+                </param>
+                <param label="changeServicePlans.actionCommonInfo.opCost" name="changeServicePlans.actionCommonInfo.opCost" default="" target="function" required="false">
+                    <description>opCost is of long type.</description>
+                </param>
+                <param label="changeServicePlans.actionCommonInfo.opCost.@exponent" name="changeServicePlans.actionCommonInfo.opCost.@exponent" default="" target="function" required="false">
+                    <description>exponent is of int type.</description>
+                </param>
+                <param label="changeServicePlans.actionCommonInfo.currencyCode" name="changeServicePlans.actionCommonInfo.currencyCode" default="" target="function" required="false">
+                    <description>CurrencyCodeType</description>
+                </param>
+                <param label="changeServicePlans.actionCommonInfo.extension.@anyAttributeParam" name="changeServicePlans.actionCommonInfo.extension.@anyAttributeParam" default="" target="function" required="false">
+                    <description>Additional attributes for element extension</description>
+                </param>
+                <param label="changeServicePlans.actionCommonInfo.extension.any" name="changeServicePlans.actionCommonInfo.extension.any" default="" target="function" required="false">
+                    <description>You may enter ANY elements at this point</description>
+                </param>
+                <param label="changeServicePlans.subscriberId.choice" name="changeServicePlans.subscriberId.choice" default="" target="function" required="false">
+                    <description>SubscriberIdType</description>
+                </param>
+                <param label="changeServicePlans.serviceClass" name="changeServicePlans.serviceClass" default="" target="function" required="true">
+                    <description>ServiceClassType</description>
+                </param>
+                <param label="changeServicePlans.servicePlansInfoList.servicePlansInfo.tariffPlanId" name="changeServicePlans.servicePlansInfoList.servicePlansInfo.tariffPlanId" default="" target="function" required="true">
+                    <description>tariffPlanId is of string type.</description>
+                </param>
+                <param label="changeServicePlans.servicePlansInfoList.servicePlansInfo.extension.@anyAttributeParam" name="changeServicePlans.servicePlansInfoList.servicePlansInfo.extension.@anyAttributeParam" default="" target="function" required="false">
+                    <description>Additional attributes for element extension</description>
+                </param>
+                <param label="changeServicePlans.servicePlansInfoList.servicePlansInfo.extension.any" name="changeServicePlans.servicePlansInfoList.servicePlansInfo.extension.any" default="" target="function" required="false">
+                    <description>You may enter ANY elements at this point</description>
+                </param>
+                <param label="changeServicePlans.servicePlansInfoList.extension.@anyAttributeParam" name="changeServicePlans.servicePlansInfoList.extension.@anyAttributeParam" default="" target="function" required="false">
+                    <description>Additional attributes for element extension</description>
+                </param>
+                <param label="changeServicePlans.servicePlansInfoList.extension.any" name="changeServicePlans.servicePlansInfoList.extension.any" default="" target="function" required="false">
+                    <description>You may enter ANY elements at this point</description>
+                </param>
+                <param label="changeServicePlans.extension.@anyAttributeParam" name="changeServicePlans.extension.@anyAttributeParam" default="" target="function" required="false">
+                    <description>Additional attributes for element extension</description>
+                </param>
+                <param label="changeServicePlans.extension.any" name="changeServicePlans.extension.any" default="" target="function" required="false">
+                    <description>You may enter ANY elements at this point</description>
+                </param>
+                <param name="http.authorization" label="http.authorization" required="false" default="" target="function">
+                    <description />
+                </param>
+                <param name="headers" label="headers" required="false" default="" target="function">
+                    <description />
+                </param>
+                <param name="privateRequest" default="false" label="private" target="function">
+                    <description />
+                </param>
+            </parameters>
+        </request>
+        <request id="queryServicePlansAllowed" label="queryServicePlansAllowed" function="queryServicePlansAllowed_AccountManagement" type="JSON">
+            <parameters>
+                <param label="queryServicePlansAllowed.queryCommonInfo.currencyCode" name="queryServicePlansAllowed.queryCommonInfo.currencyCode" default="" target="function" required="false">
+                    <description>CurrencyCodeType</description>
+                </param>
+                <param label="queryServicePlansAllowed.queryCommonInfo.pagingInfo.token" name="queryServicePlansAllowed.queryCommonInfo.pagingInfo.token" default="" target="function" required="false">
+                    <description>token is of string type.</description>
+                </param>
+                <param label="queryServicePlansAllowed.queryCommonInfo.pagingInfo.numRegs" name="queryServicePlansAllowed.queryCommonInfo.pagingInfo.numRegs" default="" target="function" required="false">
+                    <description>numRegs is of int type.</description>
+                </param>
+                <param label="queryServicePlansAllowed.queryCommonInfo.pagingInfo.extension.@anyAttributeParam" name="queryServicePlansAllowed.queryCommonInfo.pagingInfo.extension.@anyAttributeParam" default="" target="function" required="false">
+                    <description>Additional attributes for element extension</description>
+                </param>
+                <param label="queryServicePlansAllowed.queryCommonInfo.pagingInfo.extension.any" name="queryServicePlansAllowed.queryCommonInfo.pagingInfo.extension.any" default="" target="function" required="false">
+                    <description>You may enter ANY elements at this point</description>
+                </param>
+                <param label="queryServicePlansAllowed.queryCommonInfo.extension.@anyAttributeParam" name="queryServicePlansAllowed.queryCommonInfo.extension.@anyAttributeParam" default="" target="function" required="false">
+                    <description>Additional attributes for element extension</description>
+                </param>
+                <param label="queryServicePlansAllowed.queryCommonInfo.extension.any" name="queryServicePlansAllowed.queryCommonInfo.extension.any" default="" target="function" required="false">
+                    <description>You may enter ANY elements at this point</description>
+                </param>
+                <param label="queryServicePlansAllowed.subscriberId.choice" name="queryServicePlansAllowed.subscriberId.choice" default="" target="function" required="false">
+                    <description>SubscriberIdType</description>
+                </param>
+                <param label="queryServicePlansAllowed.serviceClass" name="queryServicePlansAllowed.serviceClass" default="" target="function" required="true">
+                    <description>ServiceClassType</description>
+                </param>
+                <param label="queryServicePlansAllowed.extension.@anyAttributeParam" name="queryServicePlansAllowed.extension.@anyAttributeParam" default="" target="function" required="false">
+                    <description>Additional attributes for element extension</description>
+                </param>
+                <param label="queryServicePlansAllowed.extension.any" name="queryServicePlansAllowed.extension.any" default="" target="function" required="false">
+                    <description>You may enter ANY elements at this point</description>
+                </param>
+                <param name="http.authorization" label="http.authorization" required="false" default="" target="function">
+                    <description />
+                </param>
+                <param name="headers" label="headers" required="false" default="" target="function">
+                    <description />
+                </param>
+                <param name="privateRequest" default="false" label="private" target="function">
+                    <description />
+                </param>
+            </parameters>
+        </request>
+        <request id="queryServicePlansBasics" label="queryServicePlansBasics" function="queryServicePlansBasics_AccountManagement" type="JSON">
+            <parameters>
+                <param label="queryServicePlansBasics.queryCommonInfo.currencyCode" name="queryServicePlansBasics.queryCommonInfo.currencyCode" default="" target="function" required="false">
+                    <description>CurrencyCodeType</description>
+                </param>
+                <param label="queryServicePlansBasics.queryCommonInfo.pagingInfo.token" name="queryServicePlansBasics.queryCommonInfo.pagingInfo.token" default="" target="function" required="false">
+                    <description>token is of string type.</description>
+                </param>
+                <param label="queryServicePlansBasics.queryCommonInfo.pagingInfo.numRegs" name="queryServicePlansBasics.queryCommonInfo.pagingInfo.numRegs" default="" target="function" required="false">
+                    <description>numRegs is of int type.</description>
+                </param>
+                <param label="queryServicePlansBasics.queryCommonInfo.pagingInfo.extension.@anyAttributeParam" name="queryServicePlansBasics.queryCommonInfo.pagingInfo.extension.@anyAttributeParam" default="" target="function" required="false">
+                    <description>Additional attributes for element extension</description>
+                </param>
+                <param label="queryServicePlansBasics.queryCommonInfo.pagingInfo.extension.any" name="queryServicePlansBasics.queryCommonInfo.pagingInfo.extension.any" default="" target="function" required="false">
+                    <description>You may enter ANY elements at this point</description>
+                </param>
+                <param label="queryServicePlansBasics.queryCommonInfo.extension.@anyAttributeParam" name="queryServicePlansBasics.queryCommonInfo.extension.@anyAttributeParam" default="" target="function" required="false">
+                    <description>Additional attributes for element extension</description>
+                </param>
+                <param label="queryServicePlansBasics.queryCommonInfo.extension.any" name="queryServicePlansBasics.queryCommonInfo.extension.any" default="" target="function" required="false">
+                    <description>You may enter ANY elements at this point</description>
+                </param>
+                <param label="queryServicePlansBasics.subscriberId.choice" name="queryServicePlansBasics.subscriberId.choice" default="" target="function" required="false">
+                    <description>SubscriberIdType</description>
+                </param>
+                <param label="queryServicePlansBasics.serviceClass" name="queryServicePlansBasics.serviceClass" default="" target="function" required="true">
+                    <description>ServiceClassType</description>
+                </param>
+                <param label="queryServicePlansBasics.extension.@anyAttributeParam" name="queryServicePlansBasics.extension.@anyAttributeParam" default="" target="function" required="false">
+                    <description>Additional attributes for element extension</description>
+                </param>
+                <param label="queryServicePlansBasics.extension.any" name="queryServicePlansBasics.extension.any" default="" target="function" required="false">
+                    <description>You may enter ANY elements at this point</description>
+                </param>
+                <param name="http.authorization" label="http.authorization" required="false" default="" target="function">
+                    <description />
+                </param>
+                <param name="headers" label="headers" required="false" default="" target="function">
+                    <description />
+                </param>
+                <param name="privateRequest" default="false" label="private" target="function">
+                    <description />
+                </param>
+            </parameters>
+        </request>
+        <request id="subscribeSegment" label="subscribeSegment" function="subscribeSegment_AccountManagement" type="JSON">
+            <parameters>
+                <param label="subscribeSegment.actionCommonInfo.appInfo.appId" name="subscribeSegment.actionCommonInfo.appInfo.appId" default="" target="function" required="true">
+                    <description>appId is of string type.</description>
+                </param>
+                <param label="subscribeSegment.actionCommonInfo.appInfo.reference" name="subscribeSegment.actionCommonInfo.appInfo.reference" default="" target="function" required="true">
+                    <description>reference is of string type.</description>
+                </param>
+                <param label="subscribeSegment.actionCommonInfo.appInfo.extension.@anyAttributeParam" name="subscribeSegment.actionCommonInfo.appInfo.extension.@anyAttributeParam" default="" target="function" required="false">
+                    <description>Additional attributes for element extension</description>
+                </param>
+                <param label="subscribeSegment.actionCommonInfo.appInfo.extension.any" name="subscribeSegment.actionCommonInfo.appInfo.extension.any" default="" target="function" required="false">
+                    <description>You may enter ANY elements at this point</description>
+                </param>
+                <param label="subscribeSegment.actionCommonInfo.userCode" name="subscribeSegment.actionCommonInfo.userCode" default="" target="function" required="false">
+                    <description>userCode is of string type.</description>
+                </param>
+                <param label="subscribeSegment.actionCommonInfo.opCost" name="subscribeSegment.actionCommonInfo.opCost" default="" target="function" required="false">
+                    <description>opCost is of long type.</description>
+                </param>
+                <param label="subscribeSegment.actionCommonInfo.opCost.@exponent" name="subscribeSegment.actionCommonInfo.opCost.@exponent" default="" target="function" required="false">
+                    <description>exponent is of int type.</description>
+                </param>
+                <param label="subscribeSegment.actionCommonInfo.currencyCode" name="subscribeSegment.actionCommonInfo.currencyCode" default="" target="function" required="false">
+                    <description>CurrencyCodeType</description>
+                </param>
+                <param label="subscribeSegment.actionCommonInfo.extension.@anyAttributeParam" name="subscribeSegment.actionCommonInfo.extension.@anyAttributeParam" default="" target="function" required="false">
+                    <description>Additional attributes for element extension</description>
+                </param>
+                <param label="subscribeSegment.actionCommonInfo.extension.any" name="subscribeSegment.actionCommonInfo.extension.any" default="" target="function" required="false">
+                    <description>You may enter ANY elements at this point</description>
+                </param>
+                <param label="subscribeSegment.subscriberId.choice" name="subscribeSegment.subscriberId.choice" default="" target="function" required="false">
+                    <description>SubscriberIdType</description>
+                </param>
+                <param label="subscribeSegment.segmentId" name="subscribeSegment.segmentId" default="" target="function" required="true">
+                    <description>segmentId is of string type.</description>
+                </param>
+                <param label="subscribeSegment.timeInterval.startTime.choice" name="subscribeSegment.timeInterval.startTime.choice" default="" target="function" required="false">
+                    <description>TimeType</description>
+                </param>
+                <param label="subscribeSegment.timeInterval.endTime.choice" name="subscribeSegment.timeInterval.endTime.choice" default="" target="function" required="false">
+                    <description>TimeType</description>
+                </param>
+                <param label="subscribeSegment.timeInterval.extension.@anyAttributeParam" name="subscribeSegment.timeInterval.extension.@anyAttributeParam" default="" target="function" required="false">
+                    <description>Additional attributes for element extension</description>
+                </param>
+                <param label="subscribeSegment.timeInterval.extension.any" name="subscribeSegment.timeInterval.extension.any" default="" target="function" required="false">
+                    <description>You may enter ANY elements at this point</description>
+                </param>
+                <param label="subscribeSegment.extension.@anyAttributeParam" name="subscribeSegment.extension.@anyAttributeParam" default="" target="function" required="false">
+                    <description>Additional attributes for element extension</description>
+                </param>
+                <param label="subscribeSegment.extension.any" name="subscribeSegment.extension.any" default="" target="function" required="false">
+                    <description>You may enter ANY elements at this point</description>
+                </param>
+                <param name="http.authorization" label="http.authorization" required="false" default="" target="function">
+                    <description />
+                </param>
+                <param name="headers" label="headers" required="false" default="" target="function">
+                    <description />
+                </param>
+                <param name="privateRequest" default="false" label="private" target="function">
+                    <description />
+                </param>
+            </parameters>
+        </request>
+        <request id="changeSegment" label="changeSegment" function="changeSegment_AccountManagement" type="JSON">
+            <parameters>
+                <param label="changeSegment.actionCommonInfo.appInfo.appId" name="changeSegment.actionCommonInfo.appInfo.appId" default="" target="function" required="true">
+                    <description>appId is of string type.</description>
+                </param>
+                <param label="changeSegment.actionCommonInfo.appInfo.reference" name="changeSegment.actionCommonInfo.appInfo.reference" default="" target="function" required="true">
+                    <description>reference is of string type.</description>
+                </param>
+                <param label="changeSegment.actionCommonInfo.appInfo.extension.@anyAttributeParam" name="changeSegment.actionCommonInfo.appInfo.extension.@anyAttributeParam" default="" target="function" required="false">
+                    <description>Additional attributes for element extension</description>
+                </param>
+                <param label="changeSegment.actionCommonInfo.appInfo.extension.any" name="changeSegment.actionCommonInfo.appInfo.extension.any" default="" target="function" required="false">
+                    <description>You may enter ANY elements at this point</description>
+                </param>
+                <param label="changeSegment.actionCommonInfo.userCode" name="changeSegment.actionCommonInfo.userCode" default="" target="function" required="false">
+                    <description>userCode is of string type.</description>
+                </param>
+                <param label="changeSegment.actionCommonInfo.opCost" name="changeSegment.actionCommonInfo.opCost" default="" target="function" required="false">
+                    <description>opCost is of long type.</description>
+                </param>
+                <param label="changeSegment.actionCommonInfo.opCost.@exponent" name="changeSegment.actionCommonInfo.opCost.@exponent" default="" target="function" required="false">
+                    <description>exponent is of int type.</description>
+                </param>
+                <param label="changeSegment.actionCommonInfo.currencyCode" name="changeSegment.actionCommonInfo.currencyCode" default="" target="function" required="false">
+                    <description>CurrencyCodeType</description>
+                </param>
+                <param label="changeSegment.actionCommonInfo.extension.@anyAttributeParam" name="changeSegment.actionCommonInfo.extension.@anyAttributeParam" default="" target="function" required="false">
+                    <description>Additional attributes for element extension</description>
+                </param>
+                <param label="changeSegment.actionCommonInfo.extension.any" name="changeSegment.actionCommonInfo.extension.any" default="" target="function" required="false">
+                    <description>You may enter ANY elements at this point</description>
+                </param>
+                <param label="changeSegment.subscriberId.choice" name="changeSegment.subscriberId.choice" default="" target="function" required="false">
+                    <description>SubscriberIdType</description>
+                </param>
+                <param label="changeSegment.segmentId" name="changeSegment.segmentId" default="" target="function" required="true">
+                    <description>segmentId is of string type.</description>
+                </param>
+                <param label="changeSegment.segmentReference" name="changeSegment.segmentReference" default="" target="function" required="false">
+                    <description>segmentReference is of string type.</description>
+                </param>
+                <param label="changeSegment.timeInterval.startTime.choice" name="changeSegment.timeInterval.startTime.choice" default="" target="function" required="false">
+                    <description>TimeType</description>
+                </param>
+                <param label="changeSegment.timeInterval.endTime.choice" name="changeSegment.timeInterval.endTime.choice" default="" target="function" required="false">
+                    <description>TimeType</description>
+                </param>
+                <param label="changeSegment.timeInterval.extension.@anyAttributeParam" name="changeSegment.timeInterval.extension.@anyAttributeParam" default="" target="function" required="false">
+                    <description>Additional attributes for element extension</description>
+                </param>
+                <param label="changeSegment.timeInterval.extension.any" name="changeSegment.timeInterval.extension.any" default="" target="function" required="false">
+                    <description>You may enter ANY elements at this point</description>
+                </param>
+                <param label="changeSegment.extension.@anyAttributeParam" name="changeSegment.extension.@anyAttributeParam" default="" target="function" required="false">
+                    <description>Additional attributes for element extension</description>
+                </param>
+                <param label="changeSegment.extension.any" name="changeSegment.extension.any" default="" target="function" required="false">
+                    <description>You may enter ANY elements at this point</description>
+                </param>
+                <param name="http.authorization" label="http.authorization" required="false" default="" target="function">
+                    <description />
+                </param>
+                <param name="headers" label="headers" required="false" default="" target="function">
+                    <description />
+                </param>
+                <param name="privateRequest" default="false" label="private" target="function">
+                    <description />
+                </param>
+            </parameters>
+        </request>
+        <request id="unsubscribeSegment" label="unsubscribeSegment" function="unsubscribeSegment_AccountManagement" type="JSON">
+            <parameters>
+                <param label="unsubscribeSegment.actionCommonInfo.appInfo.appId" name="unsubscribeSegment.actionCommonInfo.appInfo.appId" default="" target="function" required="true">
+                    <description>appId is of string type.</description>
+                </param>
+                <param label="unsubscribeSegment.actionCommonInfo.appInfo.reference" name="unsubscribeSegment.actionCommonInfo.appInfo.reference" default="" target="function" required="true">
+                    <description>reference is of string type.</description>
+                </param>
+                <param label="unsubscribeSegment.actionCommonInfo.appInfo.extension.@anyAttributeParam" name="unsubscribeSegment.actionCommonInfo.appInfo.extension.@anyAttributeParam" default="" target="function" required="false">
+                    <description>Additional attributes for element extension</description>
+                </param>
+                <param label="unsubscribeSegment.actionCommonInfo.appInfo.extension.any" name="unsubscribeSegment.actionCommonInfo.appInfo.extension.any" default="" target="function" required="false">
+                    <description>You may enter ANY elements at this point</description>
+                </param>
+                <param label="unsubscribeSegment.actionCommonInfo.userCode" name="unsubscribeSegment.actionCommonInfo.userCode" default="" target="function" required="false">
+                    <description>userCode is of string type.</description>
+                </param>
+                <param label="unsubscribeSegment.actionCommonInfo.opCost" name="unsubscribeSegment.actionCommonInfo.opCost" default="" target="function" required="false">
+                    <description>opCost is of long type.</description>
+                </param>
+                <param label="unsubscribeSegment.actionCommonInfo.opCost.@exponent" name="unsubscribeSegment.actionCommonInfo.opCost.@exponent" default="" target="function" required="false">
+                    <description>exponent is of int type.</description>
+                </param>
+                <param label="unsubscribeSegment.actionCommonInfo.currencyCode" name="unsubscribeSegment.actionCommonInfo.currencyCode" default="" target="function" required="false">
+                    <description>CurrencyCodeType</description>
+                </param>
+                <param label="unsubscribeSegment.actionCommonInfo.extension.@anyAttributeParam" name="unsubscribeSegment.actionCommonInfo.extension.@anyAttributeParam" default="" target="function" required="false">
+                    <description>Additional attributes for element extension</description>
+                </param>
+                <param label="unsubscribeSegment.actionCommonInfo.extension.any" name="unsubscribeSegment.actionCommonInfo.extension.any" default="" target="function" required="false">
+                    <description>You may enter ANY elements at this point</description>
+                </param>
+                <param label="unsubscribeSegment.subscriberId.choice" name="unsubscribeSegment.subscriberId.choice" default="" target="function" required="false">
+                    <description>SubscriberIdType</description>
+                </param>
+                <param label="unsubscribeSegment.segmentId" name="unsubscribeSegment.segmentId" default="" target="function" required="true">
+                    <description>segmentId is of string type.</description>
+                </param>
+                <param label="unsubscribeSegment.segmentReference" name="unsubscribeSegment.segmentReference" default="" target="function" required="false">
+                    <description>segmentReference is of string type.</description>
+                </param>
+                <param label="unsubscribeSegment.extension.@anyAttributeParam" name="unsubscribeSegment.extension.@anyAttributeParam" default="" target="function" required="false">
+                    <description>Additional attributes for element extension</description>
+                </param>
+                <param label="unsubscribeSegment.extension.any" name="unsubscribeSegment.extension.any" default="" target="function" required="false">
+                    <description>You may enter ANY elements at this point</description>
+                </param>
+                <param name="http.authorization" label="http.authorization" required="false" default="" target="function">
+                    <description />
+                </param>
+                <param name="headers" label="headers" required="false" default="" target="function">
+                    <description />
+                </param>
+                <param name="privateRequest" default="false" label="private" target="function">
+                    <description />
+                </param>
+            </parameters>
+        </request>
+        <request id="querySegments" label="querySegments" function="querySegments_AccountManagement" type="JSON">
+            <parameters>
+                <param label="querySegments.queryCommonInfo.currencyCode" name="querySegments.queryCommonInfo.currencyCode" default="" target="function" required="false">
+                    <description>CurrencyCodeType</description>
+                </param>
+                <param label="querySegments.queryCommonInfo.pagingInfo.token" name="querySegments.queryCommonInfo.pagingInfo.token" default="" target="function" required="false">
+                    <description>token is of string type.</description>
+                </param>
+                <param label="querySegments.queryCommonInfo.pagingInfo.numRegs" name="querySegments.queryCommonInfo.pagingInfo.numRegs" default="" target="function" required="false">
+                    <description>numRegs is of int type.</description>
+                </param>
+                <param label="querySegments.queryCommonInfo.pagingInfo.extension.@anyAttributeParam" name="querySegments.queryCommonInfo.pagingInfo.extension.@anyAttributeParam" default="" target="function" required="false">
+                    <description>Additional attributes for element extension</description>
+                </param>
+                <param label="querySegments.queryCommonInfo.pagingInfo.extension.any" name="querySegments.queryCommonInfo.pagingInfo.extension.any" default="" target="function" required="false">
+                    <description>You may enter ANY elements at this point</description>
+                </param>
+                <param label="querySegments.queryCommonInfo.extension.@anyAttributeParam" name="querySegments.queryCommonInfo.extension.@anyAttributeParam" default="" target="function" required="false">
+                    <description>Additional attributes for element extension</description>
+                </param>
+                <param label="querySegments.queryCommonInfo.extension.any" name="querySegments.queryCommonInfo.extension.any" default="" target="function" required="false">
+                    <description>You may enter ANY elements at this point</description>
+                </param>
+                <param label="querySegments.subscriberId.choice" name="querySegments.subscriberId.choice" default="" target="function" required="false">
+                    <description>SubscriberIdType</description>
+                </param>
+                <param label="querySegments.timeInterval.startTime.choice" name="querySegments.timeInterval.startTime.choice" default="" target="function" required="false">
+                    <description>TimeType</description>
+                </param>
+                <param label="querySegments.timeInterval.endTime.choice" name="querySegments.timeInterval.endTime.choice" default="" target="function" required="false">
+                    <description>TimeType</description>
+                </param>
+                <param label="querySegments.timeInterval.extension.@anyAttributeParam" name="querySegments.timeInterval.extension.@anyAttributeParam" default="" target="function" required="false">
+                    <description>Additional attributes for element extension</description>
+                </param>
+                <param label="querySegments.timeInterval.extension.any" name="querySegments.timeInterval.extension.any" default="" target="function" required="false">
+                    <description>You may enter ANY elements at this point</description>
+                </param>
+                <param label="querySegments.statusFlagFilter" name="querySegments.statusFlagFilter" default="" target="function" required="true">
+                    <description>FlagType</description>
+                </param>
+                <param label="querySegments.extension.@anyAttributeParam" name="querySegments.extension.@anyAttributeParam" default="" target="function" required="false">
+                    <description>Additional attributes for element extension</description>
+                </param>
+                <param label="querySegments.extension.any" name="querySegments.extension.any" default="" target="function" required="false">
+                    <description>You may enter ANY elements at this point</description>
+                </param>
+                <param name="http.authorization" label="http.authorization" required="false" default="" target="function">
+                    <description />
+                </param>
+                <param name="headers" label="headers" required="false" default="" target="function">
+                    <description />
+                </param>
+                <param name="privateRequest" default="false" label="private" target="function">
+                    <description />
+                </param>
+            </parameters>
+        </request>
+        <request id="querySubscriberIds" label="querySubscriberIds" function="querySubscriberIds_AccountManagement" type="JSON">
+            <parameters>
+                <param label="querySubscriberIds.queryCommonInfo.currencyCode" name="querySubscriberIds.queryCommonInfo.currencyCode" default="" target="function" required="false">
+                    <description>CurrencyCodeType</description>
+                </param>
+                <param label="querySubscriberIds.queryCommonInfo.pagingInfo.token" name="querySubscriberIds.queryCommonInfo.pagingInfo.token" default="" target="function" required="false">
+                    <description>token is of string type.</description>
+                </param>
+                <param label="querySubscriberIds.queryCommonInfo.pagingInfo.numRegs" name="querySubscriberIds.queryCommonInfo.pagingInfo.numRegs" default="" target="function" required="false">
+                    <description>numRegs is of int type.</description>
+                </param>
+                <param label="querySubscriberIds.queryCommonInfo.pagingInfo.extension.@anyAttributeParam" name="querySubscriberIds.queryCommonInfo.pagingInfo.extension.@anyAttributeParam" default="" target="function" required="false">
+                    <description>Additional attributes for element extension</description>
+                </param>
+                <param label="querySubscriberIds.queryCommonInfo.pagingInfo.extension.any" name="querySubscriberIds.queryCommonInfo.pagingInfo.extension.any" default="" target="function" required="false">
+                    <description>You may enter ANY elements at this point</description>
+                </param>
+                <param label="querySubscriberIds.queryCommonInfo.extension.@anyAttributeParam" name="querySubscriberIds.queryCommonInfo.extension.@anyAttributeParam" default="" target="function" required="false">
+                    <description>Additional attributes for element extension</description>
+                </param>
+                <param label="querySubscriberIds.queryCommonInfo.extension.any" name="querySubscriberIds.queryCommonInfo.extension.any" default="" target="function" required="false">
+                    <description>You may enter ANY elements at this point</description>
+                </param>
+                <param label="querySubscriberIds.extension.@anyAttributeParam" name="querySubscriberIds.extension.@anyAttributeParam" default="" target="function" required="false">
+                    <description>Additional attributes for element extension</description>
+                </param>
+                <param label="querySubscriberIds.extension.any" name="querySubscriberIds.extension.any" default="" target="function" required="false">
+                    <description>You may enter ANY elements at this point</description>
+                </param>
+                <param name="http.authorization" label="http.authorization" required="false" default="" target="function">
+                    <description />
+                </param>
+                <param name="headers" label="headers" required="false" default="" target="function">
+                    <description />
+                </param>
+                <param name="privateRequest" default="false" label="private" target="function">
+                    <description />
+                </param>
+            </parameters>
+        </request>
+        <request id="changeExternalSubscriberIds" label="changeExternalSubscriberIds" function="changeExternalSubscriberIds_AccountManagement" type="JSON">
+            <parameters>
+                <param label="changeExternalSubscriberIds.actionCommonInfo.appInfo.appId" name="changeExternalSubscriberIds.actionCommonInfo.appInfo.appId" default="" target="function" required="true">
+                    <description>appId is of string type.</description>
+                </param>
+                <param label="changeExternalSubscriberIds.actionCommonInfo.appInfo.reference" name="changeExternalSubscriberIds.actionCommonInfo.appInfo.reference" default="" target="function" required="true">
+                    <description>reference is of string type.</description>
+                </param>
+                <param label="changeExternalSubscriberIds.actionCommonInfo.appInfo.extension.@anyAttributeParam" name="changeExternalSubscriberIds.actionCommonInfo.appInfo.extension.@anyAttributeParam" default="" target="function" required="false">
+                    <description>Additional attributes for element extension</description>
+                </param>
+                <param label="changeExternalSubscriberIds.actionCommonInfo.appInfo.extension.any" name="changeExternalSubscriberIds.actionCommonInfo.appInfo.extension.any" default="" target="function" required="false">
+                    <description>You may enter ANY elements at this point</description>
+                </param>
+                <param label="changeExternalSubscriberIds.actionCommonInfo.userCode" name="changeExternalSubscriberIds.actionCommonInfo.userCode" default="" target="function" required="false">
+                    <description>userCode is of string type.</description>
+                </param>
+                <param label="changeExternalSubscriberIds.actionCommonInfo.opCost" name="changeExternalSubscriberIds.actionCommonInfo.opCost" default="" target="function" required="false">
+                    <description>opCost is of long type.</description>
+                </param>
+                <param label="changeExternalSubscriberIds.actionCommonInfo.opCost.@exponent" name="changeExternalSubscriberIds.actionCommonInfo.opCost.@exponent" default="" target="function" required="false">
+                    <description>exponent is of int type.</description>
+                </param>
+                <param label="changeExternalSubscriberIds.actionCommonInfo.currencyCode" name="changeExternalSubscriberIds.actionCommonInfo.currencyCode" default="" target="function" required="false">
+                    <description>CurrencyCodeType</description>
+                </param>
+                <param label="changeExternalSubscriberIds.actionCommonInfo.extension.@anyAttributeParam" name="changeExternalSubscriberIds.actionCommonInfo.extension.@anyAttributeParam" default="" target="function" required="false">
+                    <description>Additional attributes for element extension</description>
+                </param>
+                <param label="changeExternalSubscriberIds.actionCommonInfo.extension.any" name="changeExternalSubscriberIds.actionCommonInfo.extension.any" default="" target="function" required="false">
+                    <description>You may enter ANY elements at this point</description>
+                </param>
+                <param label="changeExternalSubscriberIds.subscriberId.choice" name="changeExternalSubscriberIds.subscriberId.choice" default="" target="function" required="false">
+                    <description>SubscriberIdType</description>
+                </param>
+                <param label="changeExternalSubscriberIds.currentExternalSubscriberId.choice" name="changeExternalSubscriberIds.currentExternalSubscriberId.choice" default="" target="function" required="false">
+                    <description>SubscriberIdType</description>
+                </param>
+                <param label="changeExternalSubscriberIds.newExternalSubscriberId.choice" name="changeExternalSubscriberIds.newExternalSubscriberId.choice" default="" target="function" required="false">
+                    <description>SubscriberIdType</description>
+                </param>
+                <param label="changeExternalSubscriberIds.extension.@anyAttributeParam" name="changeExternalSubscriberIds.extension.@anyAttributeParam" default="" target="function" required="false">
+                    <description>Additional attributes for element extension</description>
+                </param>
+                <param label="changeExternalSubscriberIds.extension.any" name="changeExternalSubscriberIds.extension.any" default="" target="function" required="false">
+                    <description>You may enter ANY elements at this point</description>
+                </param>
+                <param name="http.authorization" label="http.authorization" required="false" default="" target="function">
+                    <description />
+                </param>
+                <param name="headers" label="headers" required="false" default="" target="function">
+                    <description />
+                </param>
+                <param name="privateRequest" default="false" label="private" target="function">
+                    <description />
+                </param>
+            </parameters>
+        </request>
+        <request id="assignInternalSubscriberId" label="assignInternalSubscriberId" function="assignInternalSubscriberId_AccountManagement" type="JSON">
+            <parameters>
+                <param label="assignInternalSubscriberId.actionCommonInfo.appInfo.appId" name="assignInternalSubscriberId.actionCommonInfo.appInfo.appId" default="" target="function" required="true">
+                    <description>appId is of string type.</description>
+                </param>
+                <param label="assignInternalSubscriberId.actionCommonInfo.appInfo.reference" name="assignInternalSubscriberId.actionCommonInfo.appInfo.reference" default="" target="function" required="true">
+                    <description>reference is of string type.</description>
+                </param>
+                <param label="assignInternalSubscriberId.actionCommonInfo.appInfo.extension.@anyAttributeParam" name="assignInternalSubscriberId.actionCommonInfo.appInfo.extension.@anyAttributeParam" default="" target="function" required="false">
+                    <description>Additional attributes for element extension</description>
+                </param>
+                <param label="assignInternalSubscriberId.actionCommonInfo.appInfo.extension.any" name="assignInternalSubscriberId.actionCommonInfo.appInfo.extension.any" default="" target="function" required="false">
+                    <description>You may enter ANY elements at this point</description>
+                </param>
+                <param label="assignInternalSubscriberId.actionCommonInfo.userCode" name="assignInternalSubscriberId.actionCommonInfo.userCode" default="" target="function" required="false">
+                    <description>userCode is of string type.</description>
+                </param>
+                <param label="assignInternalSubscriberId.actionCommonInfo.opCost" name="assignInternalSubscriberId.actionCommonInfo.opCost" default="" target="function" required="false">
+                    <description>opCost is of long type.</description>
+                </param>
+                <param label="assignInternalSubscriberId.actionCommonInfo.opCost.@exponent" name="assignInternalSubscriberId.actionCommonInfo.opCost.@exponent" default="" target="function" required="false">
+                    <description>exponent is of int type.</description>
+                </param>
+                <param label="assignInternalSubscriberId.actionCommonInfo.currencyCode" name="assignInternalSubscriberId.actionCommonInfo.currencyCode" default="" target="function" required="false">
+                    <description>CurrencyCodeType</description>
+                </param>
+                <param label="assignInternalSubscriberId.actionCommonInfo.extension.@anyAttributeParam" name="assignInternalSubscriberId.actionCommonInfo.extension.@anyAttributeParam" default="" target="function" required="false">
+                    <description>Additional attributes for element extension</description>
+                </param>
+                <param label="assignInternalSubscriberId.actionCommonInfo.extension.any" name="assignInternalSubscriberId.actionCommonInfo.extension.any" default="" target="function" required="false">
+                    <description>You may enter ANY elements at this point</description>
+                </param>
+                <param label="assignInternalSubscriberId.extension.@anyAttributeParam" name="assignInternalSubscriberId.extension.@anyAttributeParam" default="" target="function" required="false">
+                    <description>Additional attributes for element extension</description>
+                </param>
+                <param label="assignInternalSubscriberId.extension.any" name="assignInternalSubscriberId.extension.any" default="" target="function" required="false">
+                    <description>You may enter ANY elements at this point</description>
+                </param>
+                <param name="http.authorization" label="http.authorization" required="false" default="" target="function">
+                    <description />
+                </param>
+                <param name="headers" label="headers" required="false" default="" target="function">
+                    <description />
+                </param>
+                <param name="privateRequest" default="false" label="private" target="function">
+                    <description />
+                </param>
+            </parameters>
+        </request>
+        <request id="subscribeExternalNotifications" label="subscribeExternalNotifications" function="subscribeExternalNotifications_AccountManagement" type="JSON">
+            <parameters>
+                <param label="subscribeExternalNotifications.actionCommonInfo.appInfo.appId" name="subscribeExternalNotifications.actionCommonInfo.appInfo.appId" default="" target="function" required="true">
+                    <description>appId is of string type.</description>
+                </param>
+                <param label="subscribeExternalNotifications.actionCommonInfo.appInfo.reference" name="subscribeExternalNotifications.actionCommonInfo.appInfo.reference" default="" target="function" required="true">
+                    <description>reference is of string type.</description>
+                </param>
+                <param label="subscribeExternalNotifications.actionCommonInfo.appInfo.extension.@anyAttributeParam" name="subscribeExternalNotifications.actionCommonInfo.appInfo.extension.@anyAttributeParam" default="" target="function" required="false">
+                    <description>Additional attributes for element extension</description>
+                </param>
+                <param label="subscribeExternalNotifications.actionCommonInfo.appInfo.extension.any" name="subscribeExternalNotifications.actionCommonInfo.appInfo.extension.any" default="" target="function" required="false">
+                    <description>You may enter ANY elements at this point</description>
+                </param>
+                <param label="subscribeExternalNotifications.actionCommonInfo.userCode" name="subscribeExternalNotifications.actionCommonInfo.userCode" default="" target="function" required="false">
+                    <description>userCode is of string type.</description>
+                </param>
+                <param label="subscribeExternalNotifications.actionCommonInfo.opCost" name="subscribeExternalNotifications.actionCommonInfo.opCost" default="" target="function" required="false">
+                    <description>opCost is of long type.</description>
+                </param>
+                <param label="subscribeExternalNotifications.actionCommonInfo.opCost.@exponent" name="subscribeExternalNotifications.actionCommonInfo.opCost.@exponent" default="" target="function" required="false">
+                    <description>exponent is of int type.</description>
+                </param>
+                <param label="subscribeExternalNotifications.actionCommonInfo.currencyCode" name="subscribeExternalNotifications.actionCommonInfo.currencyCode" default="" target="function" required="false">
+                    <description>CurrencyCodeType</description>
+                </param>
+                <param label="subscribeExternalNotifications.actionCommonInfo.extension.@anyAttributeParam" name="subscribeExternalNotifications.actionCommonInfo.extension.@anyAttributeParam" default="" target="function" required="false">
+                    <description>Additional attributes for element extension</description>
+                </param>
+                <param label="subscribeExternalNotifications.actionCommonInfo.extension.any" name="subscribeExternalNotifications.actionCommonInfo.extension.any" default="" target="function" required="false">
+                    <description>You may enter ANY elements at this point</description>
+                </param>
+                <param label="subscribeExternalNotifications.subscriberId.choice" name="subscribeExternalNotifications.subscriberId.choice" default="" target="function" required="false">
+                    <description>SubscriberIdType</description>
+                </param>
+                <param label="subscribeExternalNotifications.extNotServer" name="subscribeExternalNotifications.extNotServer" default="" target="function" required="false">
+                    <description>extNotServer is of string type.</description>
+                </param>
+                <param label="subscribeExternalNotifications.extension.@anyAttributeParam" name="subscribeExternalNotifications.extension.@anyAttributeParam" default="" target="function" required="false">
+                    <description>Additional attributes for element extension</description>
+                </param>
+                <param label="subscribeExternalNotifications.extension.any" name="subscribeExternalNotifications.extension.any" default="" target="function" required="false">
+                    <description>You may enter ANY elements at this point</description>
+                </param>
+                <param name="http.authorization" label="http.authorization" required="false" default="" target="function">
+                    <description />
+                </param>
+                <param name="headers" label="headers" required="false" default="" target="function">
+                    <description />
+                </param>
+                <param name="privateRequest" default="false" label="private" target="function">
+                    <description />
+                </param>
+            </parameters>
+        </request>
+        <request id="unsubscribeExternalNotifications" label="unsubscribeExternalNotifications" function="unsubscribeExternalNotifications_AccountManagement" type="JSON">
+            <parameters>
+                <param label="unsubscribeExternalNotifications.actionCommonInfo.appInfo.appId" name="unsubscribeExternalNotifications.actionCommonInfo.appInfo.appId" default="" target="function" required="true">
+                    <description>appId is of string type.</description>
+                </param>
+                <param label="unsubscribeExternalNotifications.actionCommonInfo.appInfo.reference" name="unsubscribeExternalNotifications.actionCommonInfo.appInfo.reference" default="" target="function" required="true">
+                    <description>reference is of string type.</description>
+                </param>
+                <param label="unsubscribeExternalNotifications.actionCommonInfo.appInfo.extension.@anyAttributeParam" name="unsubscribeExternalNotifications.actionCommonInfo.appInfo.extension.@anyAttributeParam" default="" target="function" required="false">
+                    <description>Additional attributes for element extension</description>
+                </param>
+                <param label="unsubscribeExternalNotifications.actionCommonInfo.appInfo.extension.any" name="unsubscribeExternalNotifications.actionCommonInfo.appInfo.extension.any" default="" target="function" required="false">
+                    <description>You may enter ANY elements at this point</description>
+                </param>
+                <param label="unsubscribeExternalNotifications.actionCommonInfo.userCode" name="unsubscribeExternalNotifications.actionCommonInfo.userCode" default="" target="function" required="false">
+                    <description>userCode is of string type.</description>
+                </param>
+                <param label="unsubscribeExternalNotifications.actionCommonInfo.opCost" name="unsubscribeExternalNotifications.actionCommonInfo.opCost" default="" target="function" required="false">
+                    <description>opCost is of long type.</description>
+                </param>
+                <param label="unsubscribeExternalNotifications.actionCommonInfo.opCost.@exponent" name="unsubscribeExternalNotifications.actionCommonInfo.opCost.@exponent" default="" target="function" required="false">
+                    <description>exponent is of int type.</description>
+                </param>
+                <param label="unsubscribeExternalNotifications.actionCommonInfo.currencyCode" name="unsubscribeExternalNotifications.actionCommonInfo.currencyCode" default="" target="function" required="false">
+                    <description>CurrencyCodeType</description>
+                </param>
+                <param label="unsubscribeExternalNotifications.actionCommonInfo.extension.@anyAttributeParam" name="unsubscribeExternalNotifications.actionCommonInfo.extension.@anyAttributeParam" default="" target="function" required="false">
+                    <description>Additional attributes for element extension</description>
+                </param>
+                <param label="unsubscribeExternalNotifications.actionCommonInfo.extension.any" name="unsubscribeExternalNotifications.actionCommonInfo.extension.any" default="" target="function" required="false">
+                    <description>You may enter ANY elements at this point</description>
+                </param>
+                <param label="unsubscribeExternalNotifications.subscriberId.choice" name="unsubscribeExternalNotifications.subscriberId.choice" default="" target="function" required="false">
+                    <description>SubscriberIdType</description>
+                </param>
+                <param label="unsubscribeExternalNotifications.extNotServer" name="unsubscribeExternalNotifications.extNotServer" default="" target="function" required="false">
+                    <description>extNotServer is of string type.</description>
+                </param>
+                <param label="unsubscribeExternalNotifications.extension.@anyAttributeParam" name="unsubscribeExternalNotifications.extension.@anyAttributeParam" default="" target="function" required="false">
+                    <description>Additional attributes for element extension</description>
+                </param>
+                <param label="unsubscribeExternalNotifications.extension.any" name="unsubscribeExternalNotifications.extension.any" default="" target="function" required="false">
+                    <description>You may enter ANY elements at this point</description>
+                </param>
+                <param name="http.authorization" label="http.authorization" required="false" default="" target="function">
+                    <description />
+                </param>
+                <param name="headers" label="headers" required="false" default="" target="function">
+                    <description />
+                </param>
+                <param name="privateRequest" default="false" label="private" target="function">
+                    <description />
+                </param>
+            </parameters>
+        </request>
+        <request id="changeSubscriberBillingCycle" label="changeSubscriberBillingCycle" function="changeSubscriberBillingCycle_AccountManagement" type="JSON">
+            <parameters>
+                <param label="changeSubscriberBillingCycle.actionCommonInfo.appInfo.appId" name="changeSubscriberBillingCycle.actionCommonInfo.appInfo.appId" default="" target="function" required="true">
+                    <description>appId is of string type.</description>
+                </param>
+                <param label="changeSubscriberBillingCycle.actionCommonInfo.appInfo.reference" name="changeSubscriberBillingCycle.actionCommonInfo.appInfo.reference" default="" target="function" required="true">
+                    <description>reference is of string type.</description>
+                </param>
+                <param label="changeSubscriberBillingCycle.actionCommonInfo.appInfo.extension.@anyAttributeParam" name="changeSubscriberBillingCycle.actionCommonInfo.appInfo.extension.@anyAttributeParam" default="" target="function" required="false">
+                    <description>Additional attributes for element extension</description>
+                </param>
+                <param label="changeSubscriberBillingCycle.actionCommonInfo.appInfo.extension.any" name="changeSubscriberBillingCycle.actionCommonInfo.appInfo.extension.any" default="" target="function" required="false">
+                    <description>You may enter ANY elements at this point</description>
+                </param>
+                <param label="changeSubscriberBillingCycle.actionCommonInfo.userCode" name="changeSubscriberBillingCycle.actionCommonInfo.userCode" default="" target="function" required="false">
+                    <description>userCode is of string type.</description>
+                </param>
+                <param label="changeSubscriberBillingCycle.actionCommonInfo.opCost" name="changeSubscriberBillingCycle.actionCommonInfo.opCost" default="" target="function" required="false">
+                    <description>opCost is of long type.</description>
+                </param>
+                <param label="changeSubscriberBillingCycle.actionCommonInfo.opCost.@exponent" name="changeSubscriberBillingCycle.actionCommonInfo.opCost.@exponent" default="" target="function" required="false">
+                    <description>exponent is of int type.</description>
+                </param>
+                <param label="changeSubscriberBillingCycle.actionCommonInfo.currencyCode" name="changeSubscriberBillingCycle.actionCommonInfo.currencyCode" default="" target="function" required="false">
+                    <description>CurrencyCodeType</description>
+                </param>
+                <param label="changeSubscriberBillingCycle.actionCommonInfo.extension.@anyAttributeParam" name="changeSubscriberBillingCycle.actionCommonInfo.extension.@anyAttributeParam" default="" target="function" required="false">
+                    <description>Additional attributes for element extension</description>
+                </param>
+                <param label="changeSubscriberBillingCycle.actionCommonInfo.extension.any" name="changeSubscriberBillingCycle.actionCommonInfo.extension.any" default="" target="function" required="false">
+                    <description>You may enter ANY elements at this point</description>
+                </param>
+                <param label="changeSubscriberBillingCycle.subscriberId.choice" name="changeSubscriberBillingCycle.subscriberId.choice" default="" target="function" required="false">
+                    <description>SubscriberIdType</description>
+                </param>
+                <param label="changeSubscriberBillingCycle.billingCycleCode" name="changeSubscriberBillingCycle.billingCycleCode" default="" target="function" required="false">
+                    <description>billingCycleCode is of string type.</description>
+                </param>
+                <param label="changeSubscriberBillingCycle.immediateFlag" name="changeSubscriberBillingCycle.immediateFlag" default="" target="function" required="false">
+                    <description>immediateFlag is of string type.</description>
+                </param>
+                <param label="changeSubscriberBillingCycle.chargingModality" name="changeSubscriberBillingCycle.chargingModality" default="" target="function" required="false">
+                    <description>chargingModality is of int type.</description>
+                </param>
+                <param label="changeSubscriberBillingCycle.extension.@anyAttributeParam" name="changeSubscriberBillingCycle.extension.@anyAttributeParam" default="" target="function" required="false">
+                    <description>Additional attributes for element extension</description>
+                </param>
+                <param label="changeSubscriberBillingCycle.extension.any" name="changeSubscriberBillingCycle.extension.any" default="" target="function" required="false">
+                    <description>You may enter ANY elements at this point</description>
+                </param>
+                <param name="http.authorization" label="http.authorization" required="false" default="" target="function">
+                    <description />
+                </param>
+                <param name="headers" label="headers" required="false" default="" target="function">
+                    <description />
+                </param>
+                <param name="privateRequest" default="false" label="private" target="function">
+                    <description />
+                </param>
+            </parameters>
+        </request>
+        <request id="changeAccountProfileId" label="changeAccountProfileId" function="changeAccountProfileId_AccountManagement" type="JSON">
+            <parameters>
+                <param label="changeAccountProfileId.actionCommonInfo.appInfo.appId" name="changeAccountProfileId.actionCommonInfo.appInfo.appId" default="" target="function" required="true">
+                    <description>appId is of string type.</description>
+                </param>
+                <param label="changeAccountProfileId.actionCommonInfo.appInfo.reference" name="changeAccountProfileId.actionCommonInfo.appInfo.reference" default="" target="function" required="true">
+                    <description>reference is of string type.</description>
+                </param>
+                <param label="changeAccountProfileId.actionCommonInfo.appInfo.extension.@anyAttributeParam" name="changeAccountProfileId.actionCommonInfo.appInfo.extension.@anyAttributeParam" default="" target="function" required="false">
+                    <description>Additional attributes for element extension</description>
+                </param>
+                <param label="changeAccountProfileId.actionCommonInfo.appInfo.extension.any" name="changeAccountProfileId.actionCommonInfo.appInfo.extension.any" default="" target="function" required="false">
+                    <description>You may enter ANY elements at this point</description>
+                </param>
+                <param label="changeAccountProfileId.actionCommonInfo.userCode" name="changeAccountProfileId.actionCommonInfo.userCode" default="" target="function" required="false">
+                    <description>userCode is of string type.</description>
+                </param>
+                <param label="changeAccountProfileId.actionCommonInfo.opCost" name="changeAccountProfileId.actionCommonInfo.opCost" default="" target="function" required="false">
+                    <description>opCost is of long type.</description>
+                </param>
+                <param label="changeAccountProfileId.actionCommonInfo.opCost.@exponent" name="changeAccountProfileId.actionCommonInfo.opCost.@exponent" default="" target="function" required="false">
+                    <description>exponent is of int type.</description>
+                </param>
+                <param label="changeAccountProfileId.actionCommonInfo.currencyCode" name="changeAccountProfileId.actionCommonInfo.currencyCode" default="" target="function" required="false">
+                    <description>CurrencyCodeType</description>
+                </param>
+                <param label="changeAccountProfileId.actionCommonInfo.extension.@anyAttributeParam" name="changeAccountProfileId.actionCommonInfo.extension.@anyAttributeParam" default="" target="function" required="false">
+                    <description>Additional attributes for element extension</description>
+                </param>
+                <param label="changeAccountProfileId.actionCommonInfo.extension.any" name="changeAccountProfileId.actionCommonInfo.extension.any" default="" target="function" required="false">
+                    <description>You may enter ANY elements at this point</description>
+                </param>
+                <param label="changeAccountProfileId.subscriberId.choice" name="changeAccountProfileId.subscriberId.choice" default="" target="function" required="false">
+                    <description>SubscriberIdType</description>
+                </param>
+                <param label="changeAccountProfileId.accountProfileId" name="changeAccountProfileId.accountProfileId" default="" target="function" required="true">
+                    <description>accountProfileId is of string type.</description>
+                </param>
+                <param label="changeAccountProfileId.initialBalance" name="changeAccountProfileId.initialBalance" default="" target="function" required="false">
+                    <description>initialBalance is of long type.</description>
+                </param>
+                <param label="changeAccountProfileId.initialBalance.@exponent" name="changeAccountProfileId.initialBalance.@exponent" default="" target="function" required="false">
+                    <description>exponent is of int type.</description>
+                </param>
+                <param label="changeAccountProfileId.subscriberExtendedInfo.taxCode" name="changeAccountProfileId.subscriberExtendedInfo.taxCode" default="" target="function" required="false">
+                    <description>taxCode is of string type.</description>
+                </param>
+                <param label="changeAccountProfileId.subscriberExtendedInfo.genericRatingParameter" name="changeAccountProfileId.subscriberExtendedInfo.genericRatingParameter" default="" target="function" required="false">
+                    <description>genericRatingParameter is of string type.</description>
+                </param>
+                <param label="changeAccountProfileId.subscriberExtendedInfo.subscriptionArea" name="changeAccountProfileId.subscriberExtendedInfo.subscriptionArea" default="" target="function" required="false">
+                    <description>subscriptionArea is of string type.</description>
+                </param>
+                <param label="changeAccountProfileId.subscriberExtendedInfo.ocsreNodeId" name="changeAccountProfileId.subscriberExtendedInfo.ocsreNodeId" default="" target="function" required="false">
+                    <description>ocsreNodeId is of string type.</description>
+                </param>
+                <param label="changeAccountProfileId.subscriberExtendedInfo.geographicArea" name="changeAccountProfileId.subscriberExtendedInfo.geographicArea" default="" target="function" required="false">
+                    <description>geographicArea is of string type.</description>
+                </param>
+                <param label="changeAccountProfileId.subscriberExtendedInfo.billingCycleCode" name="changeAccountProfileId.subscriberExtendedInfo.billingCycleCode" default="" target="function" required="false">
+                    <description>billingCycleCode is of string type.</description>
+                </param>
+                <param label="changeAccountProfileId.subscriberExtendedInfo.extension.@anyAttributeParam" name="changeAccountProfileId.subscriberExtendedInfo.extension.@anyAttributeParam" default="" target="function" required="false">
+                    <description>Additional attributes for element extension</description>
+                </param>
+                <param label="changeAccountProfileId.subscriberExtendedInfo.extension.any" name="changeAccountProfileId.subscriberExtendedInfo.extension.any" default="" target="function" required="false">
+                    <description>You may enter ANY elements at this point</description>
+                </param>
+                <param label="changeAccountProfileId.cycleSpendControlFlag" name="changeAccountProfileId.cycleSpendControlFlag" default="" target="function" required="true">
+                    <description>FlagType</description>
+                </param>
+                <param label="changeAccountProfileId.spendAttributesInfoList.spendAttributesInfo.spendId" name="changeAccountProfileId.spendAttributesInfoList.spendAttributesInfo.spendId" default="" target="function" required="false">
+                    <description>spendId is of string type.</description>
+                </param>
+                <param label="changeAccountProfileId.spendAttributesInfoList.spendAttributesInfo.spendLimitAmount" name="changeAccountProfileId.spendAttributesInfoList.spendAttributesInfo.spendLimitAmount" default="" target="function" required="false">
+                    <description>spendLimitAmount is of long type.</description>
+                </param>
+                <param label="changeAccountProfileId.spendAttributesInfoList.spendAttributesInfo.spendLimitAmount.@exponent" name="changeAccountProfileId.spendAttributesInfoList.spendAttributesInfo.spendLimitAmount.@exponent" default="" target="function" required="false">
+                    <description>exponent is of int type.</description>
+                </param>
+                <param label="changeAccountProfileId.spendAttributesInfoList.spendAttributesInfo.spendThresholdValue" name="changeAccountProfileId.spendAttributesInfoList.spendAttributesInfo.spendThresholdValue" default="" target="function" required="false">
+                    <description>spendThresholdValue is of long type.</description>
+                </param>
+                <param label="changeAccountProfileId.spendAttributesInfoList.spendAttributesInfo.spendThresholdValue.@exponent" name="changeAccountProfileId.spendAttributesInfoList.spendAttributesInfo.spendThresholdValue.@exponent" default="" target="function" required="false">
+                    <description>exponent is of int type.</description>
+                </param>
+                <param label="changeAccountProfileId.spendAttributesInfoList.spendAttributesInfo.spendValue" name="changeAccountProfileId.spendAttributesInfoList.spendAttributesInfo.spendValue" default="" target="function" required="false">
+                    <description>spendValue is of long type.</description>
+                </param>
+                <param label="changeAccountProfileId.spendAttributesInfoList.spendAttributesInfo.spendValue.@exponent" name="changeAccountProfileId.spendAttributesInfoList.spendAttributesInfo.spendValue.@exponent" default="" target="function" required="false">
+                    <description>exponent is of int type.</description>
+                </param>
+                <param label="changeAccountProfileId.spendAttributesInfoList.spendAttributesInfo.messageNotificationEventFlag" name="changeAccountProfileId.spendAttributesInfoList.spendAttributesInfo.messageNotificationEventFlag" default="" target="function" required="false">
+                    <description>FlagType</description>
+                </param>
+                <param label="changeAccountProfileId.spendAttributesInfoList.spendAttributesInfo.extension.@anyAttributeParam" name="changeAccountProfileId.spendAttributesInfoList.spendAttributesInfo.extension.@anyAttributeParam" default="" target="function" required="false">
+                    <description>Additional attributes for element extension</description>
+                </param>
+                <param label="changeAccountProfileId.spendAttributesInfoList.spendAttributesInfo.extension.any" name="changeAccountProfileId.spendAttributesInfoList.spendAttributesInfo.extension.any" default="" target="function" required="false">
+                    <description>You may enter ANY elements at this point</description>
+                </param>
+                <param label="changeAccountProfileId.spendAttributesInfoList.extension.@anyAttributeParam" name="changeAccountProfileId.spendAttributesInfoList.extension.@anyAttributeParam" default="" target="function" required="false">
+                    <description>Additional attributes for element extension</description>
+                </param>
+                <param label="changeAccountProfileId.spendAttributesInfoList.extension.any" name="changeAccountProfileId.spendAttributesInfoList.extension.any" default="" target="function" required="false">
+                    <description>You may enter ANY elements at this point</description>
+                </param>
+                <param label="changeAccountProfileId.extension.@anyAttributeParam" name="changeAccountProfileId.extension.@anyAttributeParam" default="" target="function" required="false">
+                    <description>Additional attributes for element extension</description>
+                </param>
+                <param label="changeAccountProfileId.extension.any" name="changeAccountProfileId.extension.any" default="" target="function" required="false">
+                    <description>You may enter ANY elements at this point</description>
+                </param>
+                <param name="http.authorization" label="http.authorization" required="false" default="" target="function">
+                    <description />
+                </param>
+                <param name="headers" label="headers" required="false" default="" target="function">
+                    <description />
+                </param>
+                <param name="privateRequest" default="false" label="private" target="function">
+                    <description />
+                </param>
+            </parameters>
+        </request>
+ -->    </requests>
+</ascon>

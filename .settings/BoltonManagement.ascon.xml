@@ -1,0 +1,333 @@
+<?xml version="1.0" encoding="US-ASCII"?>
+<ascon version="1.2">
+<connector id="BoltonManagement" label="BoltonManagement" icon="BoltonManagement.gif" version="1.0">
+<!--
+			Textual description of the connector
+		-->
+<description>
+			Connector to the charging database for IVR Prepaid
+		</description>
+<include copy="true" file="BoltonManagement.es"/>
+<properties name="BoltonManagement">
+<property name="AS_URL" value="/SOAPConnector/SOAPConnector/"/>
+<property name="application" value="BoltonManagement"/>
+<property name="service" value="BoltonManagement"/>
+</properties>
+</connector>
+<requests>
+<request id="subscribeBolton" label="subscribeBolton" function="subscribeBolton_BoltonManagement" type="JSON">
+<parameters>
+<param label="subscribeBolton.actionCommonInfo.appInfo.appId" name="subscribeBolton.actionCommonInfo.appInfo.appId" default="" target="function" required="true">
+<description>appId is of string type.</description>
+</param>
+<param label="subscribeBolton.actionCommonInfo.appInfo.reference" name="subscribeBolton.actionCommonInfo.appInfo.reference" default="" target="function" required="true">
+<description>reference is of string type.</description>
+</param>
+<param label="subscribeBolton.actionCommonInfo.appInfo.extension.@anyAttributeParam" name="subscribeBolton.actionCommonInfo.appInfo.extension.@anyAttributeParam" default="" target="function" required="false">
+<description>Additional attributes for element extension</description>
+</param>
+<param label="subscribeBolton.actionCommonInfo.appInfo.extension.any" name="subscribeBolton.actionCommonInfo.appInfo.extension.any" default="" target="function" required="false">
+<description>You may enter ANY elements at this point</description>
+</param>
+<param label="subscribeBolton.actionCommonInfo.userCode" name="subscribeBolton.actionCommonInfo.userCode" default="" target="function" required="false">
+<description>userCode is of string type.</description>
+</param>
+<param label="subscribeBolton.actionCommonInfo.opCost" name="subscribeBolton.actionCommonInfo.opCost" default="" target="function" required="false">
+<description>opCost is of long type.</description>
+</param>
+<param label="subscribeBolton.actionCommonInfo.opCost.@exponent" name="subscribeBolton.actionCommonInfo.opCost.@exponent" default="" target="function" required="false">
+<description>exponent is of int type.</description>
+</param>
+<param label="subscribeBolton.actionCommonInfo.currencyCode" name="subscribeBolton.actionCommonInfo.currencyCode" default="" target="function" required="false">
+<description>CurrencyCodeType</description>
+</param>
+<param label="subscribeBolton.actionCommonInfo.extension.@anyAttributeParam" name="subscribeBolton.actionCommonInfo.extension.@anyAttributeParam" default="" target="function" required="false">
+<description>Additional attributes for element extension</description>
+</param>
+<param label="subscribeBolton.actionCommonInfo.extension.any" name="subscribeBolton.actionCommonInfo.extension.any" default="" target="function" required="false">
+<description>You may enter ANY elements at this point</description>
+</param>
+<param label="subscribeBolton.subscriberId.choice" name="subscribeBolton.subscriberId.choice" default="" target="function" required="true">
+<description>SubscriberIdType</description>
+</param>
+<param label="subscribeBolton.boltonInfo.boltonIdentifier.boltonCode" name="subscribeBolton.boltonInfo.boltonIdentifier.boltonCode" default="" target="function" required="false">
+<description>boltonCode is of string type.</description>
+</param>
+<param label="subscribeBolton.boltonInfo.boltonIdentifier.boltonTypeCode" name="subscribeBolton.boltonInfo.boltonIdentifier.boltonTypeCode" default="" target="function" required="false">
+<description>boltonTypeCode is of string type.</description>
+</param>
+<param label="subscribeBolton.boltonInfo.boltonIdentifier.boltonInstance" name="subscribeBolton.boltonInfo.boltonIdentifier.boltonInstance" default="" target="function" required="false">
+<description>boltonInstance is of string type.</description>
+</param>
+<param label="subscribeBolton.boltonInfo.boltonIdentifier.extension.@anyAttributeParam" name="subscribeBolton.boltonInfo.boltonIdentifier.extension.@anyAttributeParam" default="" target="function" required="false">
+<description>Additional attributes for element extension</description>
+</param>
+<param label="subscribeBolton.boltonInfo.boltonIdentifier.extension.any" name="subscribeBolton.boltonInfo.boltonIdentifier.extension.any" default="" target="function" required="false">
+<description>You may enter ANY elements at this point</description>
+</param>
+<param label="subscribeBolton.boltonInfo.boltonAmount" name="subscribeBolton.boltonInfo.boltonAmount" default="" target="function" required="false">
+<description>boltonAmount is of long type.</description>
+</param>
+<param label="subscribeBolton.boltonInfo.boltonAmount.@exponent" name="subscribeBolton.boltonInfo.boltonAmount.@exponent" default="" target="function" required="false">
+<description>exponent is of int type.</description>
+</param>
+<param label="subscribeBolton.boltonInfo.boltonLD" name="subscribeBolton.boltonInfo.boltonLD" default="" target="function" required="false">
+<description>boltonLD is of long type.</description>
+</param>
+<param label="subscribeBolton.boltonInfo.boltonLD.@exponent" name="subscribeBolton.boltonInfo.boltonLD.@exponent" default="" target="function" required="false">
+<description>exponent is of int type.</description>
+</param>
+<param label="subscribeBolton.boltonInfo.boltonMaxNumberOfSessions" name="subscribeBolton.boltonInfo.boltonMaxNumberOfSessions" default="" target="function" required="false">
+<description>boltonMaxNumberOfSessions is of int type.</description>
+</param>
+<param label="subscribeBolton.boltonInfo.boltonCost" name="subscribeBolton.boltonInfo.boltonCost" default="" target="function" required="false">
+<description>boltonCost is of long type.</description>
+</param>
+<param label="subscribeBolton.boltonInfo.boltonCost.@exponent" name="subscribeBolton.boltonInfo.boltonCost.@exponent" default="" target="function" required="false">
+<description>exponent is of int type.</description>
+</param>
+<param label="subscribeBolton.boltonInfo.chargingModality" name="subscribeBolton.boltonInfo.chargingModality" default="" target="function" required="false">
+<description>chargingModality is of int type.</description>
+</param>
+
+<param label="subscribeBolton.boltonInfo.timeInterval.startTime.choice" name="subscribeBolton.boltonInfo.timeInterval.startTime.choice" default="" target="function" required="false">
+<description>TimeType</description>
+</param>
+<param label="subscribeBolton.boltonInfo.timeInterval.endTime.choice" name="subscribeBolton.boltonInfo.timeInterval.endTime.choice" default="" target="function" required="false">
+<description>TimeType</description>
+</param>
+<param label="subscribeBolton.boltonInfo.timeInterval.extension.@anyAttributeParam" name="subscribeBolton.boltonInfo.timeInterval.extension.@anyAttributeParam" default="" target="function" required="false">
+<description>Additional attributes for element extension</description>
+</param>
+<param label="subscribeBolton.boltonInfo.timeInterval.extension.any" name="subscribeBolton.boltonInfo.timeInterval.extension.any" default="" target="function" required="false">
+<description>You may enter ANY elements at this point</description>
+</param>
+<param label="subscribeBolton.boltonInfo.maxUnitsPerSession" name="subscribeBolton.boltonInfo.maxUnitsPerSession" default="" target="function" required="false">
+<description>maxUnitsPerSession is of long type.</description>
+</param>
+<param label="subscribeBolton.boltonInfo.maxUnitsPerSession.@exponent" name="subscribeBolton.boltonInfo.maxUnitsPerSession.@exponent" default="" target="function" required="false">
+<description>exponent is of int type.</description>
+</param>
+<param label="subscribeBolton.boltonInfo.extension.@anyAttributeParam" name="subscribeBolton.boltonInfo.extension.@anyAttributeParam" default="" target="function" required="false">
+<description>Additional attributes for element extension</description>
+</param>
+<param label="subscribeBolton.boltonInfo.extension.any" name="subscribeBolton.boltonInfo.extension.any" default="" target="function" required="false">
+<description>You may enter ANY elements at this point</description>
+</param>
+<param label="subscribeBolton.extension.@anyAttributeParam" name="subscribeBolton.extension.@anyAttributeParam" default="" target="function" required="false">
+<description>Additional attributes for element extension</description>
+</param>
+<param label="subscribeBolton.extension.any" name="subscribeBolton.extension.any" default="" target="function" required="false">
+<description>You may enter ANY elements at this point</description>
+</param>
+<param name="http.authorization" label="http.authorization" required="false" default="" target="function">
+<description/>
+</param>
+<param name="headers" label="headers" required="false" default="" target="function">
+<description/>
+</param>
+<param name="privateRequest" default="false" label="private" target="function">
+<description/>
+</param>
+</parameters>
+</request>
+<request id="unsubscribeBolton" label="unsubscribeBolton" function="unsubscribeBolton_BoltonManagement" type="JSON">
+<parameters>
+<param label="unsubscribeBolton.actionCommonInfo.appInfo.appId" name="unsubscribeBolton.actionCommonInfo.appInfo.appId" default="" target="function" required="true">
+<description>appId is of string type.</description>
+</param>
+<param label="unsubscribeBolton.actionCommonInfo.appInfo.reference" name="unsubscribeBolton.actionCommonInfo.appInfo.reference" default="" target="function" required="true">
+<description>reference is of string type.</description>
+</param>
+<param label="unsubscribeBolton.actionCommonInfo.appInfo.extension.@anyAttributeParam" name="unsubscribeBolton.actionCommonInfo.appInfo.extension.@anyAttributeParam" default="" target="function" required="false">
+<description>Additional attributes for element extension</description>
+</param>
+<param label="unsubscribeBolton.actionCommonInfo.appInfo.extension.any" name="unsubscribeBolton.actionCommonInfo.appInfo.extension.any" default="" target="function" required="false">
+<description>You may enter ANY elements at this point</description>
+</param>
+<param label="unsubscribeBolton.actionCommonInfo.userCode" name="unsubscribeBolton.actionCommonInfo.userCode" default="" target="function" required="false">
+<description>userCode is of string type.</description>
+</param>
+<param label="unsubscribeBolton.actionCommonInfo.opCost" name="unsubscribeBolton.actionCommonInfo.opCost" default="" target="function" required="false">
+<description>opCost is of long type.</description>
+</param>
+<param label="unsubscribeBolton.actionCommonInfo.opCost.@exponent" name="unsubscribeBolton.actionCommonInfo.opCost.@exponent" default="" target="function" required="false">
+<description>exponent is of int type.</description>
+</param>
+<param label="unsubscribeBolton.actionCommonInfo.currencyCode" name="unsubscribeBolton.actionCommonInfo.currencyCode" default="" target="function" required="false">
+<description>CurrencyCodeType</description>
+</param>
+<param label="unsubscribeBolton.actionCommonInfo.extension.@anyAttributeParam" name="unsubscribeBolton.actionCommonInfo.extension.@anyAttributeParam" default="" target="function" required="false">
+<description>Additional attributes for element extension</description>
+</param>
+<param label="unsubscribeBolton.actionCommonInfo.extension.any" name="unsubscribeBolton.actionCommonInfo.extension.any" default="" target="function" required="false">
+<description>You may enter ANY elements at this point</description>
+</param>
+<param label="unsubscribeBolton.subscriberId.choice" name="unsubscribeBolton.subscriberId.choice" default="" target="function" required="true">
+<description>SubscriberIdType</description>
+</param>
+<param label="unsubscribeBolton.boltonIdentifier.boltonCode" name="unsubscribeBolton.boltonIdentifier.boltonCode" default="" target="function" required="false">
+<description>boltonCode is of string type.</description>
+</param>
+<param label="unsubscribeBolton.boltonIdentifier.boltonTypeCode" name="unsubscribeBolton.boltonIdentifier.boltonTypeCode" default="" target="function" required="false">
+<description>boltonTypeCode is of string type.</description>
+</param>
+<param label="unsubscribeBolton.boltonIdentifier.boltonInstance" name="unsubscribeBolton.boltonIdentifier.boltonInstance" default="" target="function" required="false">
+<description>boltonInstance is of string type.</description>
+</param>
+<param label="unsubscribeBolton.boltonIdentifier.extension.@anyAttributeParam" name="unsubscribeBolton.boltonIdentifier.extension.@anyAttributeParam" default="" target="function" required="false">
+<description>Additional attributes for element extension</description>
+</param>
+<param label="unsubscribeBolton.boltonIdentifier.extension.any" name="unsubscribeBolton.boltonIdentifier.extension.any" default="" target="function" required="false">
+<description>You may enter ANY elements at this point</description>
+</param>
+<param label="unsubscribeBolton.extension.@anyAttributeParam" name="unsubscribeBolton.extension.@anyAttributeParam" default="" target="function" required="false">
+<description>Additional attributes for element extension</description>
+</param>
+<param label="unsubscribeBolton.extension.any" name="unsubscribeBolton.extension.any" default="" target="function" required="false">
+<description>You may enter ANY elements at this point</description>
+</param>
+<param name="http.authorization" label="http.authorization" required="false" default="" target="function">
+<description/>
+</param>
+<param name="headers" label="headers" required="false" default="" target="function">
+<description/>
+</param>
+<param name="privateRequest" default="false" label="private" target="function">
+<description/>
+</param>
+</parameters>
+</request>
+<request id="queryBoltons" label="queryBoltons" function="queryBoltons_BoltonManagement" type="JSON">
+<parameters>
+<param label="queryBoltons.queryCommonInfo.currencyCode" name="queryBoltons.queryCommonInfo.currencyCode" default="" target="function" required="false">
+<description>CurrencyCodeType</description>
+</param>
+<param label="queryBoltons.queryCommonInfo.pagingInfo.token" name="queryBoltons.queryCommonInfo.pagingInfo.token" default="" target="function" required="false">
+<description>token is of string type.</description>
+</param>
+<param label="queryBoltons.queryCommonInfo.pagingInfo.numRegs" name="queryBoltons.queryCommonInfo.pagingInfo.numRegs" default="" target="function" required="false">
+<description>numRegs is of int type.</description>
+</param>
+<param label="queryBoltons.queryCommonInfo.pagingInfo.extension.@anyAttributeParam" name="queryBoltons.queryCommonInfo.pagingInfo.extension.@anyAttributeParam" default="" target="function" required="false">
+<description>Additional attributes for element extension</description>
+</param>
+<param label="queryBoltons.queryCommonInfo.pagingInfo.extension.any" name="queryBoltons.queryCommonInfo.pagingInfo.extension.any" default="" target="function" required="false">
+<description>You may enter ANY elements at this point</description>
+</param>
+<param label="queryBoltons.queryCommonInfo.extension.@anyAttributeParam" name="queryBoltons.queryCommonInfo.extension.@anyAttributeParam" default="" target="function" required="false">
+<description>Additional attributes for element extension</description>
+</param>
+<param label="queryBoltons.queryCommonInfo.extension.any" name="queryBoltons.queryCommonInfo.extension.any" default="" target="function" required="false">
+<description>You may enter ANY elements at this point</description>
+</param>
+<param label="queryBoltons.subscriberId.choice" name="queryBoltons.subscriberId.choice" default="" target="function" required="true">
+<description>SubscriberIdType</description>
+</param>
+<param label="queryBoltons.boltonIdentifierFilter.boltonCode" name="queryBoltons.boltonIdentifierFilter.boltonCode" default="" target="function" required="false">
+<description>boltonCode is of string type.</description>
+</param>
+<param label="queryBoltons.boltonIdentifierFilter.boltonTypeCode" name="queryBoltons.boltonIdentifierFilter.boltonTypeCode" default="" target="function" required="false">
+<description>boltonTypeCode is of string type.</description>
+</param>
+<param label="queryBoltons.boltonIdentifierFilter.boltonInstance" name="queryBoltons.boltonIdentifierFilter.boltonInstance" default="" target="function" required="false">
+<description>boltonInstance is of string type.</description>
+</param>
+<param label="queryBoltons.boltonIdentifierFilter.extension.@anyAttributeParam" name="queryBoltons.boltonIdentifierFilter.extension.@anyAttributeParam" default="" target="function" required="false">
+<description>Additional attributes for element extension</description>
+</param>
+<param label="queryBoltons.boltonIdentifierFilter.extension.any" name="queryBoltons.boltonIdentifierFilter.extension.any" default="" target="function" required="false">
+<description>You may enter ANY elements at this point</description>
+</param>
+<param label="queryBoltons.boltonStatusFilter" name="queryBoltons.boltonStatusFilter" default="" target="function" required="true">
+<description>BoltonStatusType</description>
+</param>
+<param label="queryBoltons.extension.@anyAttributeParam" name="queryBoltons.extension.@anyAttributeParam" default="" target="function" required="false">
+<description>Additional attributes for element extension</description>
+</param>
+<param label="queryBoltons.extension.any" name="queryBoltons.extension.any" default="" target="function" required="false">
+<description>You may enter ANY elements at this point</description>
+</param>
+<param name="http.authorization" label="http.authorization" required="false" default="" target="function">
+<description/>
+</param>
+<param name="headers" label="headers" required="false" default="" target="function">
+<description/>
+</param>
+<param name="privateRequest" default="false" label="private" target="function">
+<description/>
+</param>
+</parameters>
+</request>
+<request id="queryBoltonsDetails" label="queryBoltonsDetails" function="queryBoltonsDetails_BoltonManagement" type="JSON">
+<parameters>
+<param label="queryBoltonsDetails.queryCommonInfo.currencyCode" name="queryBoltonsDetails.queryCommonInfo.currencyCode" default="" target="function" required="false">
+<description>CurrencyCodeType</description>
+</param>
+<param label="queryBoltonsDetails.queryCommonInfo.pagingInfo.token" name="queryBoltonsDetails.queryCommonInfo.pagingInfo.token" default="" target="function" required="false">
+<description>token is of string type.</description>
+</param>
+<param label="queryBoltonsDetails.queryCommonInfo.pagingInfo.numRegs" name="queryBoltonsDetails.queryCommonInfo.pagingInfo.numRegs" default="" target="function" required="false">
+<description>numRegs is of int type.</description>
+</param>
+<param label="queryBoltonsDetails.queryCommonInfo.pagingInfo.extension.@anyAttributeParam" name="queryBoltonsDetails.queryCommonInfo.pagingInfo.extension.@anyAttributeParam" default="" target="function" required="false">
+<description>Additional attributes for element extension</description>
+</param>
+<param label="queryBoltonsDetails.queryCommonInfo.pagingInfo.extension.any" name="queryBoltonsDetails.queryCommonInfo.pagingInfo.extension.any" default="" target="function" required="false">
+<description>You may enter ANY elements at this point</description>
+</param>
+<param label="queryBoltonsDetails.queryCommonInfo.extension.@anyAttributeParam" name="queryBoltonsDetails.queryCommonInfo.extension.@anyAttributeParam" default="" target="function" required="false">
+<description>Additional attributes for element extension</description>
+</param>
+<param label="queryBoltonsDetails.queryCommonInfo.extension.any" name="queryBoltonsDetails.queryCommonInfo.extension.any" default="" target="function" required="false">
+<description>You may enter ANY elements at this point</description>
+</param>
+<param label="queryBoltonsDetails.subscriberId.choice" name="queryBoltonsDetails.subscriberId.choice" default="" target="function" required="true">
+<description>SubscriberIdType</description>
+</param>
+<param label="queryBoltonsDetails.timeIntervalFilter.startTime.choice" name="queryBoltonsDetails.timeIntervalFilter.startTime.choice" default="" target="function" required="false">
+<description>TimeType</description>
+</param>
+<param label="queryBoltonsDetails.timeIntervalFilter.endTime.choice" name="queryBoltonsDetails.timeIntervalFilter.endTime.choice" default="" target="function" required="false">
+<description>TimeType</description>
+</param>
+<param label="queryBoltonsDetails.timeIntervalFilter.extension.@anyAttributeParam" name="queryBoltonsDetails.timeIntervalFilter.extension.@anyAttributeParam" default="" target="function" required="false">
+<description>Additional attributes for element extension</description>
+</param>
+<param label="queryBoltonsDetails.timeIntervalFilter.extension.any" name="queryBoltonsDetails.timeIntervalFilter.extension.any" default="" target="function" required="false">
+<description>You may enter ANY elements at this point</description>
+</param>
+<param label="queryBoltonsDetails.boltonIdentifierFilter.boltonCode" name="queryBoltonsDetails.boltonIdentifierFilter.boltonCode" default="" target="function" required="false">
+<description>boltonCode is of string type.</description>
+</param>
+<param label="queryBoltonsDetails.boltonIdentifierFilter.boltonTypeCode" name="queryBoltonsDetails.boltonIdentifierFilter.boltonTypeCode" default="" target="function" required="false">
+<description>boltonTypeCode is of string type.</description>
+</param>
+<param label="queryBoltonsDetails.boltonIdentifierFilter.boltonInstance" name="queryBoltonsDetails.boltonIdentifierFilter.boltonInstance" default="" target="function" required="false">
+<description>boltonInstance is of string type.</description>
+</param>
+<param label="queryBoltonsDetails.boltonIdentifierFilter.extension.@anyAttributeParam" name="queryBoltonsDetails.boltonIdentifierFilter.extension.@anyAttributeParam" default="" target="function" required="false">
+<description>Additional attributes for element extension</description>
+</param>
+<param label="queryBoltonsDetails.boltonIdentifierFilter.extension.any" name="queryBoltonsDetails.boltonIdentifierFilter.extension.any" default="" target="function" required="false">
+<description>You may enter ANY elements at this point</description>
+</param>
+<param label="queryBoltonsDetails.extension.@anyAttributeParam" name="queryBoltonsDetails.extension.@anyAttributeParam" default="" target="function" required="false">
+<description>Additional attributes for element extension</description>
+</param>
+<param label="queryBoltonsDetails.extension.any" name="queryBoltonsDetails.extension.any" default="" target="function" required="false">
+<description>You may enter ANY elements at this point</description>
+</param>
+<param name="http.authorization" label="http.authorization" required="false" default="" target="function">
+<description/>
+</param>
+<param name="headers" label="headers" required="false" default="" target="function">
+<description/>
+</param>
+<param name="privateRequest" default="false" label="private" target="function">
+<description/>
+</param>
+</parameters>
+</request>
+</requests>
+</ascon>

@@ -1,0 +1,23 @@
+﻿var smsHeaderValues = {
+	country:"AR",
+	lang:"EN",
+	entity:"TEF",
+	system:"AR",
+	subsystem:"es",
+	originator:"AR:TEF:IVR:IVR",
+	userId:"IVR",
+	operation:"sendSMSOperation",
+	destination:"AR:TEF:GDN:JUMP",
+	pid:"a2345678-a012-a456-a890",
+	msgId:"a2345678-a012-a456-a890",
+	execId:"a2345678-a012-a456-a890",
+	timestamp:"2019-02-13T12:06:53-03:00",
+	codeCliente:"MODEM",
+	addressSource:"Movistar",
+	message:"Descarga la App Mi Movistar desde acá https://mov.is/hO9z",
+	fromHourWindow:6,
+	toHourWindow:23,
+	validPeriod:1440,
+	priorityFlag:1,
+	timeout:"25s"
+};

@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="US-ASCII"?>
+<ascon version="1.2">
+<connector id="VoucherManagement" label="VoucherManagement" icon="VoucherManagement.gif" version="1.0">
+<!--
+			Textual description of the connector
+		-->
+<description>
+			Connector to the charging database for IVR Prepaid
+		</description>
+<include copy="true" file="VoucherManagement.es"/>
+<properties name="VoucherManagement">
+<property name="AS_URL" value="/SOAPConnector/SOAPConnector/"/>
+<property name="application" value="VoucherManagement"/>
+<property name="service" value="VoucherManagement"/>
+</properties>
+</connector>
+<requests>
+<request id="voucherCardAccount" label="voucherCardAccount" function="voucherCardAccount_VoucherManagement" type="JSON">
+<parameters>
+<param label="voucherCardAccount.actionCommonInfo.appInfo.appId" name="voucherCardAccount.actionCommonInfo.appInfo.appId" default="" target="function" required="true">
+<description>appId is of string type.</description>
+</param>
+<param label="voucherCardAccount.actionCommonInfo.appInfo.reference" name="voucherCardAccount.actionCommonInfo.appInfo.reference" default="" target="function" required="true">
+<description>reference is of string type.</description>
+</param>
+<param label="voucherCardAccount.actionCommonInfo.appInfo.extension.@anyAttributeParam" name="voucherCardAccount.actionCommonInfo.appInfo.extension.@anyAttributeParam" default="" target="function" required="false">
+<description>Additional attributes for element extension</description>
+</param>
+<param label="voucherCardAccount.actionCommonInfo.appInfo.extension.any" name="voucherCardAccount.actionCommonInfo.appInfo.extension.any" default="" target="function" required="false">
+<description>You may enter ANY elements at this point</description>
+</param>
+<param label="voucherCardAccount.actionCommonInfo.userCode" name="voucherCardAccount.actionCommonInfo.userCode" default="" target="function" required="false">
+<description>userCode is of string type.</description>
+</param>
+
+<param label="voucherCardAccount.actionCommonInfo.opCost.@exponent" name="voucherCardAccount.actionCommonInfo.opCost.@exponent" default="" target="function" required="false">
+<description>exponent is of int type.</description>
+</param>
+<param label="voucherCardAccount.actionCommonInfo.extension.@anyAttributeParam" name="voucherCardAccount.actionCommonInfo.extension.@anyAttributeParam" default="" target="function" required="false">
+<description>Additional attributes for element extension</description>
+</param>
+<param label="voucherCardAccount.actionCommonInfo.extension.any" name="voucherCardAccount.actionCommonInfo.extension.any" default="" target="function" required="false">
+<description>You may enter ANY elements at this point</description>
+</param>
+<param label="voucherCardAccount.subscriberId.choice" name="voucherCardAccount.subscriberId.choice" default="" target="function" required="true">
+<description>SubscriberIdType</description>
+</param>
+<param label="voucherCardAccount.topUpKey" name="voucherCardAccount.topUpKey" default="" target="function" required="true">
+<description>topUpKey is of string type.</description>
+</param>
+<param label="voucherCardAccount.extension.@anyAttributeParam" name="voucherCardAccount.extension.@anyAttributeParam" default="" target="function" required="false">
+<description>Additional attributes for element extension</description>
+</param>
+<param label="voucherCardAccount.extension.any" name="voucherCardAccount.extension.any" default="" target="function" required="false">
+<description>You may enter ANY elements at this point</description>
+</param>
+<param name="http.authorization" label="http.authorization" required="false" default="" target="function">
+<description/>
+</param>
+<param name="headers" label="headers" required="false" default="" target="function">
+<description/>
+</param>
+<param name="privateRequest" default="false" label="private" target="function">
+<description/>
+</param>
+</parameters>
+</request>
+</requests>
+</ascon>

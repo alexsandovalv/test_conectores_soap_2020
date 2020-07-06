@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:gmap="http://www.example.org/gmap" xmlns:notation="http://www.eclipse.org/gmf/runtime/1.0.2/notation">
+  <gmap:VxmlType xmi:id="_huKMgG7tEeqWQbNrfNviJw" version="1.13">
+    <globalEventHandler xmi:type="gmap:GlobalEventHandlerType" xmi:id="_huKMgm7tEeqWQbNrfNviJw">
+      <eventGlobalEventHandlerPlay xmi:type="gmap:GlobalEventHandlerPromptEventRelationType" xmi:id="_wAEeYG9aEeqWQbNrfNviJw" event="error.semantic error.badfetch" eventCount="1" source="_huKMgm7tEeqWQbNrfNviJw" targetElement="_vABWpm9aEeqWQbNrfNviJw"/>
+    </globalEventHandler>
+    <target xmi:type="gmap:TargetType" xmi:id="_huKMgW7tEeqWQbNrfNviJw">
+      <stdTransitionTargetSetVariable xmi:type="gmap:StandardTransitionTargetSetVariableType" xmi:id="_sHg4cG9aEeqWQbNrfNviJw" source="_huKMgW7tEeqWQbNrfNviJw" targetElement="_drvycm9aEeqWQbNrfNviJw"/>
+    </target>
+    <variable xmi:type="gmap:VariableType" xmi:id="_huKMg27tEeqWQbNrfNviJw">
+      <var xmi:type="gmap:VarType" xmi:id="_kzvv4G9aEeqWQbNrfNviJw" name="result" value=""/>
+    </variable>
+    <play xmi:type="gmap:PromptType" xmi:id="_oZE3029aEeqWQbNrfNviJw" enabled="Yes" id="Play_sva1645" label="Play Message" promptFile="../promptFiles/audio/respuesta_ok_ws.wav" promptWait="false" type="audio">
+      <stdTransitionPlayGotoTarget xmi:type="gmap:StandardTransitionPlayGotoTargetType" xmi:id="_t87h8G9aEeqWQbNrfNviJw" source="_oZE3029aEeqWQbNrfNviJw" targetElement="_3yk0A27vEeqWQbNrfNviJw"/>
+    </play>
+    <play xmi:type="gmap:PromptType" xmi:id="_vABWpm9aEeqWQbNrfNviJw" enabled="Yes" id="Play_sva912" label="Play Message" promptFile="../promptFiles/audio/error_ws.wav" promptWait="false" type="audio">
+      <stdTransitionPlayGotoTarget xmi:type="gmap:StandardTransitionPlayGotoTargetType" xmi:id="_yiND8G9aEeqWQbNrfNviJw" source="_vABWpm9aEeqWQbNrfNviJw" targetElement="_3yk0A27vEeqWQbNrfNviJw"/>
+    </play>
+    <setVariable xmi:type="gmap:SetType" xmi:id="_drvycm9aEeqWQbNrfNviJw" id="SetVariable_sva122" label="Set Variable">
+      <var xmi:type="gmap:VarType" xmi:id="_gCSzEG9aEeqWQbNrfNviJw" name="msisdn" value="'1169557096'"/>
+      <stdTransitionSetVariableLog xmi:type="gmap:StandardTransitionSetVariableLogType" xmi:id="_sdVXcG9aEeqWQbNrfNviJw" source="_drvycm9aEeqWQbNrfNviJw" targetElement="_aXGK3m9aEeqWQbNrfNviJw"/>
+    </setVariable>
+    <gotoTarget xmi:type="gmap:GotoTargetType" xmi:id="_3yk0A27vEeqWQbNrfNviJw" enabled="Yes" id="MenuPrincipal7" label="MenuPrincipal7" target="start.vxml"/>
+    <log xmi:type="gmap:LogType" xmi:id="_aXGK3m9aEeqWQbNrfNviJw" desc="WS-REQUEST" id="Log_140" label="" logtext="WS_Resquest_SvaService_findAllServiceGrouped: " sourceExpr="' [channel: IVR , msisdn: '+msisdn+']'">
+      <stdTransitionLogScript xmi:type="gmap:StandardTransitionLogScriptType" xmi:id="_s06J8G9aEeqWQbNrfNviJw" source="_aXGK3m9aEeqWQbNrfNviJw" targetElement="_aXGK1m9aEeqWQbNrfNviJw"/>
+    </log>
+    <log xmi:type="gmap:LogType" xmi:id="_aXGK4G9aEeqWQbNrfNviJw" desc="WS_RESPONSE" id="Log_141" label="" logtext="WS_Response_SvaService_findAllServiceGrouped: " sourceExpr="print_r(result)">
+      <stdTransitionLogPlay xmi:type="gmap:StandardTransitionLogPlayType" xmi:id="_tmpv8G9aEeqWQbNrfNviJw" source="_aXGK4G9aEeqWQbNrfNviJw" targetElement="_oZE3029aEeqWQbNrfNviJw"/>
+    </log>
+    <script xmi:type="gmap:ScriptType" xmi:id="_aXGK1m9aEeqWQbNrfNviJw" connetorRequest="findAllServiceGrouped" connetorType="SvaService" fetchtimeout="25s" id="SvaService" isData="false" label="SvaService" sensitivityLocal="false">
+      <var xmi:type="gmap:VarType" xmi:id="_aXGK129aEeqWQbNrfNviJw" name="result"/>
+      <connetorParameter xmi:type="gmap:ConnetorParameterType" xmi:id="_kzvv4W9aEeqWQbNrfNviJw" name="findAllServiceGrouped.channel" value="'IVR'"/>
+      <connetorParameter xmi:type="gmap:ConnetorParameterType" xmi:id="_kzvv4m9aEeqWQbNrfNviJw" name="findAllServiceGrouped.msisdn" value="'' + msisdn + ''"/>
+      <connetorParameter xmi:type="gmap:ConnetorParameterType" xmi:id="_kzvv429aEeqWQbNrfNviJw" name="http.authorization" value=""/>
+      <connetorParameter xmi:type="gmap:ConnetorParameterType" xmi:id="_kzvv5G9aEeqWQbNrfNviJw" name="headers" value=""/>
+      <connetorParameter xmi:type="gmap:ConnetorParameterType" xmi:id="_kzvv5W9aEeqWQbNrfNviJw" name="private" value="false"/>
+      <stdTransitionScriptLog xmi:type="gmap:StandardTransitionScriptLogType" xmi:id="_tR0vcG9aEeqWQbNrfNviJw" source="_aXGK1m9aEeqWQbNrfNviJw" targetElement="_aXGK4G9aEeqWQbNrfNviJw"/>
+    </script>
+  </gmap:VxmlType>
+  <notation:Diagram xmi:id="_huKMhG7tEeqWQbNrfNviJw" type="Gmap" element="_huKMgG7tEeqWQbNrfNviJw" name="SvaService.mmdiag" measurementUnit="Pixel">
+    <children xmi:type="notation:Shape" xmi:id="_huKMhW7tEeqWQbNrfNviJw" type="1003" element="_huKMgW7tEeqWQbNrfNviJw" fontName="Segoe UI">
+      <layoutConstraint xmi:type="notation:Bounds" xmi:id="_huKMhm7tEeqWQbNrfNviJw" x="270" y="30"/>
+    </children>
+    <children xmi:type="notation:Shape" xmi:id="_huKMh27tEeqWQbNrfNviJw" type="1015" element="_huKMgm7tEeqWQbNrfNviJw" fontName="Segoe UI">
+      <layoutConstraint xmi:type="notation:Bounds" xmi:id="_huKMiG7tEeqWQbNrfNviJw" x="495" y="30"/>
+    </children>
+    <children xmi:type="notation:Shape" xmi:id="_huKMiW7tEeqWQbNrfNviJw" type="1001" element="_huKMg27tEeqWQbNrfNviJw" fontName="Segoe UI">
+      <layoutConstraint xmi:type="notation:Bounds" xmi:id="_huKMim7tEeqWQbNrfNviJw"/>
+    </children>
+    <children xmi:type="notation:Shape" xmi:id="_3yk0AW7vEeqWQbNrfNviJw" type="1020" element="_3yk0A27vEeqWQbNrfNviJw" fontName="Segoe UI">
+      <layoutConstraint xmi:type="notation:Bounds" xmi:id="_3yk0Am7vEeqWQbNrfNviJw" x="495" y="255"/>
+    </children>
+    <children xmi:type="notation:Shape" xmi:id="_aXGK0G9aEeqWQbNrfNviJw" type="1010" element="_aXGK1m9aEeqWQbNrfNviJw" fontName="Segoe UI">
+      <layoutConstraint xmi:type="notation:Bounds" xmi:id="_aXGK0W9aEeqWQbNrfNviJw" x="270" y="225"/>
+    </children>
+    <children xmi:type="notation:Shape" xmi:id="_aXGK0m9aEeqWQbNrfNviJw" type="1017" element="_aXGK3m9aEeqWQbNrfNviJw" fontName="Segoe UI">
+      <layoutConstraint xmi:type="notation:Bounds" xmi:id="_aXGK029aEeqWQbNrfNviJw" x="270" y="150"/>
+    </children>
+    <children xmi:type="notation:Shape" xmi:id="_aXGK1G9aEeqWQbNrfNviJw" type="1017" element="_aXGK4G9aEeqWQbNrfNviJw" fontName="Segoe UI">
+      <layoutConstraint xmi:type="notation:Bounds" xmi:id="_aXGK1W9aEeqWQbNrfNviJw" x="270" y="300"/>
+    </children>
+    <children xmi:type="notation:Shape" xmi:id="_drvycG9aEeqWQbNrfNviJw" type="1006" element="_drvycm9aEeqWQbNrfNviJw" fontName="Segoe UI">
+      <layoutConstraint xmi:type="notation:Bounds" xmi:id="_drvycW9aEeqWQbNrfNviJw" x="270" y="90"/>
+    </children>
+    <children xmi:type="notation:Shape" xmi:id="_oZE30W9aEeqWQbNrfNviJw" type="1004" element="_oZE3029aEeqWQbNrfNviJw" fontName="Segoe UI">
+      <layoutConstraint xmi:type="notation:Bounds" xmi:id="_oZE30m9aEeqWQbNrfNviJw" x="270" y="360"/>
+    </children>
+    <children xmi:type="notation:Shape" xmi:id="_vABWo29aEeqWQbNrfNviJw" type="1004" element="_vABWpm9aEeqWQbNrfNviJw" fontName="Segoe UI">
+      <layoutConstraint xmi:type="notation:Bounds" xmi:id="_vABWpG9aEeqWQbNrfNviJw" x="495" y="120"/>
+    </children>
+    <styles xmi:type="notation:DiagramStyle" xmi:id="_huKMi27tEeqWQbNrfNviJw"/>
+    <edges xmi:type="notation:Connector" xmi:id="_sHg4cW9aEeqWQbNrfNviJw" type="3263" element="_sHg4cG9aEeqWQbNrfNviJw" source="_huKMhW7tEeqWQbNrfNviJw" target="_drvycG9aEeqWQbNrfNviJw">
+      <styles xmi:type="notation:FontStyle" xmi:id="_sHg4cm9aEeqWQbNrfNviJw" fontName="Segoe UI"/>
+      <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_sHg4c29aEeqWQbNrfNviJw" points="[-4, 20, 6, -29]$[-19, 40, -9, -9]"/>
+      <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_sHjUsG9aEeqWQbNrfNviJw" id="(0.41732283464566927,0.225)"/>
+    </edges>
+    <edges xmi:type="notation:Connector" xmi:id="_sdV-gG9aEeqWQbNrfNviJw" type="3273" element="_sdVXcG9aEeqWQbNrfNviJw" source="_drvycG9aEeqWQbNrfNviJw" target="_aXGK0m9aEeqWQbNrfNviJw">
+      <styles xmi:type="notation:FontStyle" xmi:id="_sdV-gW9aEeqWQbNrfNviJw" fontName="Segoe UI"/>
+      <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_sdV-gm9aEeqWQbNrfNviJw" points="[-5, 20, -5, -40]$[-5, 40, -5, -20]"/>
+    </edges>
+    <edges xmi:type="notation:Connector" xmi:id="_s06xAG9aEeqWQbNrfNviJw" type="3399" element="_s06J8G9aEeqWQbNrfNviJw" source="_aXGK0m9aEeqWQbNrfNviJw" target="_aXGK0G9aEeqWQbNrfNviJw">
+      <styles xmi:type="notation:FontStyle" xmi:id="_s06xAW9aEeqWQbNrfNviJw" fontName="Segoe UI"/>
+      <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_s06xAm9aEeqWQbNrfNviJw" points="[-9, 20, 0, -39]$[-12, 55, -3, -4]"/>
+      <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_s1IzcG9aEeqWQbNrfNviJw" id="(0.4251968503937008,0.1)"/>
+    </edges>
+    <edges xmi:type="notation:Connector" xmi:id="_tSBjwG9aEeqWQbNrfNviJw" type="3042" element="_tR0vcG9aEeqWQbNrfNviJw" source="_aXGK0G9aEeqWQbNrfNviJw" target="_aXGK1G9aEeqWQbNrfNviJw">
+      <styles xmi:type="notation:FontStyle" xmi:id="_tSBjwW9aEeqWQbNrfNviJw" fontName="Segoe UI"/>
+      <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_tSBjwm9aEeqWQbNrfNviJw" points="[-2, 7, -12, -55]$[-53, 61, -63, -1]"/>
+      <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_tSOYEG9aEeqWQbNrfNviJw" id="(0.41732283464566927,0.825)"/>
+    </edges>
+    <edges xmi:type="notation:Connector" xmi:id="_tmqXAG9aEeqWQbNrfNviJw" type="3329" element="_tmpv8G9aEeqWQbNrfNviJw" source="_aXGK1G9aEeqWQbNrfNviJw" target="_oZE30W9aEeqWQbNrfNviJw">
+      <styles xmi:type="notation:FontStyle" xmi:id="_tmqXAW9aEeqWQbNrfNviJw" fontName="Segoe UI"/>
+      <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_tmqXAm9aEeqWQbNrfNviJw" points="[-5, 20, 6, -29]$[-21, 40, -10, -9]"/>
+      <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_tmq-EG9aEeqWQbNrfNviJw" id="(0.4094488188976378,0.225)"/>
+    </edges>
+    <edges xmi:type="notation:Connector" xmi:id="_t88JAG9aEeqWQbNrfNviJw" type="3142" element="_t87h8G9aEeqWQbNrfNviJw" source="_oZE30W9aEeqWQbNrfNviJw" target="_3yk0AW7vEeqWQbNrfNviJw">
+      <styles xmi:type="notation:FontStyle" xmi:id="_t88JAW9aEeqWQbNrfNviJw" fontName="Segoe UI"/>
+      <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_t88JAm9aEeqWQbNrfNviJw" points="[13, 0, -161, 99]$[174, 0, 0, 99]$[174, -79, 0, 20]"/>
+      <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_t89XIG9aEeqWQbNrfNviJw" id="(0.8976377952755905,0.35)"/>
+    </edges>
+    <edges xmi:type="notation:Connector" xmi:id="_wAFFcG9aEeqWQbNrfNviJw" type="3089" element="_wAEeYG9aEeqWQbNrfNviJw" source="_huKMh27tEeqWQbNrfNviJw" target="_vABWo29aEeqWQbNrfNviJw">
+      <children xmi:type="notation:DecorationNode" xmi:id="_wAFFc29aEeqWQbNrfNviJw" type="4054">
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_wAFFdG9aEeqWQbNrfNviJw" y="40"/>
+      </children>
+      <styles xmi:type="notation:FontStyle" xmi:id="_wAFFcW9aEeqWQbNrfNviJw" fontName="Segoe UI"/>
+      <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_wAFFcm9aEeqWQbNrfNviJw" points="[1, 20, 1, -70]$[1, 110, 1, 20]"/>
+    </edges>
+    <edges xmi:type="notation:Connector" xmi:id="_yiNrAG9aEeqWQbNrfNviJw" type="3142" element="_yiND8G9aEeqWQbNrfNviJw" source="_vABWo29aEeqWQbNrfNviJw" target="_3yk0AW7vEeqWQbNrfNviJw">
+      <styles xmi:type="notation:FontStyle" xmi:id="_yiNrAW9aEeqWQbNrfNviJw" fontName="Segoe UI"/>
+      <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_yiNrAm9aEeqWQbNrfNviJw" points="[-8, 20, -8, -115]$[-8, 115, -8, -20]"/>
+    </edges>
+  </notation:Diagram>
+</xmi:XMI>
